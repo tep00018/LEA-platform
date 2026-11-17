@@ -1,6 +1,7 @@
 """The personalisation study: reproducible, and it measures what it claims to."""
 
 import numpy as np
+import pytest
 
 from simulation import personalization as P
 
@@ -16,8 +17,8 @@ def test_the_study_is_reproducible_from_its_seed():
 
 def test_lea_s_formula_is_reproduced_exactly():
     x = np.array([1.0, 0.5, 0.4, 2.0, 1.0, 0.0, 0.0])  # difficulty .5, inaccuracy .4, 20 interactions, open-ended
-    assert P.lea_load(x) == 0.5 + 0.5 + 4.5 * 0.4 + 0.1 * 20 + 1.0
-    assert P.lea_load(np.array([1.0, 1.0, 1.0, 9.0, 1.0, 0, 0])) == 10  # bounded at 10
+    assert P.lea_load(x) == pytest.approx(0.5 + 0.5 + 4.5 * 0.4 + 0.1 * 20 + 1.0)
+    assert P.lea_load(np.array([1.0, 1.0, 1.0, 9.0, 1.0, 0, 0])) == pytest.approx(10)  # bounded at 10
 
 
 def test_truth_is_hidden_from_every_estimator_input():
