@@ -93,8 +93,10 @@ class SetupActions {
   }
 
   Future<void> linkMaterialsSource(String path) async {
-    await ref.read(apiClientProvider).postObject(
-      '/teach/courses/$code/materials-source', {'type': 'folder', 'path': path});
+    await ref.read(apiClientProvider).postObject('/teach/courses/$code/materials-source', {
+      'type': 'folder',
+      'path': path,
+    });
     ref.invalidate(materialsSourceProvider(code));
     ref.invalidate(syncPreviewProvider(code));
   }

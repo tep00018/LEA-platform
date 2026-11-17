@@ -226,11 +226,10 @@ class _UploadTable extends StatelessWidget {
             Row(
               mainAxisSize: MainAxisSize.min,
               children: [
-                Flexible(child: Text(u.name, style: cell, overflow: TextOverflow.ellipsis)),
-                if (u.isLinked) ...[
-                  const SizedBox(width: 6),
-                  const TeachPill('Linked', tone: PillTone.outline),
-                ],
+                Flexible(
+                  child: Text(u.name, style: cell, overflow: TextOverflow.ellipsis),
+                ),
+                if (u.isLinked) ...[const SizedBox(width: 6), const TeachPill('Linked', tone: PillTone.outline)],
               ],
             ),
             Text(u.week == null ? '—' : '${u.week}', style: cell),
@@ -294,10 +293,9 @@ class _LinkedMaterialsCard extends ConsumerWidget {
           switch (source) {
             AsyncData(value: null) => Padding(
               padding: const EdgeInsets.fromLTRB(16, 0, 16, 16),
-              child: editable ? _FolderPicker(code: code, actions: actions) : Text(
-                'No folder linked.',
-                style: LeaType.small().copyWith(color: c.muted),
-              ),
+              child: editable
+                  ? _FolderPicker(code: code, actions: actions)
+                  : Text('No folder linked.', style: LeaType.small().copyWith(color: c.muted)),
             ),
             AsyncData(value: final linked!) => _SyncPreviewView(code: code, path: linked.path),
             AsyncError(:final error) => Padding(
@@ -424,29 +422,42 @@ class _SyncPreviewView extends ConsumerWidget {
                     child: Row(
                       children: [
                         Expanded(
-                          child: Text(e.relpath, style: LeaType.ui(13).copyWith(color: c.ink),
-                            overflow: TextOverflow.ellipsis),
+                          child: Text(
+                            e.relpath,
+                            style: LeaType.ui(13).copyWith(color: c.ink),
+                            overflow: TextOverflow.ellipsis,
+                          ),
                         ),
                         if (e.reason != null) ...[
                           Flexible(
-                            child: Text(e.reason!, style: LeaType.ui(12).copyWith(color: c.muted),
-                              overflow: TextOverflow.ellipsis, textAlign: TextAlign.right),
+                            child: Text(
+                              e.reason!,
+                              style: LeaType.ui(12).copyWith(color: c.muted),
+                              overflow: TextOverflow.ellipsis,
+                              textAlign: TextAlign.right,
+                            ),
                           ),
                           const SizedBox(width: 8),
                         ],
-                        TeachPill(e.status, tone: switch (e.status) {
-                          'new' => PillTone.ok,
-                          'changed' => PillTone.warn,
-                          'removed' => PillTone.bad,
-                          'rejected' => PillTone.dashed,
-                          _ => PillTone.neutral,
-                        }),
+                        TeachPill(
+                          e.status,
+                          tone: switch (e.status) {
+                            'new' => PillTone.ok,
+                            'changed' => PillTone.warn,
+                            'removed' => PillTone.bad,
+                            'rejected' => PillTone.dashed,
+                            _ => PillTone.neutral,
+                          },
+                        ),
                       ],
                     ),
                   ),
               ],
             ),
-            AsyncError(:final error) => TeachError(error: error, onRetry: () => ref.invalidate(syncPreviewProvider(code))),
+            AsyncError(:final error) => TeachError(
+              error: error,
+              onRetry: () => ref.invalidate(syncPreviewProvider(code)),
+            ),
             _ => const SkeletonBox(height: 40),
           },
         ],

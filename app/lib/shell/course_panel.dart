@@ -54,7 +54,9 @@ class CourseBox extends ConsumerWidget {
                     width: 20,
                     child: course.code == info.course.code ? Icon(Icons.check, size: 16, color: c.ink) : null,
                   ),
-                  Expanded(child: Text(course.label, style: LeaType.small().copyWith(color: c.ink))),
+                  Expanded(
+                    child: Text(course.label, style: LeaType.small().copyWith(color: c.ink)),
+                  ),
                   IconButton(
                     icon: Icon(Icons.close, size: 16, color: c.muted),
                     visualDensity: VisualDensity.compact,
@@ -78,7 +80,10 @@ class CourseBox extends ConsumerWidget {
     } else if (code.startsWith(_leavePrefix)) {
       final leaving = info.courses.firstWhere((c) => c.code == code.substring(_leavePrefix.length));
       if (context.mounted) {
-        await showDialog<void>(context: context, builder: (_) => _LeaveCourseDialog(course: leaving));
+        await showDialog<void>(
+          context: context,
+          builder: (_) => _LeaveCourseDialog(course: leaving),
+        );
       }
     } else if (code != info.course.code) {
       onSelect(code);
@@ -265,7 +270,8 @@ class _AddCourseDialogState extends ConsumerState<_AddCourseDialog> {
     final mine = ref.watch(myCoursesProvider).value ?? const [];
     final mineCodes = {for (final m in mine) m.code};
     final options = [
-      for (final course in available.value ?? const []) if (!mineCodes.contains(course.code)) course,
+      for (final course in available.value ?? const [])
+        if (!mineCodes.contains(course.code)) course,
     ];
     return AlertDialog(
       title: const Text('Add a course'),

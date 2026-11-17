@@ -159,7 +159,9 @@ void main() {
       await tester.pumpAndSettle();
       await tester.tap(find.text('DEMO101').last);
       await tester.pumpAndSettle();
-      await tester.tap(find.descendant(of: find.byType(AlertDialog), matching: find.widgetWithText(FilledButton, 'Add')));
+      await tester.tap(
+        find.descendant(of: find.byType(AlertDialog), matching: find.widgetWithText(FilledButton, 'Add')),
+      );
       await tester.pumpAndSettle();
 
       expect(find.text('Not enrolled in any course.'), findsNothing);

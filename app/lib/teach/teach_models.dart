@@ -131,8 +131,13 @@ class WeekPlan {
 
 /// `UploadOut`: an uploaded course file.
 class CourseUpload {
-  const CourseUpload({required this.name, required this.size, required this.week, required this.kind,
-    this.linkedRelpath});
+  const CourseUpload({
+    required this.name,
+    required this.size,
+    required this.week,
+    required this.kind,
+    this.linkedRelpath,
+  });
 
   final String name;
   final int size;
@@ -144,9 +149,7 @@ class CourseUpload {
 
   bool get isLinked => linkedRelpath != null;
 
-  static const fields = [
-    'name', 'size', 'sha256', 'week', 'kind', 'uploaded_by', 'uploaded_at', 'linked_relpath',
-  ];
+  static const fields = ['name', 'size', 'sha256', 'week', 'kind', 'uploaded_by', 'uploaded_at', 'linked_relpath'];
 
   factory CourseUpload.fromJson(Map<String, dynamic> json) => CourseUpload(
     name: json['name'] as String,
@@ -192,7 +195,11 @@ class MaterialsFolder {
 /// `SyncPreviewEntryOut`: one candidate file in a materials-source sync preview.
 class SyncPreviewEntry {
   const SyncPreviewEntry({
-    required this.relpath, required this.name, required this.size, required this.status, this.reason,
+    required this.relpath,
+    required this.name,
+    required this.size,
+    required this.status,
+    this.reason,
   });
 
   final String relpath;
@@ -217,8 +224,12 @@ class SyncPreviewEntry {
 /// `SyncPreviewOut`: what the next Build job would pick up from a linked folder.
 class SyncPreview {
   const SyncPreview({
-    required this.entries, required this.newCount, required this.changed, required this.unchanged,
-    required this.removed, required this.rejected,
+    required this.entries,
+    required this.newCount,
+    required this.changed,
+    required this.unchanged,
+    required this.removed,
+    required this.rejected,
   });
 
   final List<SyncPreviewEntry> entries;
@@ -231,7 +242,9 @@ class SyncPreview {
   static const fields = ['entries', 'new', 'changed', 'unchanged', 'removed', 'rejected'];
 
   factory SyncPreview.fromJson(Map<String, dynamic> json) => SyncPreview(
-    entries: [for (final e in (json['entries'] as List?) ?? const []) SyncPreviewEntry.fromJson(e as Map<String, dynamic>)],
+    entries: [
+      for (final e in (json['entries'] as List?) ?? const []) SyncPreviewEntry.fromJson(e as Map<String, dynamic>),
+    ],
     newCount: (json['new'] as int?) ?? 0,
     changed: (json['changed'] as int?) ?? 0,
     unchanged: (json['unchanged'] as int?) ?? 0,

@@ -168,9 +168,7 @@ void main() {
     await tester.pump();
     api.tutorStream!.add(FakeApi.sse('token', {'text': 'Let there be more to explore. '}));
     await tester.pump();
-    api.tutorStream!.add(
-      FakeApi.sse('done', api.tutorDone('A reply to an uncheckable tutor question', graded: false)),
-    );
+    api.tutorStream!.add(FakeApi.sse('done', api.tutorDone('A reply to an uncheckable tutor question', graded: false)));
     await api.tutorStream!.close();
     await tester.pump();
     await tester.pump();

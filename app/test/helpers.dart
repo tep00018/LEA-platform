@@ -504,8 +504,7 @@ class FakeApi {
     if (path == '/me/courses' && request.method == 'GET') return _json(enrolledCourses ?? courses);
     if (path == '/me/courses' && request.method == 'POST') {
       final code = (jsonDecode(request.body) as Map<String, dynamic>)['code'] as String;
-      final match = courses.firstWhere((c) => c['code'] == code,
-          orElse: () => <String, String>{});
+      final match = courses.firstWhere((c) => c['code'] == code, orElse: () => <String, String>{});
       if (match.isEmpty) return _json({'detail': 'Unknown course: $code.', 'code': 'InvalidInput'}, 400);
       final mine = List.of(enrolledCourses ?? courses);
       if (!mine.any((c) => c['code'] == code)) mine.add(match);

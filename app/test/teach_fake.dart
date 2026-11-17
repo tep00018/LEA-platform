@@ -472,7 +472,9 @@ class FakeTeach {
 
     if (path.startsWith('/admin')) return _admin(path, method, body);
     if (path == '/teach/materials-folders' && method == 'GET') {
-      return _json([for (final f in materialsFolders) {'name': f}]);
+      return _json([
+        for (final f in materialsFolders) {'name': f},
+      ]);
     }
     if (path == '/teach/courses' && method == 'GET') return _json(courses);
     if (path == '/teach/courses' && method == 'POST') {

@@ -180,12 +180,25 @@ void main() {
         ..materialsFolders = ['AIML101', 'BIO210']
         ..syncPreviewEntries['BIO210'] = [
           {'relpath': 'chapter_01.md', 'name': 'chapter_01.md', 'size': 1200, 'status': 'new', 'reason': null},
-          {'relpath': 'video.mov', 'name': 'video.mov', 'size': 0, 'status': 'rejected',
-           'reason': 'not a file type LEA accepts'},
+          {
+            'relpath': 'video.mov',
+            'name': 'video.mov',
+            'size': 0,
+            'status': 'rejected',
+            'reason': 'not a file type LEA accepts',
+          },
         ]
         ..uploads['BIO210'] = [
-          {'name': 'chapter_01.md', 'size': 1200, 'sha256': 'x', 'week': null, 'kind': null, 'uploaded_by': 'alex.m',
-           'uploaded_at': 'now', 'linked_relpath': 'chapter_01.md'},
+          {
+            'name': 'chapter_01.md',
+            'size': 1200,
+            'sha256': 'x',
+            'week': null,
+            'kind': null,
+            'uploaded_by': 'alex.m',
+            'uploaded_at': 'now',
+            'linked_relpath': 'chapter_01.md',
+          },
         ];
       final fake = await openSetup(tester, api: api);
       expect(find.text('Linked materials'), findsOneWidget);

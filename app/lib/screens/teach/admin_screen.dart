@@ -238,7 +238,9 @@ class _EditUserDialogState extends ConsumerState<_EditUserDialog> {
       await AdminActions(ref).addCourse(widget.user.username, code);
       if (mounted) {
         setState(() {
-          _courses = List.of(_courses)..add(code)..sort();
+          _courses = List.of(_courses)
+            ..add(code)
+            ..sort();
           _addCourse = null;
         });
       }
@@ -315,11 +317,7 @@ class _EditUserDialogState extends ConsumerState<_EditUserDialog> {
               runSpacing: 6,
               children: [
                 for (final code in _courses)
-                  InputChip(
-                    key: Key('enrolled-$code'),
-                    label: Text(code),
-                    onDeleted: () => _removeEnrollment(code),
-                  ),
+                  InputChip(key: Key('enrolled-$code'), label: Text(code), onDeleted: () => _removeEnrollment(code)),
               ],
             ),
             const SizedBox(height: 8),
@@ -327,7 +325,8 @@ class _EditUserDialogState extends ConsumerState<_EditUserDialog> {
               builder: (context, ref, _) {
                 final available = ref.watch(availableCoursesProvider);
                 final options = [
-                  for (final c in available.value ?? const []) if (!_courses.contains(c.code)) c.code,
+                  for (final c in available.value ?? const [])
+                    if (!_courses.contains(c.code)) c.code,
                 ];
                 return Row(
                   children: [
