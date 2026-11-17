@@ -76,7 +76,7 @@ source venv/bin/activate  # Windows: venv\Scripts\activate
 pip install -r requirements.txt
 pip install -e . --no-deps
 
-cp .env.example .env
+cp .env.example .env      # Windows PowerShell: Copy-Item .env.example .env
 # Edit .env with your credentials
 ```
 
@@ -123,7 +123,7 @@ Developed as part of a research programme on adaptive intelligent tutoring syste
 
 ## License
 
-Apache 2.0 License - see LICENSE file
+Apache 2.0 License - see [LICENSE.txt](LICENSE.txt)
 
 ## Citation
 
