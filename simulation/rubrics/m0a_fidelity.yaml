@@ -1,0 +1,19 @@
+id: M0a
+version: 2
+title: Student fidelity (is a free-text answer correct?)
+unit: one free-text student answer (tutor reply or quiz answer) with the question and a reference answer
+instructions: >
+  For each numbered student answer, decide whether it is correct with respect to the
+  question and the reference answer given. Judge the content, not the style: short,
+  informal or misspelled answers can be correct. An answer is "correct" if it states the
+  key idea of the reference (or an equally valid answer) and nothing that contradicts it;
+  otherwise "incorrect". If the student didn't attempt an answer (for example asked a
+  question instead), answer "not_an_answer". If the tutor's message asked no question with a
+  factual answer (for example it asked about the student's preferences, readiness or plans,
+  or offered a choice of activity), the reference does not apply: answer
+  "no_checkable_question" whatever the student wrote. The lesson passage the reference comes
+  from is given to help you judge answers that go beyond the reference.
+labels: [correct, incorrect, not_an_answer, no_checkable_question]
+examples:
+  - {text: "Reference: 'labelled examples are used to learn a mapping'. Answer: 'u train it on data that already has the answers'.", label: correct}
+  - {text: "Reference: 'a perceptron can only separate linearly separable classes'. Answer: 'it can learn any function if you train it long enough'.", label: incorrect}

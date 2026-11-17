@@ -1,0 +1,44 @@
+id: M18
+version: 1
+title: Quiz item checklist
+unit: one generated quiz question (with the week's content and the objective it is tagged with)
+instructions: >
+  Judge each numbered QUIZ ITEM on its own, using the objective it is tagged with and the
+  week's course content shown. Answer each item "yes" or "no". For true/false and
+  free-text items, answer "yes" to the multiple-choice-only checks.
+items:
+  answerable_from_content:
+    question: Can the item be answered from the week's course content?
+    yes_if: The content contains what is needed to answer it.
+    no_if: It needs knowledge the content doesn't give.
+    examples:
+      - {text: "Content explains the perceptron learning rule; item asks what the rule updates.", answer: "yes"}
+      - {text: "Item asks about transformers; the week's content never mentions them.", answer: "no"}
+  one_correct_option:
+    question: (Multiple choice) Is exactly one option correct?
+    yes_if: Exactly one option is correct (or the item isn't multiple choice).
+    no_if: No option is correct, or more than one is defensible.
+    examples:
+      - {text: "Options: A) 0.1 B) 1 C) 10 D) 100 with only B matching the content.", answer: "yes"}
+      - {text: "Both 'underfitting' and 'high bias' are listed and both fit the stem.", answer: "no"}
+  plausible_distractors:
+    question: (Multiple choice) Are the wrong options plausible to a student who hasn't mastered the objective?
+    yes_if: Each wrong option could tempt a learner with a partial or mistaken understanding (or the item isn't multiple choice).
+    no_if: At least one wrong option is absurd or obviously wrong to anyone.
+    examples:
+      - {text: "Distractors are other activation functions from the lesson.", answer: "yes"}
+      - {text: "One option is 'A banana'.", answer: "no"}
+  tests_its_objective:
+    question: Does the item test the objective it is tagged with?
+    yes_if: Answering it correctly requires the skill named by the objective.
+    no_if: It tests a different skill, or only trivia around the objective.
+    examples:
+      - {text: "Objective 'Apply the perceptron update rule'; item asks for the new weight after one update.", answer: "yes"}
+      - {text: "Same objective; item asks in which year the perceptron was invented.", answer: "no"}
+  stem_does_not_reveal:
+    question: Does the question avoid revealing its own answer?
+    yes_if: Nothing in the stem (or option wording) gives the answer away.
+    no_if: The answer can be found from wording cues alone (a repeated key word, a grammatical cue, the longest option).
+    examples:
+      - {text: "'Which learning uses labelled data?' with options that don't echo 'labelled'.", answer: "yes"}
+      - {text: "'Supervised learning uses ___ data' with the option 'supervised labels'.", answer: "no"}

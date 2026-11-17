@@ -1,0 +1,194 @@
+{
+  "Week01-LectureA-Introduction-To-AI.md": {
+    "repo": "https://github.com/microsoft/AI-For-Beginners",
+    "path": "lessons/1-Intro/README.md",
+    "commit": "392d0df1b2647cbee104942390551f1ed9e072c8",
+    "changes": "images, credits, video thumbnails and quiz links removed; relative links reduced to text; source line added"
+  },
+  "Week01-LectureB-History-Of-Machine-Learning.md": {
+    "repo": "https://github.com/microsoft/ML-For-Beginners",
+    "path": "1-Introduction/2-history-of-ML/README.md",
+    "commit": "de2d4e12236445198213a0711855e348e7253cd4",
+    "changes": "images, credits, video thumbnails and quiz links removed; relative links reduced to text; source line added"
+  },
+  "Week01-AssignmentA-AI-Game-Jam.md": {
+    "repo": "https://github.com/microsoft/AI-For-Beginners",
+    "path": "lessons/1-Intro/assignment.md",
+    "commit": "392d0df1b2647cbee104942390551f1ed9e072c8",
+    "changes": "images, credits, video thumbnails and quiz links removed; relative links reduced to text; source line added"
+  },
+  "Week01-AssignmentB-History-Timeline.md": {
+    "repo": "https://github.com/microsoft/ML-For-Beginners",
+    "path": "1-Introduction/2-history-of-ML/assignment.md",
+    "commit": "de2d4e12236445198213a0711855e348e7253cd4",
+    "changes": "images, credits, video thumbnails and quiz links removed; relative links reduced to text; source line added"
+  },
+  "Week02-LectureA-Knowledge-Representation-And-Expert-Systems.md": {
+    "repo": "https://github.com/microsoft/AI-For-Beginners",
+    "path": "lessons/2-Symbolic/README.md",
+    "commit": "392d0df1b2647cbee104942390551f1ed9e072c8",
+    "changes": "images, credits, video thumbnails and quiz links removed; relative links reduced to text; source line added"
+  },
+  "Week02-LabA-Animal-Expert-System.ipynb": {
+    "repo": "https://github.com/microsoft/AI-For-Beginners",
+    "path": "lessons/2-Symbolic/Animals.ipynb",
+    "commit": "392d0df1b2647cbee104942390551f1ed9e072c8",
+    "changes": "outputs, execution counts and embedded images removed"
+  },
+  "Week02-LabB-Family-Ontology.ipynb": {
+    "repo": "https://github.com/microsoft/AI-For-Beginners",
+    "path": "lessons/2-Symbolic/FamilyOntology.ipynb",
+    "commit": "392d0df1b2647cbee104942390551f1ed9e072c8",
+    "changes": "outputs, execution counts and embedded images removed"
+  },
+  "Week02-LabC-Concept-Graph.ipynb": {
+    "repo": "https://github.com/microsoft/AI-For-Beginners",
+    "path": "lessons/2-Symbolic/MSConceptGraph.ipynb",
+    "commit": "392d0df1b2647cbee104942390551f1ed9e072c8",
+    "changes": "outputs, execution counts and embedded images removed"
+  },
+  "Week02-AssignmentA-Build-An-Ontology.md": {
+    "repo": "https://github.com/microsoft/AI-For-Beginners",
+    "path": "lessons/2-Symbolic/assignment.md",
+    "commit": "392d0df1b2647cbee104942390551f1ed9e072c8",
+    "changes": "images, credits, video thumbnails and quiz links removed; relative links reduced to text; source line added"
+  },
+  "Week03-LectureA-Introduction-To-Machine-Learning.md": {
+    "repo": "https://github.com/microsoft/ML-For-Beginners",
+    "path": "1-Introduction/1-intro-to-ML/README.md",
+    "commit": "de2d4e12236445198213a0711855e348e7253cd4",
+    "changes": "images, credits, video thumbnails and quiz links removed; relative links reduced to text; source line added"
+  },
+  "Week03-LectureB-Techniques-Of-Machine-Learning.md": {
+    "repo": "https://github.com/microsoft/ML-For-Beginners",
+    "path": "1-Introduction/4-techniques-of-ML/README.md",
+    "commit": "de2d4e12236445198213a0711855e348e7253cd4",
+    "changes": "images, credits, video thumbnails and quiz links removed; relative links reduced to text; source line added"
+  },
+  "Week03-LectureC-Linear-Regression.md": {
+    "repo": "https://github.com/microsoft/ML-For-Beginners",
+    "path": "2-Regression/3-Linear/README.md",
+    "commit": "de2d4e12236445198213a0711855e348e7253cd4",
+    "changes": "images, credits, video thumbnails and quiz links removed; relative links reduced to text; source line added"
+  },
+  "Week03-AssignmentA-Get-Up-And-Running.md": {
+    "repo": "https://github.com/microsoft/ML-For-Beginners",
+    "path": "1-Introduction/1-intro-to-ML/assignment.md",
+    "commit": "de2d4e12236445198213a0711855e348e7253cd4",
+    "changes": "images, credits, video thumbnails and quiz links removed; relative links reduced to text; source line added"
+  },
+  "Week03-AssignmentB-Interview-A-Data-Scientist.md": {
+    "repo": "https://github.com/microsoft/ML-For-Beginners",
+    "path": "1-Introduction/4-techniques-of-ML/assignment.md",
+    "commit": "de2d4e12236445198213a0711855e348e7253cd4",
+    "changes": "images, credits, video thumbnails and quiz links removed; relative links reduced to text; source line added"
+  },
+  "Week03-AssignmentC-Regression-Model.md": {
+    "repo": "https://github.com/microsoft/ML-For-Beginners",
+    "path": "2-Regression/3-Linear/assignment.md",
+    "commit": "de2d4e12236445198213a0711855e348e7253cd4",
+    "changes": "images, credits, video thumbnails and quiz links removed; relative links reduced to text; source line added"
+  },
+  "Week04-LectureA-Introduction-To-Neural-Networks.md": {
+    "repo": "https://github.com/microsoft/AI-For-Beginners",
+    "path": "lessons/3-NeuralNetworks/README.md",
+    "commit": "392d0df1b2647cbee104942390551f1ed9e072c8",
+    "changes": "images, credits, video thumbnails and quiz links removed; relative links reduced to text; source line added"
+  },
+  "Week04-LectureB-Perceptron.md": {
+    "repo": "https://github.com/microsoft/AI-For-Beginners",
+    "path": "lessons/3-NeuralNetworks/03-Perceptron/README.md",
+    "commit": "392d0df1b2647cbee104942390551f1ed9e072c8",
+    "changes": "images, credits, video thumbnails and quiz links removed; relative links reduced to text; source line added"
+  },
+  "Week04-LabA-Perceptron.ipynb": {
+    "repo": "https://github.com/microsoft/AI-For-Beginners",
+    "path": "lessons/3-NeuralNetworks/03-Perceptron/Perceptron.ipynb",
+    "commit": "392d0df1b2647cbee104942390551f1ed9e072c8",
+    "changes": "outputs, execution counts and embedded images removed"
+  },
+  "Week04-LabB-Multi-Class-Perceptron.ipynb": {
+    "repo": "https://github.com/microsoft/AI-For-Beginners",
+    "path": "lessons/3-NeuralNetworks/03-Perceptron/lab/PerceptronMultiClass.ipynb",
+    "commit": "392d0df1b2647cbee104942390551f1ed9e072c8",
+    "changes": "outputs, execution counts and embedded images removed"
+  },
+  "Week04-AssignmentA-Multi-Class-Perceptron.md": {
+    "repo": "https://github.com/microsoft/AI-For-Beginners",
+    "path": "lessons/3-NeuralNetworks/03-Perceptron/lab/README.md",
+    "commit": "392d0df1b2647cbee104942390551f1ed9e072c8",
+    "changes": "images, credits, video thumbnails and quiz links removed; relative links reduced to text; source line added"
+  },
+  "Week05-LectureA-Multi-Layered-Perceptron.md": {
+    "repo": "https://github.com/microsoft/AI-For-Beginners",
+    "path": "lessons/3-NeuralNetworks/04-OwnFramework/README.md",
+    "commit": "392d0df1b2647cbee104942390551f1ed9e072c8",
+    "changes": "images, credits, video thumbnails and quiz links removed; relative links reduced to text; source line added"
+  },
+  "Week05-LabA-Own-Framework.ipynb": {
+    "repo": "https://github.com/microsoft/AI-For-Beginners",
+    "path": "lessons/3-NeuralNetworks/04-OwnFramework/OwnFramework.ipynb",
+    "commit": "392d0df1b2647cbee104942390551f1ed9e072c8",
+    "changes": "outputs, execution counts and embedded images removed"
+  },
+  "Week05-LabB-MNIST-With-Own-Framework.ipynb": {
+    "repo": "https://github.com/microsoft/AI-For-Beginners",
+    "path": "lessons/3-NeuralNetworks/04-OwnFramework/lab/MyFW_MNIST.ipynb",
+    "commit": "392d0df1b2647cbee104942390551f1ed9e072c8",
+    "changes": "outputs, execution counts and embedded images removed"
+  },
+  "Week05-AssignmentA-MNIST-With-Own-Framework.md": {
+    "repo": "https://github.com/microsoft/AI-For-Beginners",
+    "path": "lessons/3-NeuralNetworks/04-OwnFramework/lab/README.md",
+    "commit": "392d0df1b2647cbee104942390551f1ed9e072c8",
+    "changes": "images, credits, video thumbnails and quiz links removed; relative links reduced to text; source line added"
+  },
+  "Week05-LectureB-Frameworks-And-Overfitting.md": {
+    "repo": "https://github.com/microsoft/AI-For-Beginners",
+    "path": "lessons/3-NeuralNetworks/05-Frameworks/README.md",
+    "commit": "392d0df1b2647cbee104942390551f1ed9e072c8",
+    "changes": "images, credits, video thumbnails and quiz links removed; relative links reduced to text; source line added"
+  },
+  "Week05-LabC-Intro-To-PyTorch.ipynb": {
+    "repo": "https://github.com/microsoft/AI-For-Beginners",
+    "path": "lessons/3-NeuralNetworks/05-Frameworks/IntroPyTorch.ipynb",
+    "commit": "392d0df1b2647cbee104942390551f1ed9e072c8",
+    "changes": "outputs, execution counts and embedded images removed"
+  },
+  "Week05-LabD-Intro-To-Keras-And-TensorFlow.ipynb": {
+    "repo": "https://github.com/microsoft/AI-For-Beginners",
+    "path": "lessons/3-NeuralNetworks/05-Frameworks/IntroKerasTF.ipynb",
+    "commit": "392d0df1b2647cbee104942390551f1ed9e072c8",
+    "changes": "outputs, execution counts and embedded images removed"
+  },
+  "Week05-LabE-Frameworks-Classification.ipynb": {
+    "repo": "https://github.com/microsoft/AI-For-Beginners",
+    "path": "lessons/3-NeuralNetworks/05-Frameworks/lab/LabFrameworks.ipynb",
+    "commit": "392d0df1b2647cbee104942390551f1ed9e072c8",
+    "changes": "outputs, execution counts and embedded images removed"
+  },
+  "Week05-AssignmentB-Classification-With-Frameworks.md": {
+    "repo": "https://github.com/microsoft/AI-For-Beginners",
+    "path": "lessons/3-NeuralNetworks/05-Frameworks/lab/README.md",
+    "commit": "392d0df1b2647cbee104942390551f1ed9e072c8",
+    "changes": "images, credits, video thumbnails and quiz links removed; relative links reduced to text; source line added"
+  },
+  "Week06-LectureA-Responsible-AI.md": {
+    "repo": "https://github.com/microsoft/AI-For-Beginners",
+    "path": "lessons/7-Ethics/README.md",
+    "commit": "392d0df1b2647cbee104942390551f1ed9e072c8",
+    "changes": "images, credits, video thumbnails and quiz links removed; relative links reduced to text; source line added"
+  },
+  "Week06-LectureB-Fairness-In-Machine-Learning.md": {
+    "repo": "https://github.com/microsoft/ML-For-Beginners",
+    "path": "1-Introduction/3-fairness/README.md",
+    "commit": "de2d4e12236445198213a0711855e348e7253cd4",
+    "changes": "images, credits, video thumbnails and quiz links removed; relative links reduced to text; source line added"
+  },
+  "Week06-AssignmentA-Explore-The-RAI-Toolbox.md": {
+    "repo": "https://github.com/microsoft/ML-For-Beginners",
+    "path": "1-Introduction/3-fairness/assignment.md",
+    "commit": "de2d4e12236445198213a0711855e348e7253cd4",
+    "changes": "images, credits, video thumbnails and quiz links removed; relative links reduced to text; source line added"
+  }
+}

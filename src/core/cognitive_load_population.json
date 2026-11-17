@@ -1,0 +1,32 @@
+{
+  "version": "simulated-2026-09-26",
+  "coef": {
+    "b0": 0.1437495112577837,
+    "demand": 0.2616768984932993,
+    "errors": 0.08699127495111282,
+    "slow": 0.05544876128824524,
+    "help": 0.19024375457676823,
+    "typing": 0.032635552697133835,
+    "fatigue": 0.2437480164483585,
+    "demand_fatigue": 0.07457840095082441,
+    "task": 0.07463528478634082
+  },
+  "norms": {
+    "think_mu": 7.546183363435681,
+    "think_sd": 0.3696521400330997,
+    "pace_mu": 0.9767422061436913,
+    "pace_sd": 0.1507323651952635
+  },
+  "kappa": 8.0,
+  "rating_kappa": 6.0,
+  "rating_scale": 10.1797106976088,
+  "fit": {
+    "seed": 20260927,
+    "learners": 180,
+    "turns_each": 60,
+    "ratings_used": 3240,
+    "r_with_self_rating": 0.6356125471025268,
+    "r_with_true_load": 0.7353480075059432,
+    "note": "Fitted on simulated students (simulation/cl_calibration.py); replace with classroom data."
+  }
+}

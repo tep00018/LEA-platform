@@ -1,0 +1,494 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>LEA Chalkboard Screens</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Lexend:wght@300..600&display=swap">
+<style>
+:root{
+  --c-bg:#F3F2EF; --c-surface:#FFFFFF; --c-ink:#1F1D1B; --c-muted:#6A655F; --c-line:#DEDAD4;
+  --c-focus:#2F5FD0; --c-sel:#1F1D1B; --c-onsel:#FFFFFF;
+  --display:"Bricolage Grotesque", "Avenir Next", "Segoe UI", system-ui, sans-serif;
+  --body:"Lexend", "Segoe UI", system-ui, -apple-system, sans-serif;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --c-bg:#151412; --c-surface:#1E1C1A; --c-ink:#EEEAE5; --c-muted:#A39C94; --c-line:#34302C;
+    --c-focus:#8FB0FF; --c-sel:#EEEAE5; --c-onsel:#151412; color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --c-bg:#151412; --c-surface:#1E1C1A; --c-ink:#EEEAE5; --c-muted:#A39C94; --c-line:#34302C;
+  --c-focus:#8FB0FF; --c-sel:#EEEAE5; --c-onsel:#151412; color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{background:var(--c-bg); color:var(--c-ink); font-family:var(--body); font-size:15px; line-height:1.5;
+  padding-inline:clamp(16px,4vw,48px); padding-block:28px 56px}
+.page{max-width:1240px; margin:0 auto; display:grid; gap:22px}
+h1,h2,h3{font-family:var(--display); text-wrap:balance; margin:0}
+.intro{display:grid; gap:6px; max-width:70ch}
+.eyebrow{font-size:12px; letter-spacing:.08em; text-transform:uppercase; color:var(--c-muted)}
+.intro h1{font-size:clamp(26px,3.4vw,38px); font-weight:750; letter-spacing:-.01em}
+.intro p{margin:0; color:var(--c-muted)}
+.controls{display:flex; flex-wrap:wrap; gap:12px 22px; align-items:center}
+.ctl{display:flex; gap:10px; align-items:center; flex-wrap:wrap}
+.ctl > span{font-size:12px; letter-spacing:.08em; text-transform:uppercase; color:var(--c-muted)}
+.seg{display:inline-flex; flex-wrap:wrap; border:1.5px solid var(--c-line); border-radius:18px; padding:3px; background:var(--c-surface); gap:2px}
+.seg button{appearance:none; border:0; background:transparent; font:inherit; font-size:13.5px; color:var(--c-ink);
+  padding:6px 13px; border-radius:999px; cursor:pointer}
+.seg button[aria-pressed="true"]{background:var(--c-sel); color:var(--c-onsel)}
+button:focus-visible{outline:2px solid var(--c-focus); outline-offset:2px}
+.caption{font-size:13.5px; color:var(--c-muted); max-width:80ch; margin:-8px 0 0}
+.caption b{color:var(--c-ink); font-weight:500}
+
+.stage{display:flex; justify-content:center}
+.frame{width:100%; border-radius:14px; overflow:hidden; border:1px solid var(--c-line);
+  box-shadow:0 18px 40px -24px rgba(0,0,0,.35); background:var(--c-surface)}
+.frame .bar{display:flex; align-items:center; gap:8px; padding:9px 14px; border-bottom:1px solid var(--c-line); font-size:12px; color:var(--c-muted)}
+.frame .bar i{width:10px; height:10px; border-radius:50%; background:var(--c-line); display:inline-block}
+.frame .bar .url{margin-left:10px; padding:3px 12px; border-radius:6px; background:var(--c-bg)}
+.stage.phone .frame{width:390px; max-width:100%; border-radius:34px; border-width:8px; border-color:var(--c-ink)}
+.stage.phone .frame .bar{display:none}
+.appwrap{container-type:inline-size; container-name:app; height:680px}
+.stage.phone .appwrap{height:780px}
+
+/* ============ LEA app (Chalkboard tokens applied by script) ============ */
+.app{height:100%; background:var(--bg); color:var(--ink); font-family:var(--body); font-size:14.5px; overflow:hidden}
+.app h2,.app h3{font-family:var(--display); color:var(--ink)}
+.shell{height:100%; display:grid; grid-template-columns:260px 1fr}
+.rail{background:var(--surface); border-right:1px solid var(--line); padding:18px 16px; display:flex; flex-direction:column; gap:16px; min-height:0}
+.brand{display:flex; gap:10px; align-items:center}
+.brand img{width:44px; height:44px; border-radius:50%; border:2px solid var(--accent)}
+.brand b{font-family:var(--display); font-size:22px; font-weight:800; display:block; line-height:1}
+.brand span{font-size:11.5px; color:var(--muted)}
+.course{border:1px solid var(--line); border-radius:10px; padding:9px 11px; display:flex; justify-content:space-between; align-items:center; gap:8px; background:var(--bg)}
+.course small,.label{display:block; font-size:11px; letter-spacing:.08em; text-transform:uppercase; color:var(--muted)}
+.course strong{font-weight:500; font-size:13.5px}
+.label{margin-bottom:-8px}
+.weeks{display:grid; gap:4px; margin:0; padding:0; list-style:none}
+.wk{border-radius:10px; padding:9px 11px; display:grid; gap:6px}
+.wk .t{display:flex; justify-content:space-between; gap:8px; font-size:13.5px}
+.wk .t em{font-style:normal; color:var(--muted); font-size:12px; font-variant-numeric:tabular-nums; white-space:nowrap}
+.wk.on{background:var(--surface-2)} .wk.on .t span{font-weight:600}
+.wk.locked{color:var(--muted)}
+.wk .note{font-size:11.5px; color:var(--muted); line-height:1.35}
+.meter{height:6px; border-radius:99px; background:var(--line); overflow:hidden}
+.meter i{display:block; height:100%; background:var(--accent); border-radius:99px}
+.navlink{display:flex; justify-content:space-between; align-items:center; padding:9px 11px; border-radius:10px; font-size:13.5px; color:var(--ink); text-decoration:none; border:1px solid var(--line)}
+.navlink.on{background:var(--surface-2); border-color:transparent; font-weight:600}
+.rail .spacer{flex:1}
+.who{display:flex; gap:10px; align-items:center; padding-top:12px; border-top:1px solid var(--line); font-size:13px}
+.who .av{width:32px; height:32px; border-radius:50%; background:var(--primary); color:var(--on-primary); display:grid; place-items:center; font-weight:600}
+.who small{display:block; color:var(--muted); font-size:11.5px}
+
+.work{display:flex; flex-direction:column; min-height:0; min-width:0}
+.topbar{display:none}
+.modes{display:flex; gap:4px; padding:14px 22px 0; border-bottom:1px solid var(--line); background:var(--bg)}
+.modes a{padding:8px 14px; font-size:14px; color:var(--muted); text-decoration:none; border-bottom:2.5px solid transparent; margin-bottom:-1px}
+.modes a.on{color:var(--ink); font-weight:600; border-bottom-color:var(--primary)}
+.head{padding:14px 22px; border-bottom:1px solid var(--line); display:grid; gap:10px; background:var(--bg)}
+.kicker{font-size:11.5px; letter-spacing:.07em; text-transform:uppercase; color:var(--muted); display:flex; flex-wrap:wrap; gap:4px 12px}
+.head h2{font-size:24px; font-weight:750; letter-spacing:-.01em}
+.row{display:flex; gap:10px; align-items:center; flex-wrap:wrap}
+.steps{display:flex; gap:10px; align-items:center; flex-wrap:wrap}
+.steps .lo{display:flex; gap:4px}
+.steps .lo i{width:22px; height:7px; border-radius:99px; background:var(--line)}
+.steps .lo i.done{background:var(--primary)} .steps .lo i.now{background:var(--accent)}
+.steps .lo i.miss{background:var(--danger)}
+.pill{display:inline-flex; align-items:center; gap:6px; font-size:12px; padding:3px 10px; border-radius:99px; background:var(--surface-2); color:var(--ink)}
+.pill b{width:7px; height:7px; border-radius:50%; background:var(--accent); display:inline-block}
+.scroll{flex:1; overflow:auto; min-height:0}
+.thread{padding:18px 22px; display:flex; flex-direction:column; gap:14px}
+.msg{display:flex; gap:10px; max-width:74ch}
+.msg img{width:32px; height:32px; border-radius:50%; flex:none}
+.msg .b{background:var(--surface); border:1px solid var(--line); padding:10px 14px; border-radius:4px 14px 14px 14px; line-height:1.55}
+.msg .b p{margin:0 0 6px} .msg .b p:last-child{margin:0}
+.msg .b ol,.msg .b ul{margin:4px 0 6px; padding-left:20px}
+.msg.me{align-self:flex-end; flex-direction:row-reverse}
+.msg.me .b{background:var(--primary); color:var(--on-primary); border-color:transparent; border-radius:14px 4px 14px 14px}
+.meta{font-size:11.5px; color:var(--muted); margin-top:5px; display:flex; gap:8px; align-items:center; flex-wrap:wrap}
+.msg.me .meta{justify-content:flex-end}
+.tag{font-size:11px; padding:1px 8px; border-radius:99px; border:1px solid currentColor}
+.tag.ok{color:var(--success)} .tag.muted{color:var(--muted)}
+.cursor{display:inline-block; width:8px; height:15px; background:var(--accent); vertical-align:-2px; margin-left:2px; border-radius:2px; animation:blink 1s steps(2) infinite}
+@keyframes blink{50%{opacity:0}}
+.composer{padding:12px 22px 16px; border-top:1px solid var(--line); background:var(--bg)}
+.box{display:flex; gap:8px; align-items:center; background:var(--surface); border:1.5px solid var(--line); border-radius:12px; padding:6px 6px 6px 14px}
+.box span{flex:1; color:var(--muted); font-size:14px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis}
+.btn{background:var(--primary); color:var(--on-primary); border:0; border-radius:9px; padding:10px 18px; font:inherit; font-weight:600; font-size:14px; text-align:center}
+.btn.ghost{background:transparent; color:var(--ink); border:1.5px solid var(--line)}
+.btn.small{padding:8px 14px; font-size:13.5px}
+.hint{font-size:11.5px; color:var(--muted); margin-top:6px}
+.suggest{display:flex; flex-wrap:wrap; gap:8px}
+.suggest span{font-size:13px; padding:6px 12px; border-radius:99px; border:1.5px solid var(--line); background:var(--surface)}
+.bottomnav{display:none}
+
+/* quiz */
+.quiz{padding:20px 22px; display:grid; gap:16px; max-width:760px}
+.qtext{font-family:var(--display); font-size:21px; font-weight:650; line-height:1.3; margin:0}
+.opts{display:grid; gap:8px}
+.opt{display:flex; gap:12px; align-items:center; padding:12px 14px; border:1.5px solid var(--line); border-radius:12px; background:var(--surface)}
+.opt .k{width:28px; height:28px; border-radius:8px; display:grid; place-items:center; font-weight:600; font-size:13px; background:var(--surface-2); flex:none}
+.opt.sel{border-color:var(--primary); box-shadow:0 0 0 1px var(--primary) inset}
+.opt.sel .k{background:var(--primary); color:var(--on-primary)}
+.opt.wrong{border-color:var(--danger); background:var(--danger-soft)}
+.opt.wrong .k{background:var(--danger); color:var(--surface)}
+.opt.right{border-color:var(--success); background:var(--success-soft)}
+.opt.right .k{background:var(--success); color:var(--surface)}
+.opt .why{margin-left:auto; font-size:12px; font-weight:600; white-space:nowrap}
+.opt.wrong .why{color:var(--danger)} .opt.right .why{color:var(--success)}
+.actions{display:flex; gap:10px; align-items:center; flex-wrap:wrap}
+.actions .spacer{flex:1}
+.link{font-size:13.5px; color:var(--muted); text-decoration:underline; text-underline-offset:3px}
+.feedback{border-radius:12px; padding:14px 16px; display:grid; gap:4px; border:1.5px solid}
+.feedback.bad{background:var(--danger-soft); border-color:var(--danger)}
+.feedback.bad strong{color:var(--danger)}
+.feedback strong{font-family:var(--display); font-size:17px}
+.feedback p{margin:0; line-height:1.55}
+.qbar{display:grid; gap:6px}
+.qbar .row{justify-content:space-between; font-size:13px; color:var(--muted); font-variant-numeric:tabular-nums}
+.qbar .row b{color:var(--ink); font-weight:600}
+
+/* results */
+.results{padding:20px 22px; display:grid; gap:18px; max-width:820px}
+.banner{display:flex; gap:12px; align-items:center; padding:12px 16px; border-radius:12px; background:var(--accent-soft); color:var(--ink); font-size:14px}
+.banner b{font-family:var(--display); font-size:16px}
+.score{display:flex; gap:22px; align-items:center; flex-wrap:wrap}
+.big{font-family:var(--display); font-weight:800; font-size:56px; line-height:1; letter-spacing:-.02em; font-variant-numeric:tabular-nums}
+.big small{font-size:22px; color:var(--muted); font-weight:600}
+.score p{margin:0; color:var(--muted); max-width:44ch}
+.list{border:1px solid var(--line); border-radius:12px; background:var(--surface); overflow:hidden}
+.li{display:grid; grid-template-columns:28px 1fr auto; gap:10px; align-items:center; padding:9px 14px; border-top:1px solid var(--line); font-size:13.5px}
+.li:first-child{border-top:0}
+.li .n{color:var(--muted); font-variant-numeric:tabular-nums}
+.li small{display:block; color:var(--muted); font-size:12px}
+.mark{font-size:12px; font-weight:600; padding:2px 9px; border-radius:99px; white-space:nowrap}
+.mark.ok{background:var(--success-soft); color:var(--success)}
+.mark.no{background:var(--danger-soft); color:var(--danger)}
+.mark.na{background:var(--surface-2); color:var(--muted)}
+
+/* progress */
+.progress{padding:20px 22px; display:grid; gap:18px}
+.weekcards{display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:10px}
+.wc{border:1px solid var(--line); border-radius:12px; padding:12px 14px; background:var(--surface); display:grid; gap:8px}
+.wc.cur{border-color:var(--primary); box-shadow:0 0 0 1px var(--primary) inset}
+.wc .t{display:flex; justify-content:space-between; gap:8px; font-size:13px; color:var(--muted)}
+.wc strong{font-size:15px; font-weight:600}
+.wc .pct{font-family:var(--display); font-weight:750; font-size:26px; font-variant-numeric:tabular-nums}
+.lo-block{display:grid; gap:8px}
+.lo-block h3{font-size:16px; font-weight:700}
+.gos{display:grid; gap:2px; border:1px solid var(--line); border-radius:12px; background:var(--surface); padding:6px 14px}
+.go{display:grid; grid-template-columns:minmax(120px,1fr) minmax(120px,1.4fr) 58px; gap:12px; align-items:center; padding:7px 0; font-size:13.5px; border-top:1px solid var(--line)}
+.go:first-child{border-top:0}
+.gauge{position:relative; height:10px; border-radius:99px; background:var(--surface-2)}
+.gauge i{position:absolute; left:0; top:0; bottom:0; border-radius:99px; background:var(--primary)}
+.gauge i.low{background:var(--accent)}
+.gauge u{position:absolute; top:-4px; bottom:-4px; width:2px; background:var(--ink); border-radius:2px}
+.go .v{text-align:right; font-variant-numeric:tabular-nums; color:var(--muted); font-size:12.5px}
+.go .v b{color:var(--ink); font-weight:600}
+.legend{font-size:12px; color:var(--muted); display:flex; gap:14px; flex-wrap:wrap; align-items:center}
+.legend span{display:inline-flex; gap:6px; align-items:center}
+.legend i{display:inline-block; width:14px; height:8px; border-radius:99px}
+.legend u{display:inline-block; width:2px; height:12px; background:var(--ink)}
+
+/* login */
+.login{height:100%; display:grid; grid-template-columns:1.05fr 1fr}
+.board{background:var(--board); color:var(--on-board); padding:40px 44px; display:flex; flex-direction:column; justify-content:space-between; gap:24px; position:relative; overflow:hidden}
+.board::before{content:""; position:absolute; inset:0; pointer-events:none; opacity:.5;
+  background:radial-gradient(1200px 400px at 20% 110%, rgba(255,255,255,.07), transparent 60%),
+             radial-gradient(600px 300px at 90% -10%, rgba(255,255,255,.06), transparent 60%)}
+.board .top{display:flex; gap:12px; align-items:center; position:relative}
+.board .top img{width:56px; height:56px; border-radius:50%; border:2px solid var(--chalk)}
+.board .top b{font-family:var(--display); font-size:26px; font-weight:800; display:block; line-height:1}
+.board .top span{font-size:12.5px; opacity:.8}
+.board h2{color:var(--on-board); font-size:clamp(30px,4.2cqi,46px); font-weight:800; line-height:1.18; letter-spacing:-.015em; position:relative}
+.board h2 em{font-style:normal; position:relative; white-space:nowrap}
+.board h2 svg{position:absolute; left:-2%; bottom:-3px; width:104%; height:12px}
+.board .foot{font-size:12.5px; opacity:.8; position:relative; max-width:40ch}
+.formside{padding:40px 44px; display:flex; flex-direction:column; justify-content:center; gap:18px; background:var(--bg)}
+.formside h3{font-size:24px; font-weight:750}
+.tabs{display:flex; gap:4px; border-bottom:1px solid var(--line)}
+.tabs span{padding:8px 12px; font-size:14px; color:var(--muted); border-bottom:2.5px solid transparent; margin-bottom:-1px}
+.tabs span.on{color:var(--ink); font-weight:600; border-bottom-color:var(--primary)}
+.field{display:grid; gap:6px}
+.field label{font-size:13px; font-weight:500}
+.input{border:1.5px solid var(--line); border-radius:10px; padding:10px 12px; background:var(--surface); font-size:14px; color:var(--ink)}
+.input.focus{border-color:var(--primary); box-shadow:0 0 0 3px color-mix(in srgb, var(--primary) 22%, transparent)}
+.input.pw{letter-spacing:.2em}
+.formside .btn{width:100%}
+.small-note{font-size:12.5px; color:var(--muted)}
+
+@container app (max-width: 720px){
+  .shell{grid-template-columns:1fr}
+  .rail{display:none}
+  .topbar{display:flex; align-items:center; gap:10px; padding:12px 16px; background:var(--surface); border-bottom:1px solid var(--line)}
+  .topbar img{width:34px; height:34px; border-radius:50%; border:2px solid var(--accent)}
+  .topbar div{min-width:0; flex:1}
+  .topbar strong{display:block; font-size:14px; font-weight:600}
+  .topbar small{display:block; color:var(--muted); font-size:12px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis}
+  .topbar .ring{font-size:12px; font-weight:600; background:var(--surface-2); padding:4px 9px; border-radius:99px; font-variant-numeric:tabular-nums}
+  .modes{display:none}
+  .head,.thread,.quiz,.results,.progress{padding-inline:16px}
+  .head h2{font-size:20px}
+  .qtext{font-size:18px}
+  .big{font-size:46px}
+  .composer{padding:10px 12px} .composer .hint{display:none}
+  .go{grid-template-columns:1fr 70px; row-gap:4px}
+  .go .gauge{grid-column:1 / -1; grid-row:2}
+  .bottomnav{display:flex; justify-content:space-around; border-top:1px solid var(--line); background:var(--surface); padding:8px 4px 12px}
+  .bottomnav a{display:grid; justify-items:center; gap:3px; font-size:11.5px; color:var(--muted); text-decoration:none}
+  .bottomnav a svg{width:22px; height:22px}
+  .bottomnav .ic{padding:3px 14px; border-radius:99px; display:grid}
+  .bottomnav a.on{color:var(--ink); font-weight:600}
+  .bottomnav a.on .ic{background:var(--surface-2); color:var(--primary)}
+  .login{grid-template-columns:1fr; grid-template-rows:auto 1fr}
+  .board{padding:24px 20px}
+  .board h2{font-size:30px}
+  .board .foot{display:none}
+  .formside{padding:22px 20px; justify-content:flex-start}
+}
+
+/* notes under the mock */
+.notes{display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:18px; align-items:start}
+.notes h3{font-size:17px; font-weight:700; margin-bottom:6px}
+.notes ul{margin:0; padding-left:18px; display:grid; gap:4px; font-size:13.5px; color:var(--c-muted)}
+.notes li b{color:var(--c-ink); font-weight:500}
+.tokens{display:grid; grid-template-columns:repeat(auto-fill,minmax(150px,1fr)); gap:8px}
+.tok{display:flex; gap:8px; align-items:center; font-size:12.5px}
+.tok i{width:24px; height:24px; border-radius:6px; border:1px solid var(--c-line); flex:none}
+.tok code{font-family:ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-size:11.5px; color:var(--c-muted); display:block}
+@media (prefers-reduced-motion: reduce){.cursor{animation:none}}
+</style></head><body>
+
+<div class="page">
+  <header class="intro">
+    <span class="eyebrow">LEA · Flutter app · Phase 4 · Chalkboard</span>
+    <h1>LEA's screens in Chalkboard</h1>
+    <p>Every screen the first Flutter release needs, drawn with the Chalkboard palette on DEMO101 Week 1. Switch screens, light and dark, and desktop and phone. The notes under the mockup list what each screen needs from the API.</p>
+  </header>
+
+  <section class="controls" aria-label="Mockup controls">
+    <div class="ctl"><span>Screen</span><div class="seg" id="screens" role="group" aria-label="Screen"></div></div>
+    <div class="ctl"><span>Theme</span><div class="seg" role="group" aria-label="Theme">
+      <button id="mode-light" data-mode="light" type="button">Light</button><button id="mode-dark" data-mode="dark" type="button">Dark</button></div></div>
+    <div class="ctl"><span>Frame</span><div class="seg" role="group" aria-label="Frame">
+      <button id="frame-desktop" data-frame="desktop" type="button">Desktop</button><button id="frame-phone" data-frame="phone" type="button">Phone</button></div></div>
+  </section>
+  <p class="caption" id="caption"></p>
+
+  <section class="stage" id="stage" aria-label="LEA screen mockup">
+    <div class="frame">
+      <div class="bar"><i></i><i></i><i></i><span class="url" id="url">localhost:8080</span></div>
+      <div class="appwrap"><div class="app" id="app"></div></div>
+    </div>
+  </section>
+
+  <section class="notes" aria-label="Screen notes">
+    <div><h3 id="notes-title">What this screen uses</h3><ul id="notes"></ul></div>
+    <div><h3 id="tok-title">Chalkboard tokens</h3><div class="tokens" id="tokens"></div></div>
+  </section>
+</div>
+
+<script>
+const AV = "data:image/jpeg;base64,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";
+const T = {
+  light:{bg:"#F3F5F1",surface:"#FFFFFF","surface-2":"#E2E9E0",ink:"#1B2621",muted:"#56655D",line:"#D2DBD0",
+    primary:"#2E5A47","on-primary":"#FFFFFF",accent:"#A98712","accent-soft":"#F5ECC3",
+    success:"#256B42","success-soft":"#DDEFE2",warning:"#9A5F06",danger:"#B03A2E","danger-soft":"#F7E0DC",
+    board:"#2E5A47","on-board":"#F3F5F1",chalk:"#F0D35E"},
+  dark:{bg:"#111814",surface:"#18221D","surface-2":"#223129",ink:"#E7EFE9",muted:"#9DB0A5",line:"#2A3B33",
+    primary:"#86C9A8","on-primary":"#0F1F17",accent:"#F0D35E","accent-soft":"#3A3418",
+    success:"#74CD99","success-soft":"#1C3A28",warning:"#F0B75A",danger:"#F08D84","danger-soft":"#3F2220",
+    board:"#1C3A2E","on-board":"#E7EFE9",chalk:"#F0D35E"},
+};
+
+const icon = {
+  chat:'<path d="M4 5h16v11H9l-5 4z"/>',
+  tutor:'<path d="M3 9l9-5 9 5-9 5z"/><path d="M7 11v5c3 2 7 2 10 0v-5"/>',
+  quiz:'<path d="M12 3l2.6 5.5 6 .8-4.4 4.2 1.1 6L12 16.6 6.7 19.5l1.1-6L3.4 9.3l6-.8z"/>',
+  progress:'<path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/>',
+};
+const svg = k => `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">${icon[k]}</svg>`;
+
+function shell(active, title, body){
+  const modes = ["chat","tutor","quiz"].map(m=>`<a href="#${m}" class="${m===active?"on":""}">${m[0].toUpperCase()+m.slice(1)}</a>`).join("");
+  const bottom = ["chat","tutor","quiz","progress"].map(m=>`<a href="#${m}" class="${m===active?"on":""}"><span class="ic">${svg(m)}</span>${m[0].toUpperCase()+m.slice(1)}</a>`).join("");
+  return `<div class="shell">
+    <aside class="rail">
+      <div class="brand"><img src="${AV}" alt="LEA"><div><b>LEA</b><span>Slide In. Study Up. Show Off.</span></div></div>
+      <div class="course"><div><small>Course</small><strong>DEMO101 · Introduction to AI/ML</strong></div><span>▾</span></div>
+      <div class="label">Weeks</div>
+      <ul class="weeks">
+        <li class="wk on"><div class="t"><span>Week 1 · Introduction to AI</span><em>${active==="results"?"9 / 11":"2 / 11"}</em></div><div class="meter"><i style="width:${active==="results"?82:18}%"></i></div></li>
+        <li class="wk ${active==="results"?"":"locked"}"><div class="t"><span>Week 2 · Machine Learning Basics</span></div>${active==="results"?"":'<div class="note">Opens when 75% of Week 1 is mastered</div>'}</li>
+        <li class="wk locked"><div class="t"><span>Week 3 · Neural Networks</span></div></li>
+      </ul>
+      <a href="#progress" class="navlink ${active==="progress"?"on":""}">Your progress <span>→</span></a>
+      <div class="spacer"></div>
+      <div class="who"><span class="av">A</span><div>Alex M.<small>Log out</small></div></div>
+    </aside>
+    <main class="work">
+      <div class="topbar"><img src="${AV}" alt="LEA"><div><strong>${title}</strong><small>DEMO101 · Week 1 · Introduction to AI</small></div><span class="ring">${active==="results"?"9 / 11":"2 / 11"}</span></div>
+      <nav class="modes" aria-label="Modes">${modes}</nav>
+      ${body}
+      <nav class="bottomnav" aria-label="Modes">${bottom}</nav>
+    </main></div>`;
+}
+
+const steps = (done, now, miss=[]) => {
+  const groups=[4,3,4]; let n=0;
+  return `<span class="steps">${groups.map(g=>`<span class="lo">${Array.from({length:g},()=>{const i=n++;return `<i class="${miss.includes(i)?"miss":i<done?"done":i===now?"now":""}"></i>`}).join("")}</span>`).join("")}</span>`;
+};
+
+const S = {
+  login:{label:"Login", url:"localhost:8080/login",
+    caption:"<b>Login.</b> The green panel is the one place the palette is used large. Register sits on the second tab, with the same fields as Streamlit plus a course picker.",
+    notes:["<b>POST /auth/login</b> returns the token; the app keeps it in secure storage","<b>POST /auth/register</b>, then <b>GET /courses</b> for the course picker","Errors show under the form, e.g. “Too many login attempts. Try again in 12 minutes.” (429)"],
+    html:()=>`<div class="login">
+      <section class="board">
+        <div class="top"><img src="${AV}" alt="LEA"><div><b>LEA</b><span>Learning Engagement Assistant</span></div></div>
+        <h2>Slide In.<br><em>Study Up.<svg viewBox="0 0 200 14" preserveAspectRatio="none" aria-hidden="true"><path d="M2 9 C 40 3, 80 12, 120 6 S 180 4, 198 8" fill="none" stroke="var(--chalk)" stroke-width="3.5" stroke-linecap="round"/></svg></em><br>Show Off.</h2>
+        <p class="foot">An AI tutor that adapts to how you're doing: chat about your course, work through each week with a tutor, and check yourself with quizzes.</p>
+      </section>
+      <section class="formside">
+        <h3>Welcome back</h3>
+        <div class="tabs"><span class="on">Log in</span><span>Create account</span></div>
+        <div class="field"><label for="u">Username</label><div class="input focus" id="u">alex.m</div></div>
+        <div class="field"><label for="p">Password</label><div class="input pw" id="p">••••••••••</div></div>
+        <span class="btn">Log in</span>
+        <span class="small-note">Forgot your password? Ask your course tutor to reset it.</span>
+      </section></div>`},
+
+  chat:{label:"Chat", url:"localhost:8080/chat",
+    caption:"<b>Chat.</b> The follow-up “Can you give an example?” is answered in context, because chat now remembers the sitting. The reply streams in word by word.",
+    notes:["<b>GET /chat/{code}/messages</b> for history","<b>POST /chat/{code}/messages/stream</b> streams the reply; the app replaces the streamed text with the final message","Suggestions come from the week's learning objectives in <b>GET /courses/{code}/outline</b>"],
+    html:()=>shell("chat","Chat",`
+      <div class="scroll"><div class="thread">
+        <div class="msg me"><div><div class="b">What is supervised learning?</div><div class="meta">2:02 pm</div></div></div>
+        <div class="msg"><img src="${AV}" alt=""><div><div class="b"><p>Supervised learning is when a model learns from <strong>labelled examples</strong>: each input comes with the right answer, and the model learns to predict that answer for new inputs.</p><p>Your Week 1 notes contrast it with unsupervised learning, where there are no labels and the model looks for structure on its own.</p></div></div></div>
+        <div class="msg me"><div><div class="b">Can you give an example?</div><div class="meta">2:03 pm</div></div></div>
+        <div class="msg"><img src="${AV}" alt=""><div><div class="b"><p>A spam filter is a classic one. It's trained on emails that people have already marked as <em>spam</em> or <em>not spam</em>, and it learns which words and patterns go with each label<span class="cursor" aria-hidden="true"></span></p></div></div></div>
+      </div></div>
+      <div class="composer">
+        <div class="suggest" style="margin-bottom:10px"><span>What is AI?</span><span>AI vs machine learning</span><span>Where is AI used today?</span></div>
+        <div class="box"><span>Ask anything about DEMO101…</span><span class="btn small">Send</span></div>
+        <div class="hint">Chat doesn't count towards mastery. Use Tutor or Quiz for that.</div>
+      </div>`)},
+
+  tutor:{label:"Tutor", url:"localhost:8080/tutor",
+    caption:"<b>Tutor.</b> The screen from the palette picker, in Chalkboard. The yellow step is the objective you're on; green steps are mastered.",
+    notes:["<b>GET /tutor</b> resumes; <b>POST /tutor</b> starts on the selected week","<b>POST /tutor/replies/stream</b> streams LEA's answer; “Counted · correct” comes from the done event","<b>POST /tutor/end</b> returns the summary shown when the session ends"],
+    html:()=>shell("tutor","Tutor",`
+      <div class="head"><div class="kicker"><span>Objective 3 of 11</span><span>AI Basics</span></div><h2>AI Applications</h2>
+        <div class="row">${steps(2,2)}<span class="pill"><b></b>Step-by-step · medium support</span></div></div>
+      <div class="scroll"><div class="thread">
+        <div class="msg"><img src="${AV}" alt=""><div><div class="b"><p>Nice work on types of AI. Next up is <strong>AI applications</strong>.</p><p>Where have you seen AI used in everyday life, and what job is it doing there?</p></div></div></div>
+        <div class="msg me"><div><div class="b">My phone's photo app groups pictures by face, and Netflix suggests shows I might like.</div><div class="meta"><span class="tag ok">Counted · correct</span><span>2:14 pm</span></div></div></div>
+        <div class="msg"><img src="${AV}" alt=""><div><div class="b"><p>Both are real AI applications. Let's take face grouping one step at a time:</p><ol><li>The app finds the faces in each photo.</li><li>It turns each face into a set of numbers.</li><li>Faces with similar numbers go in the same group.</li></ol><p>What do you think the app had to learn before step 2 could work?<span class="cursor" aria-hidden="true"></span></p></div></div></div>
+      </div></div>
+      <div class="composer"><div class="box"><span>Share your thoughts, ask a question, or work through the problem…</span><span class="btn small">Send</span></div>
+        <div class="hint">Your replies count towards mastery. The first reply is a warm-up and doesn't count.</div></div>`)},
+
+  question:{label:"Quiz question", url:"localhost:8080/quiz",
+    caption:"<b>Quiz question.</b> One question per objective in the week. The selected option is outlined in green; nothing is sent until Submit.",
+    notes:["<b>POST /quiz</b> starts or resumes; <b>GET /quiz</b> on app open","<b>QuizView.question</b> never includes the answer","<b>POST /quiz/answer</b>; “End quiz” is <b>POST /quiz/end</b>"],
+    html:()=>shell("quiz","Quiz",`
+      <div class="head"><div class="qbar"><div class="row"><span>Question <b>4</b> of 11 · AI Basics</span><span>Correct so far <b>2</b> / 3</span></div><div class="meter"><i style="width:36%"></i></div></div></div>
+      <div class="scroll"><div class="quiz">
+        <div class="kicker"><span>Multiple choice</span><span>AI Limitations</span></div>
+        <p class="qtext">A hospital's AI system was trained on scans from one scanner model. Why might it perform worse on scans from a different hospital?</p>
+        <div class="opts">
+          <div class="opt"><span class="k">A</span>The AI needs more computing power at the new hospital</div>
+          <div class="opt sel"><span class="k">B</span>The new scans differ from the data the AI learned from</div>
+          <div class="opt"><span class="k">C</span>AI systems stop learning after one year</div>
+          <div class="opt"><span class="k">D</span>Doctors at the new hospital use it incorrectly</div>
+        </div>
+        <div class="actions"><span class="btn">Submit answer</span><span class="spacer"></span><span class="link">End quiz</span></div>
+      </div></div>`)},
+
+  feedback:{label:"Quiz feedback", url:"localhost:8080/quiz",
+    caption:"<b>Quiz feedback.</b> A wrong answer shows the right one next to it and explains why. Colour is never the only signal: each state also has a label.",
+    notes:["The response to <b>POST /quiz/answer</b> has status “feedback”","<b>feedback.correct</b> is null when the answer couldn't be graded: shown as “Not counted” with a neutral tag","“Next question” is <b>POST /quiz/next</b>"],
+    html:()=>shell("quiz","Quiz",`
+      <div class="head"><div class="qbar"><div class="row"><span>Question <b>5</b> of 11 · AI Types Overview</span><span>Correct so far <b>3</b> / 5</span></div><div class="meter"><i style="width:45%"></i></div></div></div>
+      <div class="scroll"><div class="quiz">
+        <div class="kicker"><span>Multiple choice</span><span>Understanding AI Categories</span></div>
+        <p class="qtext">A chess program that beats grandmasters but can't do anything else is an example of…</p>
+        <div class="opts">
+          <div class="opt wrong"><span class="k">A</span>General AI<span class="why">Your answer</span></div>
+          <div class="opt right"><span class="k">B</span>Narrow AI<span class="why">Correct answer</span></div>
+          <div class="opt"><span class="k">C</span>Super AI</div>
+          <div class="opt"><span class="k">D</span>Reactive memory AI</div>
+        </div>
+        <div class="feedback bad"><strong>Not quite.</strong><p>General AI would handle any intellectual task a person can. This program is excellent at one task only, which is what makes it narrow AI.</p></div>
+        <div class="actions"><span class="btn">Next question</span><span class="spacer"></span><span class="link">End quiz</span></div>
+      </div></div>`)},
+
+  results:{label:"Quiz results", url:"localhost:8080/quiz/results",
+    caption:"<b>Quiz results.</b> The score counts graded answers only. The banner appears when the quiz moved the student on to the next week.",
+    notes:["Status “completed”: <b>results</b> has one entry per answer","<b>advanced_to_week</b> drives the banner and moves the week picker","“Start a new quiz” calls <b>DELETE /quiz</b>, then <b>POST /quiz</b>"],
+    html:()=>shell("results","Quiz results",`
+      <div class="scroll"><div class="results">
+        <div class="banner"><span style="font-size:20px">★</span><div><b>Week 1 complete.</b> Week 2 · Machine Learning Basics is now open.</div></div>
+        <div class="score"><div class="big">8<small> / 10</small></div><p>80% of graded answers correct. One answer couldn't be graded and isn't counted.</p></div>
+        <div class="list">
+          ${[["Definition Of AI","ok"],["Types Of AI","ok"],["AI Applications","ok"],["AI Limitations","ok"],["Understanding AI Categories","no"],["Identifying AI Technologies","ok"],["Analyzing AI Applications","na"],["Defining AI","ok"],["Defining ML","ok"],["Differentiating AI And ML","no"],["AI And ML Interrelation","ok"]]
+            .map(([n,s],i)=>`<div class="li"><span class="n">${i+1}</span><span>${n}<small>${["AI Basics","AI Basics","AI Basics","AI Basics","AI Types Overview","AI Types Overview","AI Types Overview","AI vs ML Distinction","AI vs ML Distinction","AI vs ML Distinction","AI vs ML Distinction"][i]}</small></span><span class="mark ${s}">${s==="ok"?"Correct":s==="no"?"Incorrect":"Not counted"}</span></div>`).join("")}
+        </div>
+        <div class="actions"><span class="btn">Start Week 2 quiz</span><span class="btn ghost">Review with the tutor</span></div>
+      </div></div>`)},
+
+  progress:{label:"Progress", url:"localhost:8080/progress",
+    caption:"<b>Progress.</b> Mastery of each objective against its own threshold from the KC model (the black tick). An objective counts once its bar passes the tick.",
+    notes:["Week completion from <b>GET /courses/{code}/progress</b>","Per-objective mastery needs a new endpoint, <b>GET /courses/{code}/mastery</b> (GO levels and thresholds)","Thresholds are real DEMO101 values: 0.60 to 0.85 in Week 1"],
+    html:()=>{
+      const gos=[["AI Basics",[["Definition Of AI",.82,.60],["Types Of AI",.74,.65],["AI Applications",.41,.75],["AI Limitations",0,.85]]],
+                 ["AI Types Overview",[["Understanding AI Categories",0,.65],["Identifying AI Technologies",0,.65],["Analyzing AI Applications",0,.85]]],
+                 ["AI vs ML Distinction",[["Defining AI",0,.60],["Defining ML",0,.60],["Differentiating AI And ML",0,.70],["AI And ML Interrelation",0,.70]]]];
+      return shell("progress","Progress",`<div class="scroll"><div class="progress">
+        <div class="weekcards">
+          <div class="wc cur"><div class="t"><span>Week 1</span><span>Current</span></div><strong>Introduction to AI</strong><div class="row" style="justify-content:space-between"><span class="pct">18%</span><span class="small-note">2 of 11 mastered</span></div><div class="meter"><i style="width:18%"></i></div></div>
+          <div class="wc"><div class="t"><span>Week 2</span><span>Locked</span></div><strong>Machine Learning Basics</strong><span class="small-note">Opens at 75% of Week 1</span></div>
+          <div class="wc"><div class="t"><span>Week 3</span><span>Locked</span></div><strong>Neural Networks</strong><span class="small-note">Opens after Week 2</span></div>
+        </div>
+        <div class="legend"><span><i style="background:var(--primary)"></i>Mastered</span><span><i style="background:var(--accent)"></i>In progress</span><span><u></u>Threshold</span></div>
+        ${gos.map(([lo,items])=>`<div class="lo-block"><h3>${lo}</h3><div class="gos">${items.map(([n,v,t])=>`<div class="go"><span>${n}</span><span class="gauge"><i class="${v>=t?"":"low"}" style="width:${v*100}%"></i><u style="left:calc(${t*100}% - 1px)"></u></span><span class="v"><b>${v?v.toFixed(2):"–"}</b> / ${t.toFixed(2)}</span></div>`).join("")}</div></div>`).join("")}
+      </div></div>`)}},
+};
+
+const ORDER=["login","chat","tutor","question","feedback","results","progress"];
+const store={get(k){try{return localStorage.getItem(k)}catch(e){return null}},set(k,v){try{localStorage.setItem(k,v)}catch(e){}}};
+const hash=location.hash.slice(1);
+const state={
+  screen: ORDER.includes(hash)?hash:(ORDER.includes(store.get("leas.screen"))?store.get("leas.screen"):"tutor"),
+  mode: store.get("leas.mode")||(matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light"),
+  frame: store.get("leas.frame")||(innerWidth<720?"phone":"desktop"),
+};
+const scr=document.getElementById("screens");
+ORDER.forEach(k=>{const b=document.createElement("button");b.type="button";b.id="screen-"+k;b.dataset.screen=k;b.textContent=S[k].label;b.addEventListener("click",()=>{state.screen=k;render()});scr.appendChild(b)});
+document.querySelectorAll("[data-mode]").forEach(b=>b.addEventListener("click",()=>{state.mode=b.dataset.mode;render()}));
+document.querySelectorAll("[data-frame]").forEach(b=>b.addEventListener("click",()=>{state.frame=b.dataset.frame;render()}));
+const app=document.getElementById("app");
+app.addEventListener("click",e=>{const a=e.target.closest("a[href^='#']");if(!a)return;e.preventDefault();
+  const to={chat:"chat",tutor:"tutor",quiz:"question",progress:"progress"}[a.getAttribute("href").slice(1)];if(to){state.screen=to;render()}});
+
+function render(){
+  const t=T[state.mode], s=S[state.screen];
+  Object.entries(t).forEach(([k,v])=>app.style.setProperty("--"+k,v));
+  app.style.colorScheme=state.mode;
+  app.innerHTML=s.html();
+  document.getElementById("url").textContent=s.url;
+  document.getElementById("caption").innerHTML=s.caption;
+  document.getElementById("notes-title").textContent=`What ${s.label} uses`;
+  document.getElementById("notes").innerHTML=s.notes.map(n=>`<li>${n}</li>`).join("");
+  document.getElementById("tok-title").textContent=`Chalkboard · ${state.mode}`;
+  document.getElementById("tokens").innerHTML=Object.entries(t).map(([k,v])=>`<div class="tok"><i style="background:${v}"></i><span>${k}<code>${v}</code></span></div>`).join("");
+  document.querySelectorAll("[data-screen]").forEach(b=>b.setAttribute("aria-pressed",String(b.dataset.screen===state.screen)));
+  document.querySelectorAll("[data-mode]").forEach(b=>b.setAttribute("aria-pressed",String(b.dataset.mode===state.mode)));
+  document.querySelectorAll("[data-frame]").forEach(b=>b.setAttribute("aria-pressed",String(b.dataset.frame===state.frame)));
+  document.getElementById("stage").classList.toggle("phone",state.frame==="phone");
+  store.set("leas.screen",state.screen);store.set("leas.mode",state.mode);store.set("leas.frame",state.frame);
+}
+render();
+</script>
+
+</body></html>

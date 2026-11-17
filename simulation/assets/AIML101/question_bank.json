@@ -1,0 +1,2759 @@
+{
+  "course": "AIML101",
+  "prompt_version": "bank-v1",
+  "generated_at": "2026-09-25T22:41:00+00:00",
+  "generator": {
+    "tool": "claude -p (subscription)",
+    "model_alias": "sonnet",
+    "models": [
+      "claude-sonnet-5"
+    ],
+    "effort": "medium",
+    "claude_code_version": "2.1.282"
+  },
+  "kc_model_sha256": "82aee07816908da0ffbf35d5fe7e4db58b0fe2162a61a2c8363909802b514385",
+  "calls": [
+    {
+      "key": "week01-0",
+      "week": 1,
+      "gos": [
+        "GO_01_01_001",
+        "GO_01_01_002",
+        "GO_01_01_003",
+        "GO_01_01_004",
+        "GO_01_02_001",
+        "GO_01_02_002",
+        "GO_01_02_003",
+        "GO_01_03_001",
+        "GO_01_03_002",
+        "GO_01_03_003"
+      ],
+      "attempts": [
+        {
+          "model": "claude-sonnet-5",
+          "cost_usd": 0.0912466,
+          "usage": {
+            "input_tokens": 2,
+            "output_tokens": 4270,
+            "cache_read_input_tokens": 853,
+            "cache_creation_input_tokens": 12093
+          },
+          "problems": [],
+          "claude_code_version": "2.1.282"
+        }
+      ]
+    },
+    {
+      "key": "week02-1",
+      "week": 2,
+      "gos": [
+        "GO_02_04_001",
+        "GO_02_04_002",
+        "GO_02_04_003",
+        "GO_02_04_004",
+        "GO_02_05_001",
+        "GO_02_05_002",
+        "GO_02_05_003",
+        "GO_02_05_004",
+        "GO_02_06_001",
+        "GO_02_06_002",
+        "GO_02_06_003"
+      ],
+      "attempts": [
+        {
+          "model": "claude-sonnet-5",
+          "cost_usd": 0.1180206,
+          "usage": {
+            "input_tokens": 2,
+            "output_tokens": 4607,
+            "cache_read_input_tokens": 853,
+            "cache_creation_input_tokens": 17944
+          },
+          "problems": [],
+          "claude_code_version": "2.1.282"
+        }
+      ]
+    },
+    {
+      "key": "week03-2",
+      "week": 3,
+      "gos": [
+        "GO_03_07_001",
+        "GO_03_07_002",
+        "GO_03_07_003",
+        "GO_03_07_004",
+        "GO_03_08_001",
+        "GO_03_08_002",
+        "GO_03_08_003",
+        "GO_03_08_004",
+        "GO_03_09_001",
+        "GO_03_09_002",
+        "GO_03_09_003",
+        "GO_03_09_004"
+      ],
+      "attempts": [
+        {
+          "model": "claude-sonnet-5",
+          "cost_usd": 0.11914059999999999,
+          "usage": {
+            "input_tokens": 2,
+            "output_tokens": 4641,
+            "cache_read_input_tokens": 853,
+            "cache_creation_input_tokens": 18139
+          },
+          "problems": [
+            "GO_03_08_002: source_quote is not copied word for word from Week03-LectureB-Techniques-Of-Machine-Learning.md."
+          ],
+          "claude_code_version": "2.1.282"
+        },
+        {
+          "model": "claude-sonnet-5",
+          "cost_usd": 0.1301326,
+          "usage": {
+            "input_tokens": 2,
+            "output_tokens": 5713,
+            "cache_read_input_tokens": 853,
+            "cache_creation_input_tokens": 18207
+          },
+          "problems": [],
+          "claude_code_version": "2.1.282"
+        }
+      ]
+    },
+    {
+      "key": "week04-3",
+      "week": 4,
+      "gos": [
+        "GO_04_10_001",
+        "GO_04_10_002",
+        "GO_04_10_003",
+        "GO_04_11_001",
+        "GO_04_11_002",
+        "GO_04_11_003",
+        "GO_04_11_004"
+      ],
+      "attempts": [
+        {
+          "model": "claude-sonnet-5",
+          "cost_usd": 0.1007446,
+          "usage": {
+            "input_tokens": 2,
+            "output_tokens": 3041,
+            "cache_read_input_tokens": 853,
+            "cache_creation_input_tokens": 17540
+          },
+          "problems": [
+            "GO_04_10_001: source_quote is not copied word for word from Week04-LectureA-Introduction-To-Neural-Networks.md.",
+            "GO_04_10_003: source_quote is not copied word for word from Week04-LabA-Perceptron.ipynb.",
+            "GO_04_11_002: source_quote is not copied word for word from Week04-LectureB-Perceptron.md."
+          ],
+          "claude_code_version": "2.1.282"
+        },
+        {
+          "model": "claude-sonnet-5",
+          "cost_usd": 0.1095906,
+          "usage": {
+            "input_tokens": 2,
+            "output_tokens": 3866,
+            "cache_read_input_tokens": 853,
+            "cache_creation_input_tokens": 17689
+          },
+          "problems": [],
+          "claude_code_version": "2.1.282"
+        }
+      ]
+    },
+    {
+      "key": "week05-4",
+      "week": 5,
+      "gos": [
+        "GO_05_12_001",
+        "GO_05_12_002",
+        "GO_05_12_003",
+        "GO_05_12_004",
+        "GO_05_13_001",
+        "GO_05_13_002",
+        "GO_05_13_003"
+      ],
+      "attempts": [
+        {
+          "model": "claude-sonnet-5",
+          "cost_usd": 0.2076726,
+          "usage": {
+            "input_tokens": 2,
+            "output_tokens": 3057,
+            "cache_read_input_tokens": 853,
+            "cache_creation_input_tokens": 44232
+          },
+          "problems": [],
+          "claude_code_version": "2.1.282"
+        }
+      ]
+    },
+    {
+      "key": "week05-5",
+      "week": 5,
+      "gos": [
+        "GO_05_14_001",
+        "GO_05_14_002",
+        "GO_05_14_003",
+        "GO_05_14_004",
+        "GO_05_15_001",
+        "GO_05_15_002",
+        "GO_05_15_003",
+        "GO_05_15_004"
+      ],
+      "attempts": [
+        {
+          "model": "claude-sonnet-5",
+          "cost_usd": 0.21270060000000002,
+          "usage": {
+            "input_tokens": 2,
+            "output_tokens": 3509,
+            "cache_read_input_tokens": 853,
+            "cache_creation_input_tokens": 44359
+          },
+          "problems": [
+            "GO_05_14_002: source_quote is not copied word for word from Week05-LabC-Intro-To-PyTorch.ipynb."
+          ],
+          "claude_code_version": "2.1.282"
+        },
+        {
+          "model": "claude-sonnet-5",
+          "cost_usd": 0.2233946,
+          "usage": {
+            "input_tokens": 2,
+            "output_tokens": 4552,
+            "cache_read_input_tokens": 853,
+            "cache_creation_input_tokens": 44425
+          },
+          "problems": [],
+          "claude_code_version": "2.1.282"
+        }
+      ]
+    },
+    {
+      "key": "week06-6",
+      "week": 6,
+      "gos": [
+        "GO_06_16_001",
+        "GO_06_16_002",
+        "GO_06_16_003",
+        "GO_06_16_004",
+        "GO_06_17_001",
+        "GO_06_17_002",
+        "GO_06_17_003",
+        "GO_06_17_004"
+      ],
+      "attempts": [
+        {
+          "model": "claude-sonnet-5",
+          "cost_usd": 0.0708406,
+          "usage": {
+            "input_tokens": 2,
+            "output_tokens": 3335,
+            "cache_read_input_tokens": 853,
+            "cache_creation_input_tokens": 9329
+          },
+          "problems": [],
+          "claude_code_version": "2.1.282"
+        }
+      ]
+    }
+  ],
+  "api_equivalent_usd": 1.3835,
+  "needs_review": [],
+  "spot_check": {
+    "status": "done",
+    "sample": [
+      "GO_01_01_001",
+      "GO_01_02_002",
+      "GO_01_03_001",
+      "GO_01_03_002",
+      "GO_02_05_002",
+      "GO_02_05_003",
+      "GO_03_07_001",
+      "GO_03_08_001",
+      "GO_03_08_003",
+      "GO_03_09_003",
+      "GO_03_09_004",
+      "GO_04_10_001",
+      "GO_04_11_001",
+      "GO_04_11_004",
+      "GO_05_12_003",
+      "GO_05_14_001",
+      "GO_05_14_003",
+      "GO_05_14_004",
+      "GO_06_16_001",
+      "GO_06_17_002"
+    ],
+    "by": "owner",
+    "date": "2026-09-26"
+  },
+  "entries": [
+    {
+      "go_id": "GO_01_01_001",
+      "lo_id": "LO_01_01",
+      "week": 1,
+      "skill_name": "Define Weak Ai",
+      "questions": [
+        {
+          "text": "what does weak AI actually mean?",
+          "kind": "question",
+          "follows": null
+        },
+        {
+          "text": "is Siri or Alexa weak AI? why",
+          "kind": "question",
+          "follows": null
+        },
+        {
+          "text": "can you give me another example of that?",
+          "kind": "follow_up",
+          "follows": 1
+        }
+      ],
+      "reference_answer": "Weak AI refers to AI systems designed and trained for a specific task or a narrow set of tasks. They do well at that predefined job but lack true understanding or consciousness. Examples include virtual assistants like Siri or Alexa and recommendation algorithms used by streaming services.",
+      "source_file": "Week01-LectureA-Introduction-To-AI.md",
+      "source_quote": "Weak AI refers to AI systems that are designed and trained for a specific task or a narrow set of tasks.",
+      "misconceptions": [
+        {
+          "text": "Weak AI is a system designed to solve many tasks.",
+          "basis": "quiz_distractor"
+        },
+        {
+          "text": "Weak AI just means an AI that is badly built or performs poorly at its job.",
+          "basis": "common_error"
+        }
+      ]
+    },
+    {
+      "go_id": "GO_01_01_002",
+      "lo_id": "LO_01_01",
+      "week": 1,
+      "skill_name": "Define Strong Ai",
+      "questions": [
+        {
+          "text": "what is strong AI and how is it different from normal AI we use now?",
+          "kind": "question",
+          "follows": null
+        },
+        {
+          "text": "does strong AI exist yet?",
+          "kind": "question",
+          "follows": null
+        },
+        {
+          "text": "why would it need consciousness or self-awareness?",
+          "kind": "follow_up",
+          "follows": 0
+        }
+      ],
+      "reference_answer": "Strong AI, or Artificial General Intelligence (AGI), refers to AI with human-level intelligence and understanding. It could do any intellectual task a human can, adapt to different domains, and possess a form of consciousness or self-awareness. It is currently only a theoretical concept, and no AI system has reached it.",
+      "source_file": "Week01-LectureA-Introduction-To-AI.md",
+      "source_quote": "Strong AI is currently a theoretical concept, and no AI system has reached this level of general intelligence.",
+      "misconceptions": [
+        {
+          "text": "Chat bots are truly intelligent systems, so strong AI already exists.",
+          "basis": "quiz_distractor"
+        },
+        {
+          "text": "Strong AI just means a faster or more powerful version of weak AI.",
+          "basis": "common_error"
+        }
+      ]
+    },
+    {
+      "go_id": "GO_01_01_003",
+      "lo_id": "LO_01_01",
+      "week": 1,
+      "skill_name": "Turing Test Explanation",
+      "questions": [
+        {
+          "text": "how does the Turing test work?",
+          "kind": "question",
+          "follows": null
+        },
+        {
+          "text": "why does the Turing test use a human judge instead of an automatic comparison?",
+          "kind": "question",
+          "follows": null
+        },
+        {
+          "text": "so did the Eugene Goostman bot pass it?",
+          "kind": "follow_up",
+          "follows": 0
+        }
+      ],
+      "reference_answer": "Alan Turing proposed the test as a way to tell whether a system is truly intelligent, and it acts as a definition of intelligence. A human interrogator has a text-based dialogue and if they cannot tell a real person from the computer system, the system is considered intelligent. A human is used because any automatic comparison can be bypassed by a computer program.",
+      "source_file": "Week01-LectureA-Introduction-To-AI.md",
+      "source_quote": "if a human being is unable to distinguish between a real person and a computer system in text-based dialogue - the system is considered intelligent.",
+      "misconceptions": [
+        {
+          "text": "The Turing test was the event where the term artificial intelligence was coined and the field began.",
+          "basis": "quiz_distractor"
+        },
+        {
+          "text": "Passing the Turing test proves a system is truly intelligent.",
+          "basis": "lesson"
+        },
+        {
+          "text": "The Turing test is scored automatically by a program.",
+          "basis": "common_error"
+        }
+      ]
+    },
+    {
+      "go_id": "GO_01_01_004",
+      "lo_id": "LO_01_01",
+      "week": 1,
+      "skill_name": "Compare Weak And Strong Ai",
+      "questions": [
+        {
+          "text": "what's the difference between weak and strong AI?",
+          "kind": "question",
+          "follows": null
+        },
+        {
+          "text": "are chatbots weak AI or strong AI, and do they pass the Turing test?",
+          "kind": "question",
+          "follows": null
+        },
+        {
+          "text": "why does that difference matter?",
+          "kind": "follow_up",
+          "follows": 0
+        }
+      ],
+      "reference_answer": "Weak AI is built for a specific task or narrow set of tasks and lacks true understanding, while strong AI (AGI) would have human-level intelligence and could do any intellectual task across domains. Weak AI is what exists today, such as Siri, Alexa and recommendation systems. Strong AI is only theoretical and would require reasoning, learning and adapting across many contexts.",
+      "source_file": "Week01-LectureA-Introduction-To-AI.md",
+      "source_quote": "Weak AI is highly specialized and does not possess human-like cognitive abilities or general problem-solving capabilities beyond its narrow domain.",
+      "misconceptions": [
+        {
+          "text": "Weak AI is a system designed to solve many tasks.",
+          "basis": "quiz_distractor"
+        },
+        {
+          "text": "Chat bots are truly intelligent because they are usually considered intelligent.",
+          "basis": "quiz_distractor"
+        },
+        {
+          "text": "Strong AI already exists in things like Siri and Alexa.",
+          "basis": "common_error"
+        }
+      ]
+    },
+    {
+      "go_id": "GO_01_02_001",
+      "lo_id": "LO_01_02",
+      "week": 1,
+      "skill_name": "Symbolic Ai Fundamentals",
+      "questions": [
+        {
+          "text": "what is symbolic AI?",
+          "kind": "question",
+          "follows": null
+        },
+        {
+          "text": "why is getting knowledge from a human expert so hard in the top-down approach?",
+          "kind": "question",
+          "follows": null
+        },
+        {
+          "text": "can you give an example of that?",
+          "kind": "follow_up",
+          "follows": 0
+        }
+      ],
+      "reference_answer": "Symbolic AI is the top-down approach, which models the way a person reasons to solve a problem. It extracts knowledge from a human and represents it in a computer-readable form, and it also needs a way to model reasoning. For example, a doctor applies a large set of rules to reach a diagnosis.",
+      "source_file": "Week01-LectureA-Introduction-To-AI.md",
+      "source_quote": "A top-down approach models the way a person reasons to solve a problem. It involves extracting knowledge from a human being, and representing it in a computer-readable form.",
+      "misconceptions": [
+        {
+          "text": "A top-down approach to AI is based on strategic reasoning.",
+          "basis": "quiz_distractor"
+        },
+        {
+          "text": "A top-down approach to AI is based on synergistic reasoning.",
+          "basis": "quiz_distractor"
+        },
+        {
+          "text": "Symbolic AI learns from lots of training data like a neural network.",
+          "basis": "common_error"
+        }
+      ]
+    },
+    {
+      "go_id": "GO_01_02_002",
+      "lo_id": "LO_01_02",
+      "week": 1,
+      "skill_name": "Neural Network Basics",
+      "questions": [
+        {
+          "text": "how do neural networks work in AI, basically?",
+          "kind": "question",
+          "follows": null
+        },
+        {
+          "text": "why is the bottom-up approach compared to how a baby learns?",
+          "kind": "question",
+          "follows": null
+        },
+        {
+          "text": "what do you mean by training data there?",
+          "kind": "follow_up",
+          "follows": 0
+        }
+      ],
+      "reference_answer": "The bottom-up approach models the structure of the human brain, which is made of a huge number of simple units called neurons. Each artificial neuron acts like a weighted average of its inputs. A network of neurons is trained to solve useful problems by giving it training data, or examples.",
+      "source_file": "Week01-LectureA-Introduction-To-AI.md",
+      "source_quote": "Each neuron acts like a weighted average of its inputs, and we can train a network of neurons to solve useful problems by providing training data.",
+      "misconceptions": [
+        {
+          "text": "A bottom-up approach to AI is not based on neural networks.",
+          "basis": "quiz_distractor"
+        },
+        {
+          "text": "Neural networks are programmed with explicit if-then rules written by experts.",
+          "basis": "common_error"
+        }
+      ]
+    },
+    {
+      "go_id": "GO_01_02_003",
+      "lo_id": "LO_01_02",
+      "week": 1,
+      "skill_name": "Top-Down Vs Bottom-Up Analysis",
+      "questions": [
+        {
+          "text": "top-down vs bottom-up AI, what's the main difference?",
+          "kind": "question",
+          "follows": null
+        },
+        {
+          "text": "which approach works for a task like guessing someone's age from a photo?",
+          "kind": "question",
+          "follows": null
+        },
+        {
+          "text": "why does that one work better?",
+          "kind": "follow_up",
+          "follows": 1
+        }
+      ],
+      "reference_answer": "Top-down (symbolic reasoning) models how a person reasons, by extracting knowledge and rules and programming a way to reason with them. Bottom-up models the brain's structure with neurons and learns from training data. Some tasks, like determining age from a photograph, cannot be reduced to manipulating knowledge, which suits learning from examples.",
+      "source_file": "Week01-LectureA-Introduction-To-AI.md",
+      "source_quote": "Some tasks, such as determining the age of a person from a photograph, cannot be at all reduced to manipulating knowledge.",
+      "misconceptions": [
+        {
+          "text": "A top-down approach to AI is a model of reasoning called strategic reasoning.",
+          "basis": "quiz_distractor"
+        },
+        {
+          "text": "Both approaches work by training on lots of example data.",
+          "basis": "common_error"
+        },
+        {
+          "text": "Top-down means starting with neurons and building up to reasoning.",
+          "basis": "common_error"
+        }
+      ]
+    },
+    {
+      "go_id": "GO_01_03_001",
+      "lo_id": "LO_01_03",
+      "week": 1,
+      "skill_name": "Identify Ai Historical Periods",
+      "questions": [
+        {
+          "text": "what are the main periods in the history of AI?",
+          "kind": "question",
+          "follows": null
+        },
+        {
+          "text": "when was the term artificial intelligence coined and where?",
+          "kind": "question",
+          "follows": null
+        },
+        {
+          "text": "what happened in the golden years?",
+          "kind": "follow_up",
+          "follows": 0
+        }
+      ],
+      "reference_answer": "AI as a field began to crystallize in the 1950s. The term 'artificial intelligence' was coined at the 1956 Dartmouth Summer Research Project. This was followed by the golden years (1956-1974), the AI Winter (1974-1980), expert systems in the 1980s, an AI 'chill' (1987-1993), and a period of growing data and compute from 1993 to 2011.",
+      "source_file": "Week01-LectureB-History-Of-Machine-Learning.md",
+      "source_quote": "it was here that the term 'artificial intelligence' was coined",
+      "misconceptions": [
+        {
+          "text": "The term artificial intelligence was coined in the 1980s.",
+          "basis": "quiz_distractor"
+        },
+        {
+          "text": "Advancement slowed in the 1970s because of conflicts between countries.",
+          "basis": "quiz_distractor"
+        },
+        {
+          "text": "Charles Babbage, the 19th century pioneer, was a 20th century AI researcher who coined the term.",
+          "basis": "common_error"
+        }
+      ]
+    },
+    {
+      "go_id": "GO_01_03_002",
+      "lo_id": "LO_01_03",
+      "week": 1,
+      "skill_name": "Explain Ai Winters",
+      "questions": [
+        {
+          "text": "what was the AI winter and why did it happen?",
+          "kind": "question",
+          "follows": null
+        },
+        {
+          "text": "what decade was the AI winter?",
+          "kind": "question",
+          "follows": null
+        },
+        {
+          "text": "what did you mean by combinatorial explosion?",
+          "kind": "follow_up",
+          "follows": 0
+        }
+      ],
+      "reference_answer": "The AI Winter was a period from about 1974 to 1980 when funding dried up and confidence in the field slowed. The complexity of making intelligent machines had been understated and the promise overblown given the available compute power. Problems included limited compute, combinatorial explosion, too little data, and criticism of the approaches used.",
+      "source_file": "Week01-LectureB-History-Of-Machine-Learning.md",
+      "source_quote": "By the mid 1970s, it had become apparent that the complexity of making 'intelligent machines' had been understated and that its promise, given the available compute power, had been overblown.",
+      "misconceptions": [
+        {
+          "text": "The AI Winter occurred in the 1950s or 1960s.",
+          "basis": "quiz_distractor"
+        },
+        {
+          "text": "The AI winter happened because there weren't enough skilled engineers.",
+          "basis": "quiz_distractor"
+        },
+        {
+          "text": "The AI winter was caused by AI being too successful and being banned.",
+          "basis": "common_error"
+        }
+      ]
+    },
+    {
+      "go_id": "GO_01_03_003",
+      "lo_id": "LO_01_03",
+      "week": 1,
+      "skill_name": "Deep Learning Emergence",
+      "questions": [
+        {
+          "text": "how did deep learning take off?",
+          "kind": "question",
+          "follows": null
+        },
+        {
+          "text": "what happened in 2012 with neural networks and images?",
+          "kind": "question",
+          "follows": null
+        },
+        {
+          "text": "why did cheaper computing matter for that?",
+          "kind": "follow_up",
+          "follows": 0
+        }
+      ],
+      "reference_answer": "As computing resources became cheaper and more data became available, neural networks began to perform very well against humans in areas like computer vision and speech. Growth started around 2010 with large public datasets such as ImageNet. In 2012 Convolutional Neural Networks cut image classification errors from almost 30% to 16.4%, and ResNet reached human-level accuracy in 2015.",
+      "source_file": "Week01-LectureA-Introduction-To-AI.md",
+      "source_quote": "In 2012, Convolutional Neural Networks were first used in image classification, which led to a significant drop in classification errors (from almost 30% to 16.4%).",
+      "misconceptions": [
+        {
+          "text": "Shakey the robot was one of the early pioneers of machine learning.",
+          "basis": "quiz_distractor"
+        },
+        {
+          "text": "Neural networks were invented around 2010, so nobody worked on them before.",
+          "basis": "common_error"
+        },
+        {
+          "text": "Deep learning took off because of a new theory rather than more data and cheaper compute.",
+          "basis": "lesson"
+        }
+      ]
+    },
+    {
+      "go_id": "GO_02_04_001",
+      "lo_id": "LO_02_04",
+      "week": 2,
+      "skill_name": "Define Knowledge Representation",
+      "questions": [
+        {
+          "text": "what does knowledge representation actually mean in AI?",
+          "kind": "question",
+          "follows": null
+        },
+        {
+          "text": "is knowledge the same thing as data or information? my book says its all the same",
+          "kind": "question",
+          "follows": null
+        },
+        {
+          "text": "why is that a problem for computers though?",
+          "kind": "follow_up",
+          "follows": 0
+        }
+      ],
+      "reference_answer": "Knowledge representation is the problem of finding an effective way to represent knowledge inside a computer in the form of data, so it can be used automatically. Knowledge is different from data and information: it is information integrated into our world model through an active learning process. Representations run on a spectrum from simple ones like algorithms to powerful ones like natural text.",
+      "source_file": "Week02-LectureA-Knowledge-Representation-And-Expert-Systems.md",
+      "source_quote": "the problem of **knowledge representation** is to find some effective way to represent knowledge inside a computer in the form of data, to make it automatically usable.",
+      "misconceptions": [
+        {
+          "text": "Knowledge is the same as information, so books contain knowledge directly.",
+          "basis": "quiz_distractor"
+        },
+        {
+          "text": "The simplest way to represent knowledge is symbolic, not algorithmic.",
+          "basis": "quiz_distractor"
+        },
+        {
+          "text": "The top-down approach to AI was based on knowledge seeking and reading.",
+          "basis": "quiz_distractor"
+        }
+      ]
+    },
+    {
+      "go_id": "GO_02_04_002",
+      "lo_id": "LO_02_04",
+      "week": 2,
+      "skill_name": "Identify Semantic Networks",
+      "questions": [
+        {
+          "text": "what is a semantic network and how is it stored in a computer?",
+          "kind": "question",
+          "follows": null
+        },
+        {
+          "text": "how do object-attribute-value triplets work?",
+          "kind": "question",
+          "follows": null
+        },
+        {
+          "text": "can you give me an example of that?",
+          "kind": "follow_up",
+          "follows": 1
+        }
+      ],
+      "reference_answer": "A semantic network is a graph of interrelated concepts, copying the network of concepts we have in our head. Since a graph can be stored as a list of nodes and edges, it can be stored as a list of object-attribute-value triplets. For example, Python | invented-by | Guido van Rossum.",
+      "source_file": "Week02-LectureA-Knowledge-Representation-And-Expert-Systems.md",
+      "source_quote": "Since a graph can be represented inside a computer as a list of nodes and edges, we can represent a semantic network by a list of triplets, containing objects, attributes, and values.",
+      "misconceptions": [
+        {
+          "text": "A semantic network is a list of if-then rules.",
+          "basis": "common_error"
+        },
+        {
+          "text": "Semantic networks are a hierarchy of frames with slots and default values.",
+          "basis": "common_error"
+        }
+      ]
+    },
+    {
+      "go_id": "GO_02_04_003",
+      "lo_id": "LO_02_04",
+      "week": 2,
+      "skill_name": "Explain Frames In Ai",
+      "questions": [
+        {
+          "text": "what is a frame in AI knowledge representation?",
+          "kind": "question",
+          "follows": null
+        },
+        {
+          "text": "what are slots in a frame and what can they hold?",
+          "kind": "question",
+          "follows": null
+        },
+        {
+          "text": "how is that like object oriented programming?",
+          "kind": "follow_up",
+          "follows": 0
+        }
+      ],
+      "reference_answer": "A frame represents an object or a class of objects and contains slots. Slots can have default values, value restrictions, or stored procedures to get the value. Frames form a hierarchy like objects in object-oriented programming, and scenarios are special frames for complex situations that unfold in time.",
+      "source_file": "Week02-LectureA-Knowledge-Representation-And-Expert-Systems.md",
+      "source_quote": "Frame representation** is based on representing each object or class of objects as a **frame** which contains **slots**. Slots have possible default values, value restrictions, or stored procedures",
+      "misconceptions": [
+        {
+          "text": "Scenarios cannot represent situations that change over time.",
+          "basis": "quiz_distractor"
+        },
+        {
+          "text": "Frames are flat lists of triplets with no hierarchy.",
+          "basis": "common_error"
+        }
+      ]
+    },
+    {
+      "go_id": "GO_02_04_004",
+      "lo_id": "LO_02_04",
+      "week": 2,
+      "skill_name": "Differentiate Rules And Logic",
+      "questions": [
+        {
+          "text": "whats the difference between production rules and logic as ways to represent knowledge?",
+          "kind": "question",
+          "follows": null
+        },
+        {
+          "text": "what is predicate logic and why isnt it used fully?",
+          "kind": "question",
+          "follows": null
+        },
+        {
+          "text": "so which one does Prolog use?",
+          "kind": "follow_up",
+          "follows": 1
+        }
+      ],
+      "reference_answer": "Production rules are procedural: if-then statements that execute when a condition occurs, like a doctor's rule that high fever OR high C-reactive protein means inflammation. Logic comes from Aristotle and represents knowledge formally. Full predicate logic is too rich to be computable, so subsets like Horn clauses in Prolog are used, and description logic is used for hierarchies in the semantic web.",
+      "source_file": "Week02-LectureA-Knowledge-Representation-And-Expert-Systems.md",
+      "source_quote": "Predicate Logic as a mathematical theory is too rich to be computable, therefore some subset of it is normally used, such as Horn clauses used in Prolog.",
+      "misconceptions": [
+        {
+          "text": "Full predicate logic is used directly in practice because it is computable.",
+          "basis": "lesson"
+        },
+        {
+          "text": "Production rules and logic are the same thing, both are procedural representations.",
+          "basis": "common_error"
+        },
+        {
+          "text": "Algorithms are the best and most flexible way to represent knowledge.",
+          "basis": "lesson"
+        }
+      ]
+    },
+    {
+      "go_id": "GO_02_05_001",
+      "lo_id": "LO_02_05",
+      "week": 2,
+      "skill_name": "Knowledge Base Structure",
+      "questions": [
+        {
+          "text": "what's in the knowledge base of an expert system?",
+          "kind": "question",
+          "follows": null
+        },
+        {
+          "text": "whats the difference between problem memory and the knowledge base?",
+          "kind": "question",
+          "follows": null
+        },
+        {
+          "text": "why is the knowledge base called dynamic knowledge then?",
+          "kind": "follow_up",
+          "follows": 1
+        }
+      ],
+      "reference_answer": "The knowledge base holds long-term knowledge about a problem domain, extracted manually from human experts. It does not change from consultation to consultation. Problem memory is different: it holds the current problem state, like a patient's temperature, and is called static knowledge.",
+      "source_file": "Week02-LectureA-Knowledge-Representation-And-Expert-Systems.md",
+      "source_quote": "Knowledge base**: represents long-term knowledge about a problem domain. It is extracted manually from human experts, and does not change from consultation to consultation.",
+      "misconceptions": [
+        {
+          "text": "The knowledge base stores the facts about the current patient and changes each consultation.",
+          "basis": "common_error"
+        },
+        {
+          "text": "The knowledge base is learned automatically from data rather than taken from experts.",
+          "basis": "common_error"
+        }
+      ]
+    },
+    {
+      "go_id": "GO_02_05_002",
+      "lo_id": "LO_02_05",
+      "week": 2,
+      "skill_name": "Inference Engine Mechanism",
+      "questions": [
+        {
+          "text": "what does the inference engine do in an expert system?",
+          "kind": "question",
+          "follows": null
+        },
+        {
+          "text": "why do they say knowledge should be separate from inference?",
+          "kind": "question",
+          "follows": null
+        },
+        {
+          "text": "why does that matter?",
+          "kind": "follow_up",
+          "follows": 1
+        }
+      ],
+      "reference_answer": "The inference engine orchestrates the process of searching the problem state space, asking the user questions when needed. It also finds the right rules to apply to each state. Keeping knowledge separate from inference lets a domain expert write rules without understanding how inference works.",
+      "source_file": "Week02-LectureA-Knowledge-Representation-And-Expert-Systems.md",
+      "source_quote": "Inference engine**: orchestrates the whole process of searching in the problem state space, asking questions of the user when necessary. It is also responsible for finding the right rules to be applied",
+      "misconceptions": [
+        {
+          "text": "The inference engine stores the expert's long-term knowledge.",
+          "basis": "common_error"
+        },
+        {
+          "text": "Expert systems are best written directly in a programming language with rules mixed into the code.",
+          "basis": "lesson"
+        }
+      ]
+    },
+    {
+      "go_id": "GO_02_05_003",
+      "lo_id": "LO_02_05",
+      "week": 2,
+      "skill_name": "Forward Chaining Process",
+      "questions": [
+        {
+          "text": "how does forward chaining work step by step?",
+          "kind": "question",
+          "follows": null
+        },
+        {
+          "text": "what is a conflict set and how do you pick a rule from it?",
+          "kind": "question",
+          "follows": null
+        },
+        {
+          "text": "can you show that with the animal example?",
+          "kind": "follow_up",
+          "follows": 0
+        }
+      ],
+      "reference_answer": "Forward inference starts with initial data in working memory and runs a reasoning loop. It stops if the target attribute is present; otherwise it finds all rules whose conditions are satisfied (the conflict set), picks one by conflict resolution, applies it to add new knowledge, and repeats. For example, facts like sharp teeth, claws and forward-looking eyes fire the carnivore rule, adding a new fact.",
+      "source_file": "Week02-LectureA-Knowledge-Representation-And-Expert-Systems.md",
+      "source_quote": "It starts with some initial data about the problem available in the working memory, and then executes the following reasoning loop:",
+      "misconceptions": [
+        {
+          "text": "Forward inference starts by looking for a goal.",
+          "basis": "quiz_distractor"
+        },
+        {
+          "text": "Forward inference starts over after each rule is applied.",
+          "basis": "quiz_distractor"
+        },
+        {
+          "text": "Conflict resolution always picks a random rule.",
+          "basis": "common_error"
+        }
+      ]
+    },
+    {
+      "go_id": "GO_02_05_004",
+      "lo_id": "LO_02_05",
+      "week": 2,
+      "skill_name": "Backward Chaining Process",
+      "questions": [
+        {
+          "text": "how does backward chaining work?",
+          "kind": "question",
+          "follows": null
+        },
+        {
+          "text": "when would you use backward instead of forward inference?",
+          "kind": "question",
+          "follows": null
+        },
+        {
+          "text": "what happens if a rule fails halfway?",
+          "kind": "follow_up",
+          "follows": 0
+        }
+      ],
+      "reference_answer": "Backward inference is driven by a goal, the attribute value we want to find. It selects rules with the goal on the right-hand side, picks one as a hypothesis, and recursively tries to prove each attribute on its left-hand side as a goal. If there are no rules for an attribute, it asks the user, and if the process fails it tries another rule.",
+      "source_file": "Week02-LectureA-Knowledge-Representation-And-Expert-Systems.md",
+      "source_quote": "Select all rules that can give us the value of a goal (i.e. with the goal on the RHS (\"right-hand-side\")) - a conflict set",
+      "misconceptions": [
+        {
+          "text": "Backward inference starts with all the data already in working memory.",
+          "basis": "common_error"
+        },
+        {
+          "text": "If a rule fails in backward inference, the whole consultation ends with no answer.",
+          "basis": "lesson"
+        },
+        {
+          "text": "Knowledge is obtained by a passive learning process.",
+          "basis": "quiz_distractor"
+        }
+      ]
+    },
+    {
+      "go_id": "GO_02_06_001",
+      "lo_id": "LO_02_06",
+      "week": 2,
+      "skill_name": "Define Ontologies",
+      "questions": [
+        {
+          "text": "what is an ontology?",
+          "kind": "question",
+          "follows": null
+        },
+        {
+          "text": "is an ontology just a hierarchy or can it have more?",
+          "kind": "question",
+          "follows": null
+        },
+        {
+          "text": "can you give me an example of that?",
+          "kind": "follow_up",
+          "follows": 1
+        }
+      ],
+      "reference_answer": "An ontology is an explicit specification of a problem domain using some formal knowledge representation. The simplest ontology is just a hierarchy of objects in the domain. More complex ones also include rules that can be used for inference.",
+      "source_file": "Week02-LectureA-Knowledge-Representation-And-Expert-Systems.md",
+      "source_quote": "It refers to a explicit specification of a problem domain using some formal knowledge representation. The simplest ontology can be just a hierarchy of objects in a problem domain",
+      "misconceptions": [
+        {
+          "text": "An ontology is always just a list of rules with no hierarchy.",
+          "basis": "common_error"
+        },
+        {
+          "text": "Ontologies are always mined automatically from text.",
+          "basis": "lesson"
+        }
+      ]
+    },
+    {
+      "go_id": "GO_02_06_002",
+      "lo_id": "LO_02_06",
+      "week": 2,
+      "skill_name": "Semantic Web Principles",
+      "questions": [
+        {
+          "text": "what was the semantic web supposed to do?",
+          "kind": "question",
+          "follows": null
+        },
+        {
+          "text": "why do semantic web things use URIs and triplets?",
+          "kind": "question",
+          "follows": null
+        },
+        {
+          "text": "why did it slow down?",
+          "kind": "follow_up",
+          "follows": 0
+        }
+      ],
+      "reference_answer": "The semantic web was an initiative to use knowledge representation to annotate Internet resources so very specific queries could find them. It relied on description logics, distributed representation with global URIs for every concept, and XML-based languages RDF, RDFS and OWL. Progress slowed because search engines and NLP could extract structured data from text.",
+      "source_file": "Week02-LectureA-Knowledge-Representation-And-Expert-Systems.md",
+      "source_quote": "there was an initiative to use knowledge representation to annotate Internet resources, so that it would be possible to find resources that correspond to very specific queries.",
+      "misconceptions": [
+        {
+          "text": "The semantic web is just another name for search engines.",
+          "basis": "common_error"
+        },
+        {
+          "text": "Semantic web concepts are named with local labels, not global URIs.",
+          "basis": "lesson"
+        },
+        {
+          "text": "Description logic has no formal semantics, it is just like frames.",
+          "basis": "lesson"
+        }
+      ]
+    },
+    {
+      "go_id": "GO_02_06_003",
+      "lo_id": "LO_02_06",
+      "week": 2,
+      "skill_name": "Concept Graphs Utilization",
+      "questions": [
+        {
+          "text": "what is the concept graph and how is it built?",
+          "kind": "question",
+          "follows": null
+        },
+        {
+          "text": "how did the lab use a concept graph to group news articles?",
+          "kind": "question",
+          "follows": null
+        },
+        {
+          "text": "why did they replace nouns with more general terms?",
+          "kind": "follow_up",
+          "follows": 1
+        }
+      ],
+      "reference_answer": "A concept graph is a large collection of entities linked by is-a relationships, mined from unstructured data like text instead of made by hand. It can answer things like what is Microsoft, with probabilities. In the lab, noun phrases from news titles are looked up for their is-a parent concepts, and titles are grouped under the general terms, giving bigger themes like economy or nation.",
+      "source_file": "Week02-LabC-Concept-Graph.ipynb",
+      "source_quote": "We can see that nouns do not give us large thematic groups. Let's substitute nouns by more general terms obtained from the concept graph.",
+      "misconceptions": [
+        {
+          "text": "Concept graphs must be carefully built by hand like all ontologies.",
+          "basis": "lesson"
+        },
+        {
+          "text": "Grouping by the noun phrases themselves gives large thematic groups.",
+          "basis": "common_error"
+        }
+      ]
+    },
+    {
+      "go_id": "GO_03_07_001",
+      "lo_id": "LO_03_07",
+      "week": 3,
+      "skill_name": "Define Machine Learning",
+      "questions": [
+        {
+          "text": "what is machine learning, in simple terms?",
+          "kind": "question",
+          "follows": null
+        },
+        {
+          "text": "is machine learning supposed to copy how the human brain learns?",
+          "kind": "question",
+          "follows": null
+        },
+        {
+          "text": "can you give me an example of that?",
+          "kind": "follow_up",
+          "follows": 0
+        }
+      ],
+      "reference_answer": "Machine learning is the creation of automated systems that can learn hidden patterns from data to help make intelligent decisions. It is loosely inspired by how the human brain learns from the data it perceives. Examples include predicting disease likelihood or weather events.",
+      "source_file": "Week03-LectureA-Introduction-To-Machine-Learning.md",
+      "source_quote": "Machine learning, from a systems perspective, is defined as the creation of automated systems that can learn hidden patterns from data to aid in making intelligent decisions.",
+      "misconceptions": [
+        {
+          "text": "Machine learning algorithms are meant to simulate intelligent machines.",
+          "basis": "quiz_distractor"
+        },
+        {
+          "text": "Machine learning is only used in a few niche areas and isn't really all around us.",
+          "basis": "quiz_distractor"
+        },
+        {
+          "text": "Machine learning means a programmer writes every rule by hand for the computer to follow.",
+          "basis": "common_error"
+        }
+      ]
+    },
+    {
+      "go_id": "GO_03_07_002",
+      "lo_id": "LO_03_07",
+      "week": 3,
+      "skill_name": "Differentiate Ai And Ml",
+      "questions": [
+        {
+          "text": "whats the difference between AI and ML?",
+          "kind": "question",
+          "follows": null
+        },
+        {
+          "text": "is machine learning a part of AI or is it the other way around?",
+          "kind": "question",
+          "follows": null
+        },
+        {
+          "text": "why does that matter?",
+          "kind": "follow_up",
+          "follows": 1
+        }
+      ],
+      "reference_answer": "AI is when we program a facsimile of the human intelligent behavior process into a machine. Machine learning is an important subset of AI. ML specifically uses specialized algorithms to find hidden patterns in data to support rational decision-making.",
+      "source_file": "Week03-LectureA-Introduction-To-Machine-Learning.md",
+      "source_quote": "Although the terms can be confused, machine learning (ML) is an important subset of artificial intelligence.",
+      "misconceptions": [
+        {
+          "text": "AI and ML are just two names for exactly the same thing.",
+          "basis": "lesson"
+        },
+        {
+          "text": "AI is a small part of machine learning.",
+          "basis": "common_error"
+        },
+        {
+          "text": "Anything that counts as AI must use machine learning algorithms.",
+          "basis": "common_error"
+        }
+      ]
+    },
+    {
+      "go_id": "GO_03_07_003",
+      "lo_id": "LO_03_07",
+      "week": 3,
+      "skill_name": "Explain Deep Learning",
+      "questions": [
+        {
+          "text": "what is deep learning?",
+          "kind": "question",
+          "follows": null
+        },
+        {
+          "text": "does this course teach deep learning and neural networks?",
+          "kind": "question",
+          "follows": null
+        },
+        {
+          "text": "why do they leave it out?",
+          "kind": "follow_up",
+          "follows": 1
+        }
+      ],
+      "reference_answer": "Deep learning is many-layered model-building using neural networks. This course sticks to classical machine learning and avoids the complexities of neural networks and deep learning. They are covered in a different curriculum.",
+      "source_file": "Week03-LectureA-Introduction-To-Machine-Learning.md",
+      "source_quote": "we will avoid the complexities of neural networks, 'deep learning' - many-layered model-building using neural networks - and AI",
+      "misconceptions": [
+        {
+          "text": "Deep learning is a kind of machine learning used only in robots.",
+          "basis": "quiz_distractor"
+        },
+        {
+          "text": "Deep learning is the same as classical ML, just a newer name.",
+          "basis": "common_error"
+        },
+        {
+          "text": "This course covers deep learning and neural networks in depth.",
+          "basis": "lesson"
+        }
+      ]
+    },
+    {
+      "go_id": "GO_03_07_004",
+      "lo_id": "LO_03_07",
+      "week": 3,
+      "skill_name": "Distinguish Ml From Deep Learning",
+      "questions": [
+        {
+          "text": "what is the technical difference between classical ML and deep learning?",
+          "kind": "question",
+          "follows": null
+        },
+        {
+          "text": "do I need to know ML before learning deep learning?",
+          "kind": "question",
+          "follows": null
+        },
+        {
+          "text": "can you say that another way?",
+          "kind": "follow_up",
+          "follows": 0
+        }
+      ],
+      "reference_answer": "Deep learning uses many-layered neural networks, while classical ML, which this course covers, does not focus on them. The lesson says a strong grounding in machine learning is indispensable before tackling broader AI or deep learning.",
+      "source_file": "Week03-LectureA-Introduction-To-Machine-Learning.md",
+      "source_quote": "To understand broader concepts of artificial intelligence or deep learning, a strong fundamental knowledge of machine learning is indispensable",
+      "misconceptions": [
+        {
+          "text": "The difference is just that classical ML was invented first.",
+          "basis": "quiz_distractor"
+        },
+        {
+          "text": "Deep learning is an example of a classical ML technique.",
+          "basis": "quiz_distractor"
+        },
+        {
+          "text": "Neural networks are a classical ML technique.",
+          "basis": "quiz_distractor"
+        }
+      ]
+    },
+    {
+      "go_id": "GO_03_08_001",
+      "lo_id": "LO_03_08",
+      "week": 3,
+      "skill_name": "Define Ml Problem Statement",
+      "questions": [
+        {
+          "text": "what should the first step of building an ML model be?",
+          "kind": "question",
+          "follows": null
+        },
+        {
+          "text": "when is ML better than just writing rules?",
+          "kind": "question",
+          "follows": null
+        },
+        {
+          "text": "can you give me an example of that?",
+          "kind": "follow_up",
+          "follows": 1
+        }
+      ],
+      "reference_answer": "The first step is to decide on the question. ML fits questions that a simple conditional program or rules-based engine can't answer, often predictions from a collection of data. For example, predicting mortality from many health variables, or weather for April.",
+      "source_file": "Week03-LectureB-Techniques-Of-Machine-Learning.md",
+      "source_quote": "Most ML processes start by asking a question that cannot be answered by a simple conditional program or rules-based engine.",
+      "misconceptions": [
+        {
+          "text": "You should start by choosing a training method before you know your question.",
+          "basis": "quiz_distractor"
+        },
+        {
+          "text": "ML is only useful to automate multi-dimensional problems, not customizing things like a shopping experience.",
+          "basis": "quiz_distractor"
+        },
+        {
+          "text": "Any question can be solved just as well with a hard-coded rules engine.",
+          "basis": "common_error"
+        }
+      ]
+    },
+    {
+      "go_id": "GO_03_08_002",
+      "lo_id": "LO_03_08",
+      "week": 3,
+      "skill_name": "Data Selection And Preparation",
+      "questions": [
+        {
+          "text": "why does the quality of my data matter for a model?",
+          "kind": "question",
+          "follows": null
+        },
+        {
+          "text": "what is a feature variable?",
+          "kind": "question",
+          "follows": null
+        },
+        {
+          "text": "why should I visualize the data too?",
+          "kind": "follow_up",
+          "follows": 0
+        }
+      ],
+      "reference_answer": "The quality and sometimes quantity of your data determine how well you can answer your question. Preparation can involve normalizing, cleaning, editing and shuffling the data. Visualizing it can reveal hidden correlations, bias or unbalanced data.",
+      "source_file": "Week03-LectureB-Techniques-Of-Machine-Learning.md",
+      "source_quote": "The quality and, sometimes, quantity of your data will determine how well you can answer your initial question.",
+      "misconceptions": [
+        {
+          "text": "A feature variable is a row of your data.",
+          "basis": "quiz_distractor"
+        },
+        {
+          "text": "You should choose a training method first and prepare the data afterward.",
+          "basis": "quiz_distractor"
+        },
+        {
+          "text": "Only the amount of data matters, not its quality.",
+          "basis": "common_error"
+        }
+      ]
+    },
+    {
+      "go_id": "GO_03_08_003",
+      "lo_id": "LO_03_08",
+      "week": 3,
+      "skill_name": "Train/Test Split Execution",
+      "questions": [
+        {
+          "text": "how do I split my data for training?",
+          "kind": "question",
+          "follows": null
+        },
+        {
+          "text": "what are the training, testing and validation sets for?",
+          "kind": "question",
+          "follows": null
+        },
+        {
+          "text": "why not just test on the same data I trained on?",
+          "kind": "follow_up",
+          "follows": 1
+        }
+      ],
+      "reference_answer": "Before training you split the dataset into two or more parts of unequal size that still represent the data well. The training set is the majority and is fit to the model. The test set is independent data to confirm performance, and an optional smaller validation set tunes hyperparameters.",
+      "source_file": "Week03-LectureB-Techniques-Of-Machine-Learning.md",
+      "source_quote": "Prior to training, you need to split your dataset into two or more parts of unequal size that still represent the data well.",
+      "misconceptions": [
+        {
+          "text": "You split data into training and turing sets.",
+          "basis": "quiz_distractor"
+        },
+        {
+          "text": "The split should be into validation and evaluation sets only.",
+          "basis": "quiz_distractor"
+        },
+        {
+          "text": "The training and test parts should be equal in size.",
+          "basis": "lesson"
+        }
+      ]
+    },
+    {
+      "go_id": "GO_03_08_004",
+      "lo_id": "LO_03_08",
+      "week": 3,
+      "skill_name": "Model Evaluation And Tuning",
+      "questions": [
+        {
+          "text": "how do I evaluate a model after training it?",
+          "kind": "question",
+          "follows": null
+        },
+        {
+          "text": "what is overfitting and underfitting?",
+          "kind": "question",
+          "follows": null
+        },
+        {
+          "text": "so what do I do after that, tuning?",
+          "kind": "follow_up",
+          "follows": 0
+        }
+      ],
+      "reference_answer": "You evaluate with never before seen testing data from your collected set to see how the model performs. Based on that, you can tune hyperparameters and redo the process. Overfitting means the model learned the training details and noise too well, while underfitting means it is inaccurate even on training data.",
+      "source_file": "Week03-LectureB-Techniques-Of-Machine-Learning.md",
+      "source_quote": "You use never before seen data (your testing data) from your collected set to see how the model is performing.",
+      "misconceptions": [
+        {
+          "text": "Tuning parameters should happen before you train the model.",
+          "basis": "quiz_distractor"
+        },
+        {
+          "text": "A model that predicts the training data perfectly is the best model.",
+          "basis": "lesson"
+        },
+        {
+          "text": "You evaluate the model using the same training data it learned from.",
+          "basis": "common_error"
+        }
+      ]
+    },
+    {
+      "go_id": "GO_03_09_001",
+      "lo_id": "LO_03_09",
+      "week": 3,
+      "skill_name": "Linear Regression Fundamentals",
+      "questions": [
+        {
+          "text": "what does linear regression actually do?",
+          "kind": "question",
+          "follows": null
+        },
+        {
+          "text": "what is least-squares regression?",
+          "kind": "question",
+          "follows": null
+        },
+        {
+          "text": "what if my data isn't a straight line?",
+          "kind": "follow_up",
+          "follows": 0
+        }
+      ],
+      "reference_answer": "Linear regression predicts a numerical value by finding a straight line that best represents the relationship between input features and the output. The line shows variable relationships and predicts where new datapoints fall. Least-squares picks the line where the sum of squared vertical distances to the points is smallest.",
+      "source_file": "Week03-LectureC-Linear-Regression.md",
+      "source_quote": "It works by finding a straight line that best represents the relationship between input features and the output.",
+      "misconceptions": [
+        {
+          "text": "Linear regression plots relationships using a circle.",
+          "basis": "quiz_distractor"
+        },
+        {
+          "text": "Linear regression draws a curve through the data.",
+          "basis": "quiz_distractor"
+        },
+        {
+          "text": "In least-squares, the distances are squared and then subtracted.",
+          "basis": "quiz_distractor"
+        }
+      ]
+    },
+    {
+      "go_id": "GO_03_09_002",
+      "lo_id": "LO_03_09",
+      "week": 3,
+      "skill_name": "Correlation Coefficient Analysis",
+      "questions": [
+        {
+          "text": "what does the correlation coefficient tell me?",
+          "kind": "question",
+          "follows": null
+        },
+        {
+          "text": "should a good regression model have a high or low correlation coefficient?",
+          "kind": "question",
+          "follows": null
+        },
+        {
+          "text": "what would that look like on a scatterplot?",
+          "kind": "follow_up",
+          "follows": 0
+        }
+      ],
+      "reference_answer": "The correlation coefficient shows how closely X and Y follow a line. Points in a neat line mean high correlation, and points scattered everywhere mean low. A good linear regression model has a high coefficient, nearer to 1 than 0.",
+      "source_file": "Week03-LectureC-Linear-Regression.md",
+      "source_quote": "A good linear regression model will be one that has a high (nearer to 1 than 0) Correlation Coefficient using the Least-Squares Regression method with a line of regression.",
+      "misconceptions": [
+        {
+          "text": "A good regression model has a low correlation coefficient.",
+          "basis": "quiz_distractor"
+        },
+        {
+          "text": "A good model has a flat correlation coefficient.",
+          "basis": "quiz_distractor"
+        },
+        {
+          "text": "A small correlation like -0.15 means training a model is pointless.",
+          "basis": "common_error"
+        }
+      ]
+    },
+    {
+      "go_id": "GO_03_09_003",
+      "lo_id": "LO_03_09",
+      "week": 3,
+      "skill_name": "Regression Model Error Metrics",
+      "questions": [
+        {
+          "text": "how is the error of a regression model measured?",
+          "kind": "question",
+          "follows": null
+        },
+        {
+          "text": "what is the coefficient of determination?",
+          "kind": "question",
+          "follows": null
+        },
+        {
+          "text": "why do they square the distances?",
+          "kind": "follow_up",
+          "follows": 0
+        }
+      ],
+      "reference_answer": "Error can be measured with root mean square error (RMSE), the root of the mean of all squared differences between expected and predicted values. Another quality indicator is the coefficient of determination, where 0 means the model is no better than the mean and 1 means perfect prediction.",
+      "source_file": "Week03-LectureC-Linear-Regression.md",
+      "source_quote": "root mean square error (RMSE) metrics, which is the root of the mean of all squared differences between expected and predicted value.",
+      "misconceptions": [
+        {
+          "text": "RMSE is the average of the raw differences, so positive and negative errors cancel.",
+          "basis": "common_error"
+        },
+        {
+          "text": "A coefficient of determination of 0 means the model predicts perfectly.",
+          "basis": "lesson"
+        },
+        {
+          "text": "Squaring the distances treats large errors the same as small ones.",
+          "basis": "lesson"
+        }
+      ]
+    },
+    {
+      "go_id": "GO_03_09_004",
+      "lo_id": "LO_03_09",
+      "week": 3,
+      "skill_name": "Error Measurement Application",
+      "questions": [
+        {
+          "text": "how do I measure the error for one data point in least squares?",
+          "kind": "question",
+          "follows": null
+        },
+        {
+          "text": "if my RMSE is about 2 on pumpkin prices, is that good?",
+          "kind": "question",
+          "follows": null
+        },
+        {
+          "text": "how would I get that number in code?",
+          "kind": "follow_up",
+          "follows": 1
+        }
+      ],
+      "reference_answer": "For each data point you measure the vertical distance, called a residual, between the actual point and the regression line. In the pumpkin example, predicting on the test set gave an RMSE of about 2 points, roughly 17%. The lesson calls that not too good, and the coefficient of determination was low too.",
+      "source_file": "Week03-LectureC-Linear-Regression.md",
+      "source_quote": "For every data point, we measure the vertical distance (called a residual) between the actual point and our regression line.",
+      "misconceptions": [
+        {
+          "text": "The residual is the horizontal distance between the point and the line.",
+          "basis": "common_error"
+        },
+        {
+          "text": "You should measure error on the training data rather than on test data.",
+          "basis": "common_error"
+        },
+        {
+          "text": "Stepwise, Ridge, Lariat and Elasticnet are the regression methods.",
+          "basis": "quiz_distractor"
+        }
+      ]
+    },
+    {
+      "go_id": "GO_04_10_001",
+      "lo_id": "LO_04_10",
+      "week": 4,
+      "skill_name": "Neuron Structure Identification",
+      "questions": [
+        {
+          "text": "what is a threshold logic unit?",
+          "kind": "question",
+          "follows": null
+        },
+        {
+          "text": "what are the parts of the simple neuron model, like inputs and weights?",
+          "kind": "question",
+          "follows": null
+        },
+        {
+          "text": "how did they actually set the weights in the first one?",
+          "kind": "follow_up",
+          "follows": 0
+        }
+      ],
+      "reference_answer": "A threshold logic unit is another name for the simple single neuron used in Rosenblatt's early perceptron network. That network had 400 inputs from a photocell array and one binary output. Its weights acted like potentiometers that were adjusted by hand during training.",
+      "source_file": "Week04-LectureB-Perceptron.md",
+      "source_quote": "A simple network contained one neuron, also called a **threshold logic unit**. Neural network weights acted like potentiometers that required manual adjustment during the training phase.",
+      "misconceptions": [
+        {
+          "text": "A threshold logic unit is a different thing from a simple neuron, like a separate kind of chip.",
+          "basis": "quiz_distractor"
+        },
+        {
+          "text": "The first perceptron had many outputs, one for each shape it recognized.",
+          "basis": "common_error"
+        }
+      ]
+    },
+    {
+      "go_id": "GO_04_10_002",
+      "lo_id": "LO_04_10",
+      "week": 4,
+      "skill_name": "Perceptron Functionality Explanation",
+      "questions": [
+        {
+          "text": "how does a perceptron take an input and give an output?",
+          "kind": "question",
+          "follows": null
+        },
+        {
+          "text": "what does N mean in the perceptron model?",
+          "kind": "question",
+          "follows": null
+        },
+        {
+          "text": "and what kind of problem is that useful for?",
+          "kind": "follow_up",
+          "follows": 0
+        }
+      ],
+      "reference_answer": "A perceptron takes an input vector of size N, one value per feature. It combines the inputs with a weights vector and passes the result through a step activation function. The output is either +1 or -1, so it sorts inputs into two classes.",
+      "source_file": "Week04-LectureB-Perceptron.md",
+      "source_quote": "Suppose we have N features in our model, in which case the input vector would be a vector of size N.",
+      "misconceptions": [
+        {
+          "text": "A perceptron can output any number, so it is mainly used to predict continuous values.",
+          "basis": "common_error"
+        },
+        {
+          "text": "The perceptron ignores the weights and just looks at the raw inputs.",
+          "basis": "common_error"
+        }
+      ]
+    },
+    {
+      "go_id": "GO_04_10_003",
+      "lo_id": "LO_04_10",
+      "week": 4,
+      "skill_name": "Activation Function Analysis",
+      "questions": [
+        {
+          "text": "what does the activation function do in a perceptron?",
+          "kind": "question",
+          "follows": null
+        },
+        {
+          "text": "why is the step function used and what values does it give?",
+          "kind": "question",
+          "follows": null
+        },
+        {
+          "text": "can you give me an example of that?",
+          "kind": "follow_up",
+          "follows": 1
+        }
+      ],
+      "reference_answer": "The activation function f is applied to the weighted sum of the inputs to produce the output. In the perceptron it is a step function, so the output is +1 or -1 depending on the class. Which one you get depends on whether the weighted sum is at least zero or below zero.",
+      "source_file": "Week04-LectureB-Perceptron.md",
+      "source_quote": "We will assume that for each input vector x the output of our perceptron would be either +1 or -1, depending on the class.",
+      "misconceptions": [
+        {
+          "text": "Early neural networks needed terabytes of data to work.",
+          "basis": "quiz_distractor"
+        },
+        {
+          "text": "Early neural networks needed special reasoning ability built in rather than weight adjusting.",
+          "basis": "quiz_distractor"
+        },
+        {
+          "text": "The step activation function gives a smooth probability between 0 and 1.",
+          "basis": "common_error"
+        }
+      ]
+    },
+    {
+      "go_id": "GO_04_11_001",
+      "lo_id": "LO_04_11",
+      "week": 4,
+      "skill_name": "Perceptron Algorithm Basics",
+      "questions": [
+        {
+          "text": "what are we trying to find when we train a perceptron?",
+          "kind": "question",
+          "follows": null
+        },
+        {
+          "text": "what is the perceptron criterion?",
+          "kind": "question",
+          "follows": null
+        },
+        {
+          "text": "why does that matter for training?",
+          "kind": "follow_up",
+          "follows": 0
+        }
+      ],
+      "reference_answer": "Training a perceptron means finding a weights vector that classifies most values correctly, which gives the smallest error. The error is defined by the perceptron criterion, which sums over the wrongly classified training points.",
+      "source_file": "Week04-LectureB-Perceptron.md",
+      "source_quote": "To train a perceptron we need to find a weights vector w that classifies most of the values correctly, i.e. results in the smallest **error**.",
+      "misconceptions": [
+        {
+          "text": "Training a perceptron looks for the smallest size of the weights vector.",
+          "basis": "quiz_distractor"
+        },
+        {
+          "text": "Training tries to find the fewest nodes needed.",
+          "basis": "quiz_distractor"
+        }
+      ]
+    },
+    {
+      "go_id": "GO_04_11_002",
+      "lo_id": "LO_04_11",
+      "week": 4,
+      "skill_name": "Perceptron Learning Rule",
+      "questions": [
+        {
+          "text": "how does gradient descent train the perceptron?",
+          "kind": "question",
+          "follows": null
+        },
+        {
+          "text": "what is the learning rate for?",
+          "kind": "question",
+          "follows": null
+        },
+        {
+          "text": "so what gets changed at each step?",
+          "kind": "follow_up",
+          "follows": 0
+        }
+      ],
+      "reference_answer": "The error is treated as a function of the weights, and we want to minimize it. Gradient descent starts with some initial weights and at each step updates the weights using the gradient of the error. The learning rate scales how big each update is.",
+      "source_file": "Week04-LectureB-Perceptron.md",
+      "source_quote": "This criteria is considered as a function of weights w, and we need to minimize it.",
+      "misconceptions": [
+        {
+          "text": "At each step of gradient descent the learning rate is what gets updated.",
+          "basis": "quiz_distractor"
+        },
+        {
+          "text": "Gradient descent updates the gradient itself at each step.",
+          "basis": "quiz_distractor"
+        },
+        {
+          "text": "Gradient descent can't be used to minimize the error function of the weights.",
+          "basis": "quiz_distractor"
+        }
+      ]
+    },
+    {
+      "go_id": "GO_04_11_003",
+      "lo_id": "LO_04_11",
+      "week": 4,
+      "skill_name": "Linearly Separable Data",
+      "questions": [
+        {
+          "text": "what does linearly separable mean?",
+          "kind": "question",
+          "follows": null
+        },
+        {
+          "text": "what happens if the data isn't linearly separable, like with XOR?",
+          "kind": "question",
+          "follows": null
+        },
+        {
+          "text": "why does that matter?",
+          "kind": "follow_up",
+          "follows": 1
+        }
+      ],
+      "reference_answer": "Data is linearly separable if the two classes can be split by a straight line. A perceptron is a linear classifier, so it does well only in that case. Otherwise training does not converge, as with XOR, where accuracy never goes above 75%.",
+      "source_file": "Week04-LabA-Perceptron.ipynb",
+      "source_quote": "It can distinguish between two classes well if they are **linearly separable**, i.e. can be separated by a straight line.",
+      "misconceptions": [
+        {
+          "text": "A perceptron can learn any dataset if you train long enough.",
+          "basis": "common_error"
+        },
+        {
+          "text": "The XOR problem stopped research because multi-layer networks could not solve it either.",
+          "basis": "lesson"
+        }
+      ]
+    },
+    {
+      "go_id": "GO_04_11_004",
+      "lo_id": "LO_04_11",
+      "week": 4,
+      "skill_name": "Binary Classification With Perceptron",
+      "questions": [
+        {
+          "text": "what kind of model is a perceptron?",
+          "kind": "question",
+          "follows": null
+        },
+        {
+          "text": "how did we use a perceptron on MNIST digits?",
+          "kind": "question",
+          "follows": null
+        },
+        {
+          "text": "so how would you do all 10 digits then?",
+          "kind": "follow_up",
+          "follows": 1
+        }
+      ],
+      "reference_answer": "A perceptron is a binary classification model, meaning it separates two classes of input data. On MNIST it was applied to two digits at a time, such as 1 versus 0, one as the positive class and the other as the negative class.",
+      "source_file": "Week04-LectureB-Perceptron.md",
+      "source_quote": "A perceptron is a **binary classification** model, i.e. it can distinguish between two classes of input data.",
+      "misconceptions": [
+        {
+          "text": "A perceptron is a multi-class classification model that picks among 10 digits directly.",
+          "basis": "quiz_distractor"
+        },
+        {
+          "text": "A perceptron is a clustering model that finds groups without labels.",
+          "basis": "quiz_distractor"
+        }
+      ]
+    },
+    {
+      "go_id": "GO_05_12_001",
+      "lo_id": "LO_05_12",
+      "week": 5,
+      "skill_name": "Understand Loss Functions",
+      "questions": [
+        {
+          "text": "What is a loss function and why do we need one?",
+          "kind": "question",
+          "follows": null
+        },
+        {
+          "text": "Which loss functions are used for regression and which for classification?",
+          "kind": "question",
+          "follows": null
+        },
+        {
+          "text": "can you give me an example of that?",
+          "kind": "follow_up",
+          "follows": 1
+        }
+      ],
+      "reference_answer": "A loss function measures the quality of a model's predictions, i.e. how far the predictions f(x) are from the true labels Y. For regression, absolute error or squared error are often used. For classification, 0-1 loss (same as accuracy) or logistic loss is used.",
+      "source_file": "Week05-LectureA-Multi-Layered-Perceptron.md",
+      "source_quote": "The quality of predictions is measured by **Loss function**",
+      "misconceptions": [
+        {
+          "text": "Binary loss is one of the standard classification loss functions, alongside 0-1 loss and logistic loss.",
+          "basis": "quiz_distractor"
+        },
+        {
+          "text": "Only mean squared error is used for regression, absolute error is not a loss function.",
+          "basis": "quiz_distractor"
+        },
+        {
+          "text": "Loss function and accuracy are totally unrelated things.",
+          "basis": "common_error"
+        }
+      ]
+    },
+    {
+      "go_id": "GO_05_12_002",
+      "lo_id": "LO_05_12",
+      "week": 5,
+      "skill_name": "Gradient Descent Mechanics",
+      "questions": [
+        {
+          "text": "How does gradient descent actually update the parameters?",
+          "kind": "question",
+          "follows": null
+        },
+        {
+          "text": "What are minibatches and what makes it stochastic gradient descent?",
+          "kind": "question",
+          "follows": null
+        },
+        {
+          "text": "why does that matter?",
+          "kind": "follow_up",
+          "follows": 1
+        }
+      ],
+      "reference_answer": "Gradient descent starts with random parameter values and repeatedly computes the gradient (derivative) of the loss with respect to the parameters. Each step subtracts the learning rate times the gradient, e.g. w = w - eta * dL/dw, so the error decreases. In practice small random minibatches are used, which is called stochastic gradient descent.",
+      "source_file": "Week05-LectureA-Multi-Layered-Perceptron.md",
+      "source_quote": "we can compute a derivative (in multi-dimensional case called **gradient**) of loss function with respect to parameters, and vary parameters in such a way that the error would decrease.",
+      "misconceptions": [
+        {
+          "text": "Gradient descent starts from carefully chosen parameters, not random ones.",
+          "basis": "common_error"
+        },
+        {
+          "text": "Stochastic gradient descent uses the whole dataset for every step.",
+          "basis": "lesson"
+        },
+        {
+          "text": "You add the gradient to the parameters to reduce the loss.",
+          "basis": "common_error"
+        }
+      ]
+    },
+    {
+      "go_id": "GO_05_12_003",
+      "lo_id": "LO_05_12",
+      "week": 5,
+      "skill_name": "Loss Function Minimization",
+      "questions": [
+        {
+          "text": "Why is training a network described as minimizing the loss?",
+          "kind": "question",
+          "follows": null
+        },
+        {
+          "text": "What is cross-entropy loss and when is it 0?",
+          "kind": "question",
+          "follows": null
+        },
+        {
+          "text": "is binary cross-entropy the same thing as log loss?",
+          "kind": "follow_up",
+          "follows": 1
+        }
+      ],
+      "reference_answer": "Given a dataset, the loss becomes a function of the parameters theta, so training means finding the theta that gives the smallest loss. Cross-entropy loss compares the network's probability distribution with the one-hot true distribution, computed as -log p_c. It is 0 when the network gives probability 1 to the expected class and grows toward infinity as that probability nears 0.",
+      "source_file": "Week05-LabA-Own-Framework.ipynb",
+      "source_quote": "If the network return probability 1 for the expected class, cross-entropy loss would be 0. The closer the probability of the actual class is to 0, the higher is cross-entropy loss",
+      "misconceptions": [
+        {
+          "text": "Binary cross-entropy is a different loss from log loss.",
+          "basis": "quiz_distractor"
+        },
+        {
+          "text": "Cross-entropy can only compare a network output to a single number, not two probability distributions.",
+          "basis": "quiz_distractor"
+        },
+        {
+          "text": "Lower probability for the correct class gives lower cross-entropy loss.",
+          "basis": "common_error"
+        }
+      ]
+    },
+    {
+      "go_id": "GO_05_12_004",
+      "lo_id": "LO_05_12",
+      "week": 5,
+      "skill_name": "Implement Gradient Descent",
+      "questions": [
+        {
+          "text": "How do I write a gradient descent training loop in code?",
+          "kind": "question",
+          "follows": null
+        },
+        {
+          "text": "Why do we call zero_() on the gradients in PyTorch?",
+          "kind": "question",
+          "follows": null
+        },
+        {
+          "text": "what happens if I forget that?",
+          "kind": "follow_up",
+          "follows": 1
+        }
+      ],
+      "reference_answer": "In the loop you compute predictions and the loss, call loss.backward() to get gradients, then update parameters by subtracting learning_rate times the gradient. Then you reset the gradients with zero_(). This is needed because PyTorch accumulates gradients, so without resetting them new gradients are added to old ones.",
+      "source_file": "Week05-LabC-Intro-To-PyTorch.ipynb",
+      "source_quote": "PyTorch automatically **accumulates** gradients. If you specify `retain_graph=True` when calling `backward`, computational graph will be preserved, and new gradient is added to the `grad` field.",
+      "misconceptions": [
+        {
+          "text": "PyTorch overwrites the grad field on each backward() call, so no reset is needed.",
+          "basis": "lesson"
+        },
+        {
+          "text": "A bigger learning rate always makes gradient descent converge faster.",
+          "basis": "common_error"
+        },
+        {
+          "text": "An epoch is a single minibatch update.",
+          "basis": "common_error"
+        }
+      ]
+    },
+    {
+      "go_id": "GO_05_13_001",
+      "lo_id": "LO_05_13",
+      "week": 5,
+      "skill_name": "Mlp Architecture Understanding",
+      "questions": [
+        {
+          "text": "What can a multi-layer perceptron do that a one-layer network can't?",
+          "kind": "question",
+          "follows": null
+        },
+        {
+          "text": "How is the output of a two-layer perceptron computed step by step?",
+          "kind": "question",
+          "follows": null
+        },
+        {
+          "text": "so how many layers do I need?",
+          "kind": "follow_up",
+          "follows": 0
+        }
+      ],
+      "reference_answer": "A one-layer network can only classify linearly separable classes. Combining several layers gives a richer model that can classify sets that are not linearly separable. A two-layer MLP computes z1 = w1x+b1, then z2 = w2*alpha(z1)+b2, then applies softmax.",
+      "source_file": "Week05-LectureA-Multi-Layered-Perceptron.md",
+      "source_quote": "One-layer network, as we have seen above, is capable of classifying linearly separable classes. To build a richer model, we can combine several layers of the network.",
+      "misconceptions": [
+        {
+          "text": "A one-layer network classifies linearly joined classes.",
+          "basis": "quiz_distractor"
+        },
+        {
+          "text": "More layers is always better, so we should always use many layers.",
+          "basis": "lesson"
+        },
+        {
+          "text": "A one-layer network can classify any dataset given enough training.",
+          "basis": "common_error"
+        }
+      ]
+    },
+    {
+      "go_id": "GO_05_13_002",
+      "lo_id": "LO_05_13",
+      "week": 5,
+      "skill_name": "Activation Functions In Mlps",
+      "questions": [
+        {
+          "text": "Why do we need an activation function between linear layers?",
+          "kind": "question",
+          "follows": null
+        },
+        {
+          "text": "Which activation functions show up in the labs?",
+          "kind": "question",
+          "follows": null
+        },
+        {
+          "text": "can you explain why that matters?",
+          "kind": "follow_up",
+          "follows": 0
+        }
+      ],
+      "reference_answer": "Between linear layers a non-linear activation function such as tanh is needed. Without it, several linear layers have the same expressive power as a single one, because a composition of linear functions is also linear. The non-linearity is what lets multi-layer models handle data that is not linearly separable.",
+      "source_file": "Week05-LabA-Own-Framework.ipynb",
+      "source_quote": "Without such non-linearity, several linear layers would have the same expressive power as just one layers - because composition of linear functions is also linear!",
+      "misconceptions": [
+        {
+          "text": "Stacking linear layers without activation makes the network more powerful.",
+          "basis": "lesson"
+        },
+        {
+          "text": "The softmax is the activation used between hidden layers.",
+          "basis": "common_error"
+        },
+        {
+          "text": "Activation functions are only there to make training faster.",
+          "basis": "common_error"
+        }
+      ]
+    },
+    {
+      "go_id": "GO_05_13_003",
+      "lo_id": "LO_05_13",
+      "week": 5,
+      "skill_name": "Backpropagation Algorithm Steps",
+      "questions": [
+        {
+          "text": "What is backpropagation and what is it used for?",
+          "kind": "question",
+          "follows": null
+        },
+        {
+          "text": "What are the forward pass and backward pass in one training step?",
+          "kind": "question",
+          "follows": null
+        },
+        {
+          "text": "can you walk me through an example?",
+          "kind": "follow_up",
+          "follows": 1
+        }
+      ],
+      "reference_answer": "Backpropagation is the method of training a multi-layered perceptron. The forward pass computes the loss for a minibatch. The backward pass uses the chain rule to compute gradients of the loss with respect to parameters, starting at the loss and going backward through the graph, then the parameters are updated.",
+      "source_file": "Week05-LabA-Own-Framework.ipynb",
+      "source_quote": "**Backward pass**, when we compute the gradients of the loss with respect to the model parameters by propagating derivatives backward through the computational graph.",
+      "misconceptions": [
+        {
+          "text": "Multi-layer perceptrons are trained by front propagation or multiple propagation.",
+          "basis": "quiz_distractor"
+        },
+        {
+          "text": "Backpropagation is a different optimizer that replaces gradient descent.",
+          "basis": "lesson"
+        },
+        {
+          "text": "Backpropagation computes the gradients from the input layer forward to the loss.",
+          "basis": "common_error"
+        }
+      ]
+    },
+    {
+      "go_id": "GO_05_14_001",
+      "lo_id": "LO_05_14",
+      "week": 5,
+      "skill_name": "Framework Abstraction Layers",
+      "questions": [
+        {
+          "text": "what does a framework like PyTorch or Keras actually do for me that plain numpy doesn't?",
+          "kind": "question",
+          "follows": null
+        },
+        {
+          "text": "whats the difference between low-level and high-level API in tensorflow and pytorch?",
+          "kind": "question",
+          "follows": null
+        },
+        {
+          "text": "can you give me an example of when i'd pick the low-level one?",
+          "kind": "follow_up",
+          "follows": 1
+        }
+      ],
+      "reference_answer": "Frameworks add layers of abstraction on top of raw tensor math. The low-level API works with tensors and computational graphs and computes gradients automatically, on CPU or GPU. The high-level API (Keras, PyTorch Lightning) treats a network as a sequence of layers so you can build typical networks quickly without worrying about lots of details.",
+      "source_file": "Week05-LectureB-Frameworks-And-Overfitting.md",
+      "source_quote": "The high-level API allows you to construct typical neural networks very quickly without worrying about lots of details.",
+      "misconceptions": [
+        {
+          "text": "Keras and PyTorch are completely separate things, and the high-level API can't be combined with low-level code.",
+          "basis": "lesson"
+        },
+        {
+          "text": "High-level APIs are always better, so nobody needs the low-level API.",
+          "basis": "common_error"
+        },
+        {
+          "text": "A framework just adds a faster version of numpy and nothing else.",
+          "basis": "common_error"
+        }
+      ]
+    },
+    {
+      "go_id": "GO_05_14_002",
+      "lo_id": "LO_05_14",
+      "week": 5,
+      "skill_name": "Pre-Built Neural Components",
+      "questions": [
+        {
+          "text": "what ready-made pieces does PyTorch give you for building a network?",
+          "kind": "question",
+          "follows": null
+        },
+        {
+          "text": "is torch.nn.Linear the same as a one-layer perceptron?",
+          "kind": "question",
+          "follows": null
+        },
+        {
+          "text": "what other kinds of layers are there besides that one?",
+          "kind": "follow_up",
+          "follows": 0
+        }
+      ],
+      "reference_answer": "PyTorch provides standard layers inside its modules. `Linear` is a dense linear layer equivalent to a one-layered perceptron, and there are layers for activation functions such as Softmax, Sigmoid and ReLU. There are also layers for special network types such as convolution and recurrent.",
+      "source_file": "Week05-LabC-Intro-To-PyTorch.ipynb",
+      "source_quote": "`Linear` - dense linear layer, equivalent to one-layered perceptron. It has the same architecture as we have defined above for our network",
+      "misconceptions": [
+        {
+          "text": "You have to write every layer and its derivatives yourself, like in our own framework.",
+          "basis": "common_error"
+        },
+        {
+          "text": "Activation functions like ReLU aren't available as layers, only Linear is built in.",
+          "basis": "common_error"
+        },
+        {
+          "text": "Built-in layers only work for classification, never for regression.",
+          "basis": "common_error"
+        }
+      ]
+    },
+    {
+      "go_id": "GO_05_14_003",
+      "lo_id": "LO_05_14",
+      "week": 5,
+      "skill_name": "Model Training Utilities",
+      "questions": [
+        {
+          "text": "how do keras and pytorch help with training a model?",
+          "kind": "question",
+          "follows": null
+        },
+        {
+          "text": "what does fit do in keras?",
+          "kind": "question",
+          "follows": null
+        },
+        {
+          "text": "why does it matter that training can run on a GPU?",
+          "kind": "follow_up",
+          "follows": 0
+        }
+      ],
+      "reference_answer": "High-level APIs make training simple: you prepare the data and call a `fit` function to do the job. Frameworks also provide optimizers beyond plain gradient descent and let computation run on GPU, which matters because deep network training needs a lot of computation.",
+      "source_file": "Week05-LectureB-Frameworks-And-Overfitting.md",
+      "source_quote": "Training the model usually requires preparing the data and then calling a `fit` function to do the job.",
+      "misconceptions": [
+        {
+          "text": "After compiling a Keras model you train it by calling a train or teach function.",
+          "basis": "quiz_distractor"
+        },
+        {
+          "text": "Deep neural network training doesn't need much computation, so GPUs aren't important.",
+          "basis": "quiz_distractor"
+        },
+        {
+          "text": "Calling fit means you don't need to understand what training is doing.",
+          "basis": "lesson"
+        }
+      ]
+    },
+    {
+      "go_id": "GO_05_14_004",
+      "lo_id": "LO_05_14",
+      "week": 5,
+      "skill_name": "Framework Ecosystem Support",
+      "questions": [
+        {
+          "text": "which company made tensorflow and which made pytorch?",
+          "kind": "question",
+          "follows": null
+        },
+        {
+          "text": "how does Keras relate to TensorFlow and PyTorch?",
+          "kind": "question",
+          "follows": null
+        },
+        {
+          "text": "so which one should I pick for this course?",
+          "kind": "follow_up",
+          "follows": 1
+        }
+      ],
+      "reference_answer": "TensorFlow came from Google and PyTorch is a framework from Facebook. Keras is a higher-level API on top of TensorFlow or PyTorch that unifies and simplifies using neural networks, and in TensorFlow 2.x it is integrated. The course offers content for both, so you can choose your preferred one.",
+      "source_file": "Week05-LabC-Intro-To-PyTorch.ipynb",
+      "source_quote": "PyTorch - a framework from Facebook that is growing in popularity",
+      "misconceptions": [
+        {
+          "text": "TensorFlow is from Facebook and PyTorch is from Google.",
+          "basis": "quiz_distractor"
+        },
+        {
+          "text": "Keras is a completely independent framework unrelated to TensorFlow.",
+          "basis": "common_error"
+        },
+        {
+          "text": "You must learn both frameworks to do the course notebooks.",
+          "basis": "lesson"
+        }
+      ]
+    },
+    {
+      "go_id": "GO_05_15_001",
+      "lo_id": "LO_05_15",
+      "week": 5,
+      "skill_name": "Define Overfitting",
+      "questions": [
+        {
+          "text": "what is overfitting in machine learning?",
+          "kind": "question",
+          "follows": null
+        },
+        {
+          "text": "why does overfitting happen?",
+          "kind": "question",
+          "follows": null
+        },
+        {
+          "text": "can you give me an example of that?",
+          "kind": "follow_up",
+          "follows": 0
+        }
+      ],
+      "reference_answer": "Overfitting is when a model is too powerful for the data, so it fits the training points extremely well but does not learn the real pattern. In the lesson, a model with 7 parameters passes through 5 points with training error 0 but has a very high validation error. It happens with not enough training data, too powerful a model, or too much noise in input data.",
+      "source_file": "Week05-LectureB-Frameworks-And-Overfitting.md",
+      "source_quote": "Because we only have 5 points and the model has 7 parameters, it can adjust in such a way as to pass through all points",
+      "misconceptions": [
+        {
+          "text": "Overfitting happens because of not enough testing data.",
+          "basis": "quiz_distractor"
+        },
+        {
+          "text": "Overfitting happens because of too much noise in the output data.",
+          "basis": "quiz_distractor"
+        },
+        {
+          "text": "A model with zero training error is the best possible model.",
+          "basis": "common_error"
+        }
+      ]
+    },
+    {
+      "go_id": "GO_05_15_002",
+      "lo_id": "LO_05_15",
+      "week": 5,
+      "skill_name": "Detect Overfitting Techniques",
+      "questions": [
+        {
+          "text": "how can I tell if my model is overfitting?",
+          "kind": "question",
+          "follows": null
+        },
+        {
+          "text": "what should the training and validation errors look like during training if it's overfitting?",
+          "kind": "question",
+          "follows": null
+        },
+        {
+          "text": "and what should I do once I see that?",
+          "kind": "follow_up",
+          "follows": 1
+        }
+      ],
+      "reference_answer": "Overfitting shows up as a very low training error together with a high validation error. During training both errors usually fall at first, and then validation error may stop decreasing and start rising. That is the sign to probably stop training, or at least make a snapshot of the model.",
+      "source_file": "Week05-LectureB-Frameworks-And-Overfitting.md",
+      "source_quote": "overfitting can be detected by a very low training error, and a high validation error.",
+      "misconceptions": [
+        {
+          "text": "You detect overfitting by looking at training error only, as long as it keeps going down.",
+          "basis": "common_error"
+        },
+        {
+          "text": "If validation error rises during training, the model is just underfitting so keep training.",
+          "basis": "common_error"
+        },
+        {
+          "text": "Bias errors are caused by our computer not being able to capture the relationship in the data.",
+          "basis": "quiz_distractor"
+        }
+      ]
+    },
+    {
+      "go_id": "GO_05_15_003",
+      "lo_id": "LO_05_15",
+      "week": 5,
+      "skill_name": "Prevent Overfitting Methods",
+      "questions": [
+        {
+          "text": "what can I do to stop a network from overfitting?",
+          "kind": "question",
+          "follows": null
+        },
+        {
+          "text": "what is dropout?",
+          "kind": "question",
+          "follows": null
+        },
+        {
+          "text": "why would making the model simpler help?",
+          "kind": "follow_up",
+          "follows": 0
+        }
+      ],
+      "reference_answer": "You can increase the amount of training data, decrease the complexity of the model, or use a regularization technique such as Dropout. Simpler models with fewer layers and neurons are less likely to overfit, while complex models need more data to train on.",
+      "source_file": "Week05-LectureB-Frameworks-And-Overfitting.md",
+      "source_quote": "Use some regularization technique, such as Dropout, which we will consider later.",
+      "misconceptions": [
+        {
+          "text": "Adding more layers and neurons is the way to fix overfitting.",
+          "basis": "common_error"
+        },
+        {
+          "text": "You can only fix overfitting by collecting more data; simplifying the model doesn't help.",
+          "basis": "common_error"
+        },
+        {
+          "text": "Overfitting is fixed by training for more epochs.",
+          "basis": "lesson"
+        }
+      ]
+    },
+    {
+      "go_id": "GO_05_15_004",
+      "lo_id": "LO_05_15",
+      "week": 5,
+      "skill_name": "Bias-Variance Trade-Off Analysis",
+      "questions": [
+        {
+          "text": "what's the bias-variance tradeoff and how does it connect to overfitting?",
+          "kind": "question",
+          "follows": null
+        },
+        {
+          "text": "what is the difference between bias error and variance error?",
+          "kind": "question",
+          "follows": null
+        },
+        {
+          "text": "why does that matter when deciding when to stop training?",
+          "kind": "follow_up",
+          "follows": 0
+        }
+      ],
+      "reference_answer": "Overfitting is a case of the bias-variance tradeoff. Bias errors come from the algorithm not capturing the relationship in the training data, e.g. an underpowered model (underfitting), while variance errors come from the model approximating noise (overfitting). During training bias error decreases and variance error increases, so you must stop training, manually or through regularization, to keep a compromise.",
+      "source_file": "Week05-LectureB-Frameworks-And-Overfitting.md",
+      "source_quote": "are caused by our algorithm not being able to capture the relationship between training data correctly.",
+      "misconceptions": [
+        {
+          "text": "Both bias error and variance error keep decreasing the longer you train.",
+          "basis": "common_error"
+        },
+        {
+          "text": "Variance error means the model is too weak, i.e. underfitting.",
+          "basis": "common_error"
+        },
+        {
+          "text": "You can get zero bias and zero variance by picking the right model size.",
+          "basis": "lesson"
+        }
+      ]
+    },
+    {
+      "go_id": "GO_06_16_001",
+      "lo_id": "LO_06_16",
+      "week": 6,
+      "skill_name": "Fairness In Ai Systems",
+      "questions": [
+        {
+          "text": "what does fairness mean for an AI system?",
+          "kind": "question",
+          "follows": null
+        },
+        {
+          "text": "how does biased training data end up making a model biased?",
+          "kind": "question",
+          "follows": null
+        },
+        {
+          "text": "can you give me an example of that?",
+          "kind": "follow_up",
+          "follows": 1
+        }
+      ],
+      "reference_answer": "Fairness means AI systems should treat everyone fairly and not affect similar groups of people in different ways. Models can pick up bias from biased training data, for example a job-prediction model favoring males because the training data leaned toward a male audience. To avoid this we need to balance the training data and check the model.",
+      "source_file": "Week06-LectureA-Responsible-AI.md",
+      "source_quote": "when we try to predict the probability of getting a software developer job for a person, the model is likely to give higher preference to males - just because the training dataset was likely biased towards a male audience.",
+      "misconceptions": [
+        {
+          "text": "It is not ethical to use AI in medicine at all.",
+          "basis": "quiz_distractor"
+        },
+        {
+          "text": "Ethical AI only matters because AI is a powerful tool that can cause harm, and discrimination is not a concern.",
+          "basis": "quiz_distractor"
+        },
+        {
+          "text": "Bias in a model only happens when someone deliberately puts it there.",
+          "basis": "lesson"
+        }
+      ]
+    },
+    {
+      "go_id": "GO_06_16_002",
+      "lo_id": "LO_06_16",
+      "week": 6,
+      "skill_name": "Ai Reliability And Safety",
+      "questions": [
+        {
+          "text": "why does reliability and safety matter for AI?",
+          "kind": "question",
+          "follows": null
+        },
+        {
+          "text": "how should we test an AI system so it is reliable?",
+          "kind": "question",
+          "follows": null
+        },
+        {
+          "text": "why does that matter for something like a self-driving car?",
+          "kind": "follow_up",
+          "follows": 1
+        }
+      ],
+      "reference_answer": "AI systems need to be reliable, safe and consistent under normal and unexpected conditions, especially outliers. Developers should anticipate many circumstances during design and testing. A self-driving car, for example, must consider night, storms, children running across the street and road construction.",
+      "source_file": "Week06-LectureB-Fairness-In-Machine-Learning.md",
+      "source_quote": "How well an AI system can handle a wild range of conditions reliably and safely reflects the level of anticipation the data scientist or AI developer considered during the design or testing of the system.",
+      "misconceptions": [
+        {
+          "text": "A neural network is an example of interpretable AI, so it is easy to explain its decisions.",
+          "basis": "quiz_distractor"
+        },
+        {
+          "text": "If a model works well under normal conditions, it is reliable and safe.",
+          "basis": "lesson"
+        },
+        {
+          "text": "A good AI model does not make mistakes, so its output can be treated as certain.",
+          "basis": "common_error"
+        }
+      ]
+    },
+    {
+      "go_id": "GO_06_16_003",
+      "lo_id": "LO_06_16",
+      "week": 6,
+      "skill_name": "Privacy And Security In Ai",
+      "questions": [
+        {
+          "text": "why is privacy and security a special concern for AI?",
+          "kind": "question",
+          "follows": null
+        },
+        {
+          "text": "what does the lesson say about data used to train a model?",
+          "kind": "question",
+          "follows": null
+        },
+        {
+          "text": "why does that matter?",
+          "kind": "follow_up",
+          "follows": 1
+        }
+      ],
+      "reference_answer": "AI needs lots of data to make accurate predictions about people, so privacy and security need close attention. Developers should consider where the data came from, protect confidential information and resist attacks. There is also a tension between needing more personal data and protecting privacy.",
+      "source_file": "Week06-LectureB-Fairness-In-Machine-Learning.md",
+      "source_quote": "it is crucial to develop AI systems that can protect confidential information and resist attacks.",
+      "misconceptions": [
+        {
+          "text": "Once data is used for training, nobody needs to keep track of it, since it disappears from the model.",
+          "basis": "lesson"
+        },
+        {
+          "text": "AI only creates security problems and is never used to improve security.",
+          "basis": "lesson"
+        },
+        {
+          "text": "Privacy rules like GDPR mean AI privacy is a solved problem.",
+          "basis": "common_error"
+        }
+      ]
+    },
+    {
+      "go_id": "GO_06_16_004",
+      "lo_id": "LO_06_16",
+      "week": 6,
+      "skill_name": "Transparency And Accountability",
+      "questions": [
+        {
+          "text": "what does accountability mean for an AI system?",
+          "kind": "question",
+          "follows": null
+        },
+        {
+          "text": "what is transparency in responsible AI?",
+          "kind": "question",
+          "follows": null
+        },
+        {
+          "text": "how would a company put that into practice?",
+          "kind": "follow_up",
+          "follows": 0
+        }
+      ],
+      "reference_answer": "Accountability means the people who design and deploy AI systems are responsible for how the systems operate. It is usually good to keep a human in the loop for important decisions so real people can be held accountable. Transparency is a related principle about being clear that AI is used and making systems understandable.",
+      "source_file": "Week06-LectureA-Responsible-AI.md",
+      "source_quote": "In most cases we would want to include human beings into the loop of making important decisions, so that actual people are made accountable.",
+      "misconceptions": [
+        {
+          "text": "Accountability means the AI system itself should be held responsible for its actions.",
+          "basis": "quiz_distractor"
+        },
+        {
+          "text": "Only the developers are accountable, not the organizations deploying the system.",
+          "basis": "quiz_distractor"
+        },
+        {
+          "text": "Cleverness is one of the principles of Responsible AI.",
+          "basis": "quiz_distractor"
+        }
+      ]
+    },
+    {
+      "go_id": "GO_06_17_001",
+      "lo_id": "LO_06_17",
+      "week": 6,
+      "skill_name": "Bias Sources In Ml Models",
+      "questions": [
+        {
+          "text": "how does unfairness get into a machine learning system?",
+          "kind": "question",
+          "follows": null
+        },
+        {
+          "text": "what does unfairness mean in ML?",
+          "kind": "question",
+          "follows": null
+        },
+        {
+          "text": "is it always on purpose?",
+          "kind": "follow_up",
+          "follows": 0
+        }
+      ],
+      "reference_answer": "Unfairness can come from biased training data, since humans carry inherited biases that show up in the data. It can happen unintentionally, because it is hard to know when you are adding bias. Unfairness means negative impacts or harms for a group of people, such as by race, gender, age or disability.",
+      "source_file": "Week06-LectureB-Fairness-In-Machine-Learning.md",
+      "source_quote": "Each of us as humans carries around inherited biases that affect our decisions and actions. These biases can be evident in the data that we use to train AI systems.",
+      "misconceptions": [
+        {
+          "text": "A model discriminates because it may become unfriendly.",
+          "basis": "quiz_distractor"
+        },
+        {
+          "text": "Unfairness in ML means harm to one single person.",
+          "basis": "quiz_distractor"
+        },
+        {
+          "text": "Unfairness only happens intentionally.",
+          "basis": "quiz_distractor"
+        }
+      ]
+    },
+    {
+      "go_id": "GO_06_17_002",
+      "lo_id": "LO_06_17",
+      "week": 6,
+      "skill_name": "Fairness Metrics In Ai",
+      "questions": [
+        {
+          "text": "what are the main kinds of fairness-related harm?",
+          "kind": "question",
+          "follows": null
+        },
+        {
+          "text": "what is Fairlearn used for?",
+          "kind": "question",
+          "follows": null
+        },
+        {
+          "text": "can you explain the second one you listed?",
+          "kind": "follow_up",
+          "follows": 0
+        }
+      ],
+      "reference_answer": "The lesson lists allocation, quality of service, denigration, over- or under-representation, and stereotyping as the main fairness-related harms. Fairlearn is the fairness dashboard tool in Microsoft's Responsible AI Toolbox.",
+      "source_file": "Week06-LectureB-Fairness-In-Machine-Learning.md",
+      "source_quote": "Allocation, if a gender or ethnicity for example is favored over another.",
+      "misconceptions": [
+        {
+          "text": "Model fairness is mainly about interpretability rather than bias.",
+          "basis": "quiz_distractor"
+        },
+        {
+          "text": "Fairlearn decides for you what is fair and what is not.",
+          "basis": "quiz_distractor"
+        },
+        {
+          "text": "Fairness harms are only about whether a group gets resources, not about service quality or stereotypes.",
+          "basis": "common_error"
+        }
+      ]
+    },
+    {
+      "go_id": "GO_06_17_003",
+      "lo_id": "LO_06_17",
+      "week": 6,
+      "skill_name": "Bias Detection Techniques",
+      "questions": [
+        {
+          "text": "how can I find out if a model has bias in it?",
+          "kind": "question",
+          "follows": null
+        },
+        {
+          "text": "why aren't normal performance metrics enough to check responsible AI?",
+          "kind": "question",
+          "follows": null
+        },
+        {
+          "text": "what would the data analysis part look at?",
+          "kind": "follow_up",
+          "follows": 0
+        }
+      ],
+      "reference_answer": "Traditional performance metrics are aggregates and are not enough to show how a model violates responsible AI principles. The Responsible AI dashboard offers error analysis, model overview to find performance disparities across data cohorts, and data analysis to find potential bias in the data distribution.",
+      "source_file": "Week06-LectureB-Fairness-In-Machine-Learning.md",
+      "source_quote": "Model overview. To discover where there are disparities in the model's performance across data cohorts.",
+      "misconceptions": [
+        {
+          "text": "A high overall accuracy proves the model is fair to every group.",
+          "basis": "lesson"
+        },
+        {
+          "text": "Bias can only be detected by looking at the model, never the data.",
+          "basis": "common_error"
+        },
+        {
+          "text": "Fairlearn just picks the best model for you automatically.",
+          "basis": "quiz_distractor"
+        }
+      ]
+    },
+    {
+      "go_id": "GO_06_17_004",
+      "lo_id": "LO_06_17",
+      "week": 6,
+      "skill_name": "Mitigation Strategies For Bias",
+      "questions": [
+        {
+          "text": "how can we reduce bias in ML systems?",
+          "kind": "question",
+          "follows": null
+        },
+        {
+          "text": "what tools are there for finding and fixing unfair models?",
+          "kind": "question",
+          "follows": null
+        },
+        {
+          "text": "which of those would be best to start with?",
+          "kind": "follow_up",
+          "follows": 0
+        }
+      ],
+      "reference_answer": "To prevent harms, teams should have diverse backgrounds and perspectives, invest in datasets that reflect society's diversity, and develop better methods across the ML lifecycle for detecting and correcting irresponsible AI. Also, balance the training data and investigate the model. Tools include the Fairness Dashboard (FairLearn) and Error Analysis Dashboard.",
+      "source_file": "Week06-LectureB-Fairness-In-Machine-Learning.md",
+      "source_quote": "invest in datasets that reflect the diversity of our society",
+      "misconceptions": [
+        {
+          "text": "Unfairness is caused by too little reliance on historical data.",
+          "basis": "quiz_distractor"
+        },
+        {
+          "text": "You can fix bias just by defining fairness metrics, without identifying harms and affected groups.",
+          "basis": "quiz_distractor"
+        },
+        {
+          "text": "Once bias is fixed at training time, no further checking is needed.",
+          "basis": "common_error"
+        }
+      ]
+    }
+  ]
+}

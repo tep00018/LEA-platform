@@ -1,0 +1,13 @@
+# Main run as proposed in the plan: 8 learners per profile (48), all six AIML101 weeks,
+# 1 repetition. Sized with ``python -m simulation plan --config simulation/config/main.yaml
+# --from <pilot run id>``; it won't start until it fits, the pre-registration is approved,
+# and the budgets below come from calibration.
+usage_credits_confirmed_off: false
+sizing_from: null
+scale:
+  learners_per_profile: 8
+  weeks: [1, 2, 3, 4, 5, 6]
+claude:
+  per_5h_budget: null
+  per_week_budget: null
+  max_calls_per_run: 20000

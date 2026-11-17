@@ -1,0 +1,43 @@
+id: M16
+version: 1
+title: Tutor turn checklist
+unit: one tutor reply (judged with the whole session transcript and the course content retrieved for it)
+instructions: >
+  Judge each numbered TUTOR reply on its own, using only the transcript and the course
+  content shown for that reply. Answer each item "yes" or "no". Don't judge the student.
+items:
+  consistent_with_content:
+    question: Is everything the tutor says consistent with the retrieved course content?
+    yes_if: Every factual claim agrees with the content shown, or is general knowledge that doesn't contradict it.
+    no_if: The reply states something the content contradicts, or invents specifics (names, numbers, steps) the content doesn't support.
+    examples:
+      - {text: "Content says a perceptron has one layer; tutor says 'a perceptron is a single layer of weights'.", answer: "yes"}
+      - {text: "Content says gradient descent moves against the gradient; tutor says 'we step along the gradient to reduce loss'.", answer: "no"}
+  responds_to_student:
+    question: Does the reply respond to what the student just said?
+    yes_if: It engages with the student's last message (their answer, question or confusion) specifically.
+    no_if: It ignores the message, answers a different question, or gives a generic reply that would fit any message.
+    examples:
+      - {text: "Student: 'is it because the data is labelled?' Tutor: 'Yes, labels are what make it supervised...'", answer: "yes"}
+      - {text: "Student asks what a bias term does; tutor moves on to the next objective without addressing it.", answer: "no"}
+  explains_why:
+    question: When the student gave an answer, does the tutor explain why it is right or wrong?
+    yes_if: The reply gives a reason (not just "correct" or "not quite"), or the student's message wasn't an answer (then "yes").
+    no_if: The student answered and the tutor only judged it, or moved on, without any reason.
+    examples:
+      - {text: "'Not quite: overfitting means doing well on training data but badly on new data, so...'", answer: "yes"}
+      - {text: "'Correct! Next question: ...'", answer: "no"}
+  no_giveaway:
+    question: Does the tutor avoid giving away the answer before the student has attempted it?
+    yes_if: The tutor asks or guides without stating the answer to its own open question, or the student already attempted it.
+    no_if: The tutor poses a question and answers it in the same reply, or hands over the answer to a question the student hasn't tried.
+    examples:
+      - {text: "'What do you think happens to the error if the learning rate is too large?'", answer: "yes"}
+      - {text: "'What is a neuron's activation? It's the output of a non-linear function of the weighted sum.'", answer: "no"}
+  clear_next_step:
+    question: Does the reply end with a clear next step or question for the student?
+    yes_if: The student knows what to do next (a question to answer, a task, or a clear prompt to continue).
+    no_if: The reply ends without an invitation or with something vague ("let me know if you have questions").
+    examples:
+      - {text: "'...Can you give me an example of a regression problem?'", answer: "yes"}
+      - {text: "'...That's the main idea behind it.'", answer: "no"}

@@ -1,0 +1,1737 @@
+{
+  "course": "AIML101",
+  "format": "lea-reference-question-bank/1",
+  "note": "Reference questions from Microsoft AI for Beginners and ML for Beginners (MIT; see ATTRIBUTION.md). Not used by Quiz mode. GO tags are suggestions until reviewed.",
+  "questions": [
+    {
+      "id": "AI4B-101-1",
+      "week": 1,
+      "type": "multiple_choice",
+      "text": "A famous 19th century proto-computer engineer was",
+      "options": [
+        "Charles Barkley",
+        "Charles Babbage",
+        "Charles Darwin"
+      ],
+      "correct_index": 1,
+      "source": {
+        "curriculum": "AI for Beginners",
+        "file": "AI-For-Beginners/etc/quiz-app/src/assets/translations/en/lesson-1.json",
+        "quiz_id": 101,
+        "quiz_title": "Introduction to AI: Pre Quiz",
+        "kind": "pre"
+      },
+      "go_id": "GO_01_03_001",
+      "lo_id": "LO_01_03",
+      "tagging": {
+        "method": "embedding similarity (text-embedding-3-small) within the week",
+        "score": 0.218,
+        "reviewed": false
+      }
+    },
+    {
+      "id": "AI4B-101-2",
+      "week": 1,
+      "type": "true_false",
+      "text": "Weak AI is a system designed to solve many tasks",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correct_index": 1,
+      "source": {
+        "curriculum": "AI for Beginners",
+        "file": "AI-For-Beginners/etc/quiz-app/src/assets/translations/en/lesson-1.json",
+        "quiz_id": 101,
+        "quiz_title": "Introduction to AI: Pre Quiz",
+        "kind": "pre"
+      },
+      "go_id": "GO_01_01_004",
+      "lo_id": "LO_01_01",
+      "tagging": {
+        "method": "embedding similarity (text-embedding-3-small) within the week",
+        "score": 0.574,
+        "reviewed": false
+      }
+    },
+    {
+      "id": "AI4B-101-3",
+      "week": 1,
+      "type": "multiple_choice",
+      "text": "Chat bots are an example of truly intelligent systems",
+      "options": [
+        "false, they are usually designed by a series of rules.",
+        "true, they are usually considered to be 'intelligent",
+        "false, but they are increasingly able to pass Turing tests as they become more sophisticated."
+      ],
+      "correct_index": 2,
+      "source": {
+        "curriculum": "AI for Beginners",
+        "file": "AI-For-Beginners/etc/quiz-app/src/assets/translations/en/lesson-1.json",
+        "quiz_id": 101,
+        "quiz_title": "Introduction to AI: Pre Quiz",
+        "kind": "pre"
+      },
+      "go_id": "GO_01_01_004",
+      "lo_id": "LO_01_01",
+      "tagging": {
+        "method": "embedding similarity (text-embedding-3-small) within the week",
+        "score": 0.495,
+        "reviewed": false
+      }
+    },
+    {
+      "id": "AI4B-201-1",
+      "week": 1,
+      "type": "multiple_choice",
+      "text": "A top-down approach to AI is a model of reasoning called",
+      "options": [
+        "strategic reasoning",
+        "symbolic reasoning",
+        "synergistic reasoning"
+      ],
+      "correct_index": 1,
+      "source": {
+        "curriculum": "AI for Beginners",
+        "file": "AI-For-Beginners/etc/quiz-app/src/assets/translations/en/lesson-1.json",
+        "quiz_id": 201,
+        "quiz_title": "Introduction to AI: Post-Quiz",
+        "kind": "post"
+      },
+      "go_id": "GO_01_02_003",
+      "lo_id": "LO_01_02",
+      "tagging": {
+        "method": "embedding similarity (text-embedding-3-small) within the week",
+        "score": 0.658,
+        "reviewed": false
+      }
+    },
+    {
+      "id": "AI4B-201-2",
+      "week": 1,
+      "type": "true_false",
+      "text": "A bottom-up approach to AI is based on neural networks",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correct_index": 0,
+      "source": {
+        "curriculum": "AI for Beginners",
+        "file": "AI-For-Beginners/etc/quiz-app/src/assets/translations/en/lesson-1.json",
+        "quiz_id": 201,
+        "quiz_title": "Introduction to AI: Post-Quiz",
+        "kind": "post"
+      },
+      "go_id": "GO_01_02_002",
+      "lo_id": "LO_01_02",
+      "tagging": {
+        "method": "embedding similarity (text-embedding-3-small) within the week",
+        "score": 0.671,
+        "reviewed": false
+      }
+    },
+    {
+      "id": "AI4B-201-3",
+      "week": 1,
+      "type": "multiple_choice",
+      "text": "The AI Winter occurred in this era",
+      "options": [
+        "1950s",
+        "1960s",
+        "1970s"
+      ],
+      "correct_index": 2,
+      "source": {
+        "curriculum": "AI for Beginners",
+        "file": "AI-For-Beginners/etc/quiz-app/src/assets/translations/en/lesson-1.json",
+        "quiz_id": 201,
+        "quiz_title": "Introduction to AI: Post-Quiz",
+        "kind": "post"
+      },
+      "go_id": "GO_01_03_002",
+      "lo_id": "LO_01_03",
+      "tagging": {
+        "method": "embedding similarity (text-embedding-3-small) within the week",
+        "score": 0.595,
+        "reviewed": false
+      }
+    },
+    {
+      "id": "ML4B-3-1",
+      "week": 1,
+      "type": "multiple_choice",
+      "text": "Approximately when was the term 'artificial intelligence' coined?",
+      "options": [
+        "1980s",
+        "1950s",
+        "1930s"
+      ],
+      "correct_index": 1,
+      "source": {
+        "curriculum": "ML for Beginners",
+        "file": "ML-For-Beginners/quiz-app/src/assets/translations/en.json",
+        "quiz_id": 3,
+        "quiz_title": "History of Machine Learning: Pre-Lecture Quiz",
+        "kind": "pre"
+      },
+      "go_id": "GO_01_03_001",
+      "lo_id": "LO_01_03",
+      "tagging": {
+        "method": "embedding similarity (text-embedding-3-small) within the week",
+        "score": 0.45,
+        "reviewed": false
+      }
+    },
+    {
+      "id": "ML4B-3-2",
+      "week": 1,
+      "type": "multiple_choice",
+      "text": "Who was one of the early pioneers of machine learning?",
+      "options": [
+        "Alan Turing",
+        "Bill Gates",
+        "Shakey the robot"
+      ],
+      "correct_index": 0,
+      "source": {
+        "curriculum": "ML for Beginners",
+        "file": "ML-For-Beginners/quiz-app/src/assets/translations/en.json",
+        "quiz_id": 3,
+        "quiz_title": "History of Machine Learning: Pre-Lecture Quiz",
+        "kind": "pre"
+      },
+      "go_id": "GO_01_03_003",
+      "lo_id": "LO_01_03",
+      "tagging": {
+        "method": "embedding similarity (text-embedding-3-small) within the week",
+        "score": 0.396,
+        "reviewed": false
+      }
+    },
+    {
+      "id": "ML4B-3-3",
+      "week": 1,
+      "type": "multiple_choice",
+      "text": "What is one of the reasons that advancement in AI slowed in the 1970s?",
+      "options": [
+        "Limited compute power",
+        "Not enough skilled engineers",
+        "Conflicts between countries"
+      ],
+      "correct_index": 0,
+      "source": {
+        "curriculum": "ML for Beginners",
+        "file": "ML-For-Beginners/quiz-app/src/assets/translations/en.json",
+        "quiz_id": 3,
+        "quiz_title": "History of Machine Learning: Pre-Lecture Quiz",
+        "kind": "pre"
+      },
+      "go_id": "GO_01_03_001",
+      "lo_id": "LO_01_03",
+      "tagging": {
+        "method": "embedding similarity (text-embedding-3-small) within the week",
+        "score": 0.434,
+        "reviewed": false
+      }
+    },
+    {
+      "id": "ML4B-4-1",
+      "week": 1,
+      "type": "multiple_choice",
+      "text": "What's an example of a 'scruffy' AI system?",
+      "options": [
+        "ELIZA",
+        "HACKML",
+        "SSYSTEM"
+      ],
+      "correct_index": 0,
+      "source": {
+        "curriculum": "ML for Beginners",
+        "file": "ML-For-Beginners/quiz-app/src/assets/translations/en.json",
+        "quiz_id": 4,
+        "quiz_title": "History of Machine Learning: Post-Lecture Quiz",
+        "kind": "post"
+      },
+      "go_id": "GO_01_01_004",
+      "lo_id": "LO_01_01",
+      "tagging": {
+        "method": "embedding similarity (text-embedding-3-small) within the week",
+        "score": 0.43,
+        "reviewed": false
+      }
+    },
+    {
+      "id": "ML4B-4-2",
+      "week": 1,
+      "type": "multiple_choice",
+      "text": "What is an example of a technology that was developed during 'The Golden Years'?",
+      "options": [
+        "Blocks world",
+        "Jibo",
+        "Robot dogs"
+      ],
+      "correct_index": 0,
+      "source": {
+        "curriculum": "ML for Beginners",
+        "file": "ML-For-Beginners/quiz-app/src/assets/translations/en.json",
+        "quiz_id": 4,
+        "quiz_title": "History of Machine Learning: Post-Lecture Quiz",
+        "kind": "post"
+      },
+      "go_id": "GO_01_03_001",
+      "lo_id": "LO_01_03",
+      "tagging": {
+        "method": "embedding similarity (text-embedding-3-small) within the week",
+        "score": 0.351,
+        "reviewed": false
+      }
+    },
+    {
+      "id": "ML4B-4-3",
+      "week": 1,
+      "type": "multiple_choice",
+      "text": "Which event was foundational in the creation and expansion of the field of artificial intelligence?",
+      "options": [
+        "Turing Test",
+        "Dartmouth Summer Research Project",
+        "AI Winter"
+      ],
+      "correct_index": 1,
+      "source": {
+        "curriculum": "ML for Beginners",
+        "file": "ML-For-Beginners/quiz-app/src/assets/translations/en.json",
+        "quiz_id": 4,
+        "quiz_title": "History of Machine Learning: Post-Lecture Quiz",
+        "kind": "post"
+      },
+      "go_id": "GO_01_01_003",
+      "lo_id": "LO_01_01",
+      "tagging": {
+        "method": "embedding similarity (text-embedding-3-small) within the week",
+        "score": 0.511,
+        "reviewed": false
+      }
+    },
+    {
+      "id": "AI4B-102-1",
+      "week": 2,
+      "type": "multiple_choice",
+      "text": "The top-down approach to creating intelligent systems was based on:",
+      "options": [
+        "knowledge seeking and reading",
+        "knowledge representation and reasoning",
+        "knowledge reasoning and seeking"
+      ],
+      "correct_index": 1,
+      "source": {
+        "curriculum": "AI for Beginners",
+        "file": "AI-For-Beginners/etc/quiz-app/src/assets/translations/en/lesson-2.json",
+        "quiz_id": 102,
+        "quiz_title": "Knowledge Representation and Expert Systems: Pre-Quiz",
+        "kind": "pre"
+      },
+      "go_id": "GO_02_04_001",
+      "lo_id": "LO_02_04",
+      "tagging": {
+        "method": "embedding similarity (text-embedding-3-small) within the week",
+        "score": 0.513,
+        "reviewed": false
+      }
+    },
+    {
+      "id": "AI4B-102-2",
+      "week": 2,
+      "type": "true_false",
+      "text": "Knowledge is the same as information",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correct_index": 1,
+      "source": {
+        "curriculum": "AI for Beginners",
+        "file": "AI-For-Beginners/etc/quiz-app/src/assets/translations/en/lesson-2.json",
+        "quiz_id": 102,
+        "quiz_title": "Knowledge Representation and Expert Systems: Pre-Quiz",
+        "kind": "pre"
+      },
+      "go_id": "GO_02_04_001",
+      "lo_id": "LO_02_04",
+      "tagging": {
+        "method": "embedding similarity (text-embedding-3-small) within the week",
+        "score": 0.405,
+        "reviewed": false
+      }
+    },
+    {
+      "id": "AI4B-102-3",
+      "week": 2,
+      "type": "multiple_choice",
+      "text": "Knowledge is obtained by an:",
+      "options": [
+        "active learning process",
+        "passive learning process",
+        "both of these"
+      ],
+      "correct_index": 0,
+      "source": {
+        "curriculum": "AI for Beginners",
+        "file": "AI-For-Beginners/etc/quiz-app/src/assets/translations/en/lesson-2.json",
+        "quiz_id": 102,
+        "quiz_title": "Knowledge Representation and Expert Systems: Pre-Quiz",
+        "kind": "pre"
+      },
+      "go_id": "GO_02_05_004",
+      "lo_id": "LO_02_05",
+      "tagging": {
+        "method": "embedding similarity (text-embedding-3-small) within the week",
+        "score": 0.373,
+        "reviewed": false
+      }
+    },
+    {
+      "id": "AI4B-202-1",
+      "week": 2,
+      "type": "multiple_choice",
+      "text": "The simplest method of knowledge representation is:",
+      "options": [
+        "algorithmic",
+        "symbolic",
+        "synergistic"
+      ],
+      "correct_index": 0,
+      "source": {
+        "curriculum": "AI for Beginners",
+        "file": "AI-For-Beginners/etc/quiz-app/src/assets/translations/en/lesson-2.json",
+        "quiz_id": 202,
+        "quiz_title": "Knowledge Representation and Expert Systems: Post-Quiz",
+        "kind": "pre"
+      },
+      "go_id": "GO_02_04_001",
+      "lo_id": "LO_02_04",
+      "tagging": {
+        "method": "embedding similarity (text-embedding-3-small) within the week",
+        "score": 0.543,
+        "reviewed": false
+      }
+    },
+    {
+      "id": "AI4B-202-2",
+      "week": 2,
+      "type": "true_false",
+      "text": "Scenarios can represent complex situations that can unfold in time",
+      "options": [
+        "true",
+        "false"
+      ],
+      "correct_index": 0,
+      "source": {
+        "curriculum": "AI for Beginners",
+        "file": "AI-For-Beginners/etc/quiz-app/src/assets/translations/en/lesson-2.json",
+        "quiz_id": 202,
+        "quiz_title": "Knowledge Representation and Expert Systems: Post-Quiz",
+        "kind": "pre"
+      },
+      "go_id": "GO_02_04_004",
+      "lo_id": "LO_02_04",
+      "tagging": {
+        "method": "embedding similarity (text-embedding-3-small) within the week",
+        "score": 0.288,
+        "reviewed": false
+      }
+    },
+    {
+      "id": "AI4B-202-3",
+      "week": 2,
+      "type": "multiple_choice",
+      "text": "Forward inference starts with initial data and then:",
+      "options": [
+        "executes a reasoning loop",
+        "looks for a goal",
+        "starts over"
+      ],
+      "correct_index": 0,
+      "source": {
+        "curriculum": "AI for Beginners",
+        "file": "AI-For-Beginners/etc/quiz-app/src/assets/translations/en/lesson-2.json",
+        "quiz_id": 202,
+        "quiz_title": "Knowledge Representation and Expert Systems: Post-Quiz",
+        "kind": "pre"
+      },
+      "go_id": "GO_02_05_003",
+      "lo_id": "LO_02_05",
+      "tagging": {
+        "method": "embedding similarity (text-embedding-3-small) within the week",
+        "score": 0.485,
+        "reviewed": false
+      }
+    },
+    {
+      "id": "ML4B-1-1",
+      "week": 3,
+      "type": "true_false",
+      "text": "Applications of machine learning are all around us",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correct_index": 0,
+      "source": {
+        "curriculum": "ML for Beginners",
+        "file": "ML-For-Beginners/quiz-app/src/assets/translations/en.json",
+        "quiz_id": 1,
+        "quiz_title": "Introduction to Machine Learning: Pre-Lecture Quiz",
+        "kind": "pre"
+      },
+      "go_id": "GO_03_07_001",
+      "lo_id": "LO_03_07",
+      "tagging": {
+        "method": "embedding similarity (text-embedding-3-small) within the week",
+        "score": 0.425,
+        "reviewed": false
+      }
+    },
+    {
+      "id": "ML4B-1-2",
+      "week": 3,
+      "type": "multiple_choice",
+      "text": "What is the technical difference between classical ML and deep learning?",
+      "options": [
+        "classical ML was invented first",
+        "the use of neural networks",
+        "deep learning is used in robots"
+      ],
+      "correct_index": 1,
+      "source": {
+        "curriculum": "ML for Beginners",
+        "file": "ML-For-Beginners/quiz-app/src/assets/translations/en.json",
+        "quiz_id": 1,
+        "quiz_title": "Introduction to Machine Learning: Pre-Lecture Quiz",
+        "kind": "pre"
+      },
+      "go_id": "GO_03_07_004",
+      "lo_id": "LO_03_07",
+      "tagging": {
+        "method": "embedding similarity (text-embedding-3-small) within the week",
+        "score": 0.568,
+        "reviewed": false
+      }
+    },
+    {
+      "id": "ML4B-1-3",
+      "week": 3,
+      "type": "multiple_choice",
+      "text": "Why might a business want to use ML strategies?",
+      "options": [
+        "to automate the solving of multi-dimensional problems",
+        "to customize a shopping experience based on the type of customer",
+        "both of the above"
+      ],
+      "correct_index": 2,
+      "source": {
+        "curriculum": "ML for Beginners",
+        "file": "ML-For-Beginners/quiz-app/src/assets/translations/en.json",
+        "quiz_id": 1,
+        "quiz_title": "Introduction to Machine Learning: Pre-Lecture Quiz",
+        "kind": "pre"
+      },
+      "go_id": "GO_03_08_001",
+      "lo_id": "LO_03_08",
+      "tagging": {
+        "method": "embedding similarity (text-embedding-3-small) within the week",
+        "score": 0.454,
+        "reviewed": false
+      }
+    },
+    {
+      "id": "ML4B-2-1",
+      "week": 3,
+      "type": "multiple_choice",
+      "text": "Machine learning algorithms are meant to simulate",
+      "options": [
+        "intelligent machines",
+        "the human brain",
+        "orangutans"
+      ],
+      "correct_index": 1,
+      "source": {
+        "curriculum": "ML for Beginners",
+        "file": "ML-For-Beginners/quiz-app/src/assets/translations/en.json",
+        "quiz_id": 2,
+        "quiz_title": "Introduction to Machine Learning: Post-Lecture Quiz",
+        "kind": "post"
+      },
+      "go_id": "GO_03_07_001",
+      "lo_id": "LO_03_07",
+      "tagging": {
+        "method": "embedding similarity (text-embedding-3-small) within the week",
+        "score": 0.423,
+        "reviewed": false
+      }
+    },
+    {
+      "id": "ML4B-2-2",
+      "week": 3,
+      "type": "multiple_choice",
+      "text": "What is an example of a classical ML technique?",
+      "options": [
+        "natural language processing",
+        "deep learning",
+        "Neural Networks"
+      ],
+      "correct_index": 0,
+      "source": {
+        "curriculum": "ML for Beginners",
+        "file": "ML-For-Beginners/quiz-app/src/assets/translations/en.json",
+        "quiz_id": 2,
+        "quiz_title": "Introduction to Machine Learning: Post-Lecture Quiz",
+        "kind": "post"
+      },
+      "go_id": "GO_03_07_004",
+      "lo_id": "LO_03_07",
+      "tagging": {
+        "method": "embedding similarity (text-embedding-3-small) within the week",
+        "score": 0.497,
+        "reviewed": false
+      }
+    },
+    {
+      "id": "ML4B-2-3",
+      "week": 3,
+      "type": "multiple_choice",
+      "text": "Why should everyone learn the basics of ML?",
+      "options": [
+        "learning ML is fun and accessible to everyone",
+        "ML strategies are being used in many industries and domains",
+        "both of the above"
+      ],
+      "correct_index": 2,
+      "source": {
+        "curriculum": "ML for Beginners",
+        "file": "ML-For-Beginners/quiz-app/src/assets/translations/en.json",
+        "quiz_id": 2,
+        "quiz_title": "Introduction to Machine Learning: Post-Lecture Quiz",
+        "kind": "post"
+      },
+      "go_id": "GO_03_07_004",
+      "lo_id": "LO_03_07",
+      "tagging": {
+        "method": "embedding similarity (text-embedding-3-small) within the week",
+        "score": 0.437,
+        "reviewed": false
+      }
+    },
+    {
+      "id": "ML4B-7-1",
+      "week": 3,
+      "type": "multiple_choice",
+      "text": "When building a model, you should:",
+      "options": [
+        "prepare your data, then train your model",
+        "choose a training method, then prepare your data",
+        "tune parameters, then train your model"
+      ],
+      "correct_index": 0,
+      "source": {
+        "curriculum": "ML for Beginners",
+        "file": "ML-For-Beginners/quiz-app/src/assets/translations/en.json",
+        "quiz_id": 7,
+        "quiz_title": "Tools and Techniques: Pre-Lecture Quiz",
+        "kind": "pre"
+      },
+      "go_id": "GO_03_08_002",
+      "lo_id": "LO_03_08",
+      "tagging": {
+        "method": "embedding similarity (text-embedding-3-small) within the week",
+        "score": 0.588,
+        "reviewed": false
+      }
+    },
+    {
+      "id": "ML4B-7-2",
+      "week": 3,
+      "type": "multiple_choice",
+      "text": "Your data's ___ will impact the quality of your ML model",
+      "options": [
+        "quantity",
+        "shape",
+        "both of the above"
+      ],
+      "correct_index": 2,
+      "source": {
+        "curriculum": "ML for Beginners",
+        "file": "ML-For-Beginners/quiz-app/src/assets/translations/en.json",
+        "quiz_id": 7,
+        "quiz_title": "Tools and Techniques: Pre-Lecture Quiz",
+        "kind": "pre"
+      },
+      "go_id": "GO_03_08_002",
+      "lo_id": "LO_03_08",
+      "tagging": {
+        "method": "embedding similarity (text-embedding-3-small) within the week",
+        "score": 0.422,
+        "reviewed": false
+      }
+    },
+    {
+      "id": "ML4B-7-3",
+      "week": 3,
+      "type": "multiple_choice",
+      "text": "A feature variable is:",
+      "options": [
+        "a quality of your data",
+        "a measurable property of your data",
+        "a row of your data"
+      ],
+      "correct_index": 1,
+      "source": {
+        "curriculum": "ML for Beginners",
+        "file": "ML-For-Beginners/quiz-app/src/assets/translations/en.json",
+        "quiz_id": 7,
+        "quiz_title": "Tools and Techniques: Pre-Lecture Quiz",
+        "kind": "pre"
+      },
+      "go_id": "GO_03_08_002",
+      "lo_id": "LO_03_08",
+      "tagging": {
+        "method": "embedding similarity (text-embedding-3-small) within the week",
+        "score": 0.303,
+        "reviewed": false
+      }
+    },
+    {
+      "id": "ML4B-8-1",
+      "week": 3,
+      "type": "multiple_choice",
+      "text": "You should visualize your data because",
+      "options": [
+        "you can discover outliers",
+        "you can discover potential cause for bias",
+        "both of these"
+      ],
+      "correct_index": 2,
+      "source": {
+        "curriculum": "ML for Beginners",
+        "file": "ML-For-Beginners/quiz-app/src/assets/translations/en.json",
+        "quiz_id": 8,
+        "quiz_title": "Tools and Techniques: Post-Lecture Quiz",
+        "kind": "post"
+      },
+      "go_id": "GO_03_08_002",
+      "lo_id": "LO_03_08",
+      "tagging": {
+        "method": "embedding similarity (text-embedding-3-small) within the week",
+        "score": 0.347,
+        "reviewed": false
+      }
+    },
+    {
+      "id": "ML4B-8-2",
+      "week": 3,
+      "type": "multiple_choice",
+      "text": "Split your data into:",
+      "options": [
+        "training and turing sets",
+        "training and test sets",
+        "validation and evaluation sets"
+      ],
+      "correct_index": 1,
+      "source": {
+        "curriculum": "ML for Beginners",
+        "file": "ML-For-Beginners/quiz-app/src/assets/translations/en.json",
+        "quiz_id": 8,
+        "quiz_title": "Tools and Techniques: Post-Lecture Quiz",
+        "kind": "post"
+      },
+      "go_id": "GO_03_08_003",
+      "lo_id": "LO_03_08",
+      "tagging": {
+        "method": "embedding similarity (text-embedding-3-small) within the week",
+        "score": 0.574,
+        "reviewed": false
+      }
+    },
+    {
+      "id": "ML4B-8-3",
+      "week": 3,
+      "type": "multiple_choice",
+      "text": "A common command to start the training process in various ML libraries is:",
+      "options": [
+        "model.travel",
+        "model.train",
+        "model.fit"
+      ],
+      "correct_index": 2,
+      "source": {
+        "curriculum": "ML for Beginners",
+        "file": "ML-For-Beginners/quiz-app/src/assets/translations/en.json",
+        "quiz_id": 8,
+        "quiz_title": "Tools and Techniques: Post-Lecture Quiz",
+        "kind": "post"
+      },
+      "go_id": "GO_03_08_003",
+      "lo_id": "LO_03_08",
+      "tagging": {
+        "method": "embedding similarity (text-embedding-3-small) within the week",
+        "score": 0.454,
+        "reviewed": false
+      }
+    },
+    {
+      "id": "ML4B-13-1",
+      "week": 3,
+      "type": "multiple_choice",
+      "text": "Matplotlib is a",
+      "options": [
+        "drawing library",
+        "data visualization library",
+        "lending library"
+      ],
+      "correct_index": 1,
+      "source": {
+        "curriculum": "ML for Beginners",
+        "file": "ML-For-Beginners/quiz-app/src/assets/translations/en.json",
+        "quiz_id": 13,
+        "quiz_title": "Linear and Polynomial Regression: Pre-Lecture Quiz",
+        "kind": "pre"
+      },
+      "go_id": "GO_03_08_002",
+      "lo_id": "LO_03_08",
+      "tagging": {
+        "method": "embedding similarity (text-embedding-3-small) within the week",
+        "score": 0.206,
+        "reviewed": false
+      }
+    },
+    {
+      "id": "ML4B-13-2",
+      "week": 3,
+      "type": "multiple_choice",
+      "text": "Linear Regression uses the following to plot relationships between variables",
+      "options": [
+        "a straight line",
+        "a circle",
+        "a curve"
+      ],
+      "correct_index": 0,
+      "source": {
+        "curriculum": "ML for Beginners",
+        "file": "ML-For-Beginners/quiz-app/src/assets/translations/en.json",
+        "quiz_id": 13,
+        "quiz_title": "Linear and Polynomial Regression: Pre-Lecture Quiz",
+        "kind": "pre"
+      },
+      "go_id": "GO_03_09_001",
+      "lo_id": "LO_03_09",
+      "tagging": {
+        "method": "embedding similarity (text-embedding-3-small) within the week",
+        "score": 0.516,
+        "reviewed": false
+      }
+    },
+    {
+      "id": "ML4B-13-3",
+      "week": 3,
+      "type": "multiple_choice",
+      "text": "A good Linear Regression model has a ___ Correlation Coefficient",
+      "options": [
+        "low",
+        "high",
+        "flat"
+      ],
+      "correct_index": 1,
+      "source": {
+        "curriculum": "ML for Beginners",
+        "file": "ML-For-Beginners/quiz-app/src/assets/translations/en.json",
+        "quiz_id": 13,
+        "quiz_title": "Linear and Polynomial Regression: Pre-Lecture Quiz",
+        "kind": "pre"
+      },
+      "go_id": "GO_03_09_002",
+      "lo_id": "LO_03_09",
+      "tagging": {
+        "method": "embedding similarity (text-embedding-3-small) within the week",
+        "score": 0.483,
+        "reviewed": false
+      }
+    },
+    {
+      "id": "ML4B-14-1",
+      "week": 3,
+      "type": "multiple_choice",
+      "text": "If your data is nonlinear, try a ___ type of Regression",
+      "options": [
+        "linear",
+        "spherical",
+        "polynomial"
+      ],
+      "correct_index": 2,
+      "source": {
+        "curriculum": "ML for Beginners",
+        "file": "ML-For-Beginners/quiz-app/src/assets/translations/en.json",
+        "quiz_id": 14,
+        "quiz_title": "Linear and Polynomial Regression: Post-Lecture Quiz",
+        "kind": "post"
+      },
+      "go_id": "GO_03_09_001",
+      "lo_id": "LO_03_09",
+      "tagging": {
+        "method": "embedding similarity (text-embedding-3-small) within the week",
+        "score": 0.38,
+        "reviewed": false
+      }
+    },
+    {
+      "id": "ML4B-14-2",
+      "week": 3,
+      "type": "multiple_choice",
+      "text": "These are all types of Regression methods",
+      "options": [
+        "Falsestep, Ridge, Lasso and Elasticnet",
+        "Stepwise, Ridge, Lasso and Elasticnet",
+        "Stepwise, Ridge, Lariat and Elasticnet"
+      ],
+      "correct_index": 1,
+      "source": {
+        "curriculum": "ML for Beginners",
+        "file": "ML-For-Beginners/quiz-app/src/assets/translations/en.json",
+        "quiz_id": 14,
+        "quiz_title": "Linear and Polynomial Regression: Post-Lecture Quiz",
+        "kind": "post"
+      },
+      "go_id": "GO_03_09_004",
+      "lo_id": "LO_03_09",
+      "tagging": {
+        "method": "embedding similarity (text-embedding-3-small) within the week",
+        "score": 0.376,
+        "reviewed": false
+      }
+    },
+    {
+      "id": "ML4B-14-3",
+      "week": 3,
+      "type": "multiple_choice",
+      "text": "Least-Squares Regression means that all the datapoints surrounding the regression line are:",
+      "options": [
+        "squared and then subtracted",
+        "multiplied",
+        "squared and then added up"
+      ],
+      "correct_index": 2,
+      "source": {
+        "curriculum": "ML for Beginners",
+        "file": "ML-For-Beginners/quiz-app/src/assets/translations/en.json",
+        "quiz_id": 14,
+        "quiz_title": "Linear and Polynomial Regression: Post-Lecture Quiz",
+        "kind": "post"
+      },
+      "go_id": "GO_03_09_001",
+      "lo_id": "LO_03_09",
+      "tagging": {
+        "method": "embedding similarity (text-embedding-3-small) within the week",
+        "score": 0.391,
+        "reviewed": false
+      }
+    },
+    {
+      "id": "AI4B-103-1",
+      "week": 4,
+      "type": "multiple_choice",
+      "text": "Early neural networks required",
+      "options": [
+        "manual weight adjusting",
+        "terabytes of data",
+        "special reasoning"
+      ],
+      "correct_index": 0,
+      "source": {
+        "curriculum": "AI for Beginners",
+        "file": "AI-For-Beginners/etc/quiz-app/src/assets/translations/en/lesson-3.json",
+        "quiz_id": 103,
+        "quiz_title": "Introduction to Neural Networks - Perceptron: Pre-Quiz",
+        "kind": "pre"
+      },
+      "go_id": "GO_04_10_003",
+      "lo_id": "LO_04_10",
+      "tagging": {
+        "method": "embedding similarity (text-embedding-3-small) within the week",
+        "score": 0.36,
+        "reviewed": false
+      }
+    },
+    {
+      "id": "AI4B-103-2",
+      "week": 4,
+      "type": "true_false",
+      "text": "A simple neuron is also called a 'threshold logic unit'",
+      "options": [
+        "true",
+        "false"
+      ],
+      "correct_index": 0,
+      "source": {
+        "curriculum": "AI for Beginners",
+        "file": "AI-For-Beginners/etc/quiz-app/src/assets/translations/en/lesson-3.json",
+        "quiz_id": 103,
+        "quiz_title": "Introduction to Neural Networks - Perceptron: Pre-Quiz",
+        "kind": "pre"
+      },
+      "go_id": "GO_04_10_001",
+      "lo_id": "LO_04_10",
+      "tagging": {
+        "method": "embedding similarity (text-embedding-3-small) within the week",
+        "score": 0.441,
+        "reviewed": false
+      }
+    },
+    {
+      "id": "AI4B-103-3",
+      "week": 4,
+      "type": "multiple_choice",
+      "text": "A perceptron is a ___ type of model",
+      "options": [
+        "multi-class classification",
+        "clustering",
+        "binary classification"
+      ],
+      "correct_index": 2,
+      "source": {
+        "curriculum": "AI for Beginners",
+        "file": "AI-For-Beginners/etc/quiz-app/src/assets/translations/en/lesson-3.json",
+        "quiz_id": 103,
+        "quiz_title": "Introduction to Neural Networks - Perceptron: Pre-Quiz",
+        "kind": "pre"
+      },
+      "go_id": "GO_04_11_004",
+      "lo_id": "LO_04_11",
+      "tagging": {
+        "method": "embedding similarity (text-embedding-3-small) within the week",
+        "score": 0.643,
+        "reviewed": false
+      }
+    },
+    {
+      "id": "AI4B-203-1",
+      "week": 4,
+      "type": "multiple_choice",
+      "text": "To train a perceptron, find a weights vector that results in the smallest ___.",
+      "options": [
+        "size",
+        "error",
+        "nodes"
+      ],
+      "correct_index": 1,
+      "source": {
+        "curriculum": "AI for Beginners",
+        "file": "AI-For-Beginners/etc/quiz-app/src/assets/translations/en/lesson-3.json",
+        "quiz_id": 203,
+        "quiz_title": "Introduction to Neural Networks - Perceptron: Post-Quiz",
+        "kind": "post"
+      },
+      "go_id": "GO_04_11_001",
+      "lo_id": "LO_04_11",
+      "tagging": {
+        "method": "embedding similarity (text-embedding-3-small) within the week",
+        "score": 0.46,
+        "reviewed": false
+      }
+    },
+    {
+      "id": "AI4B-203-2",
+      "week": 4,
+      "type": "true_false",
+      "text": "To minimize the function of weights, you can use gradient descent",
+      "options": [
+        "true",
+        "false"
+      ],
+      "correct_index": 0,
+      "source": {
+        "curriculum": "AI for Beginners",
+        "file": "AI-For-Beginners/etc/quiz-app/src/assets/translations/en/lesson-3.json",
+        "quiz_id": 203,
+        "quiz_title": "Introduction to Neural Networks - Perceptron: Post-Quiz",
+        "kind": "post"
+      },
+      "go_id": "GO_04_11_002",
+      "lo_id": "LO_04_11",
+      "tagging": {
+        "method": "embedding similarity (text-embedding-3-small) within the week",
+        "score": 0.327,
+        "reviewed": false
+      }
+    },
+    {
+      "id": "AI4B-203-3",
+      "week": 4,
+      "type": "multiple_choice",
+      "text": "During gradient descent, each step updates the ___",
+      "options": [
+        "learning rate",
+        "weights",
+        "gradient"
+      ],
+      "correct_index": 1,
+      "source": {
+        "curriculum": "AI for Beginners",
+        "file": "AI-For-Beginners/etc/quiz-app/src/assets/translations/en/lesson-3.json",
+        "quiz_id": 203,
+        "quiz_title": "Introduction to Neural Networks - Perceptron: Post-Quiz",
+        "kind": "post"
+      },
+      "go_id": "GO_04_11_002",
+      "lo_id": "LO_04_11",
+      "tagging": {
+        "method": "embedding similarity (text-embedding-3-small) within the week",
+        "score": 0.317,
+        "reviewed": false
+      }
+    },
+    {
+      "id": "AI4B-104-1",
+      "week": 5,
+      "type": "true_false",
+      "text": "The quality of prediction is measured by Loss function",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correct_index": 0,
+      "source": {
+        "curriculum": "AI for Beginners",
+        "file": "AI-For-Beginners/etc/quiz-app/src/assets/translations/en/lesson-4.json",
+        "quiz_id": 104,
+        "quiz_title": "Neural Networks: Pre Quiz",
+        "kind": "pre"
+      },
+      "go_id": "GO_05_12_001",
+      "lo_id": "LO_05_12",
+      "tagging": {
+        "method": "embedding similarity (text-embedding-3-small) within the week",
+        "score": 0.367,
+        "reviewed": false
+      }
+    },
+    {
+      "id": "AI4B-104-2",
+      "week": 5,
+      "type": "multiple_choice",
+      "text": "One layer network is capable of classifying ____",
+      "options": [
+        "linearly joined classes",
+        "linearly separable classes",
+        "single layers of classes"
+      ],
+      "correct_index": 1,
+      "source": {
+        "curriculum": "AI for Beginners",
+        "file": "AI-For-Beginners/etc/quiz-app/src/assets/translations/en/lesson-4.json",
+        "quiz_id": 104,
+        "quiz_title": "Neural Networks: Pre Quiz",
+        "kind": "pre"
+      },
+      "go_id": "GO_05_13_002",
+      "lo_id": "LO_05_13",
+      "tagging": {
+        "method": "embedding similarity (text-embedding-3-small) within the week",
+        "score": 0.402,
+        "reviewed": false
+      }
+    },
+    {
+      "id": "AI4B-104-3",
+      "week": 5,
+      "type": "multiple_choice",
+      "text": "The method of training multi-layered perceptron is called ____",
+      "options": [
+        "back propagation",
+        "multiple propagation",
+        "front propagation"
+      ],
+      "correct_index": 0,
+      "source": {
+        "curriculum": "AI for Beginners",
+        "file": "AI-For-Beginners/etc/quiz-app/src/assets/translations/en/lesson-4.json",
+        "quiz_id": 104,
+        "quiz_title": "Neural Networks: Pre Quiz",
+        "kind": "pre"
+      },
+      "go_id": "GO_05_13_003",
+      "lo_id": "LO_05_13",
+      "tagging": {
+        "method": "embedding similarity (text-embedding-3-small) within the week",
+        "score": 0.716,
+        "reviewed": false
+      }
+    },
+    {
+      "id": "AI4B-204-1",
+      "week": 5,
+      "type": "multiple_choice",
+      "text": "We use ____ for regression loss functions",
+      "options": [
+        "absolute error",
+        "mean squared error",
+        "all of the above"
+      ],
+      "correct_index": 2,
+      "source": {
+        "curriculum": "AI for Beginners",
+        "file": "AI-For-Beginners/etc/quiz-app/src/assets/translations/en/lesson-4.json",
+        "quiz_id": 204,
+        "quiz_title": "Neural Networks: Post Quiz",
+        "kind": "post"
+      },
+      "go_id": "GO_05_12_001",
+      "lo_id": "LO_05_12",
+      "tagging": {
+        "method": "embedding similarity (text-embedding-3-small) within the week",
+        "score": 0.403,
+        "reviewed": false
+      }
+    },
+    {
+      "id": "AI4B-204-2",
+      "week": 5,
+      "type": "multiple_choice",
+      "text": "All but one is a type of classification loss function",
+      "options": [
+        "0-1 loss",
+        "binary loss",
+        "logistic loss"
+      ],
+      "correct_index": 1,
+      "source": {
+        "curriculum": "AI for Beginners",
+        "file": "AI-For-Beginners/etc/quiz-app/src/assets/translations/en/lesson-4.json",
+        "quiz_id": 204,
+        "quiz_title": "Neural Networks: Post Quiz",
+        "kind": "post"
+      },
+      "go_id": "GO_05_12_001",
+      "lo_id": "LO_05_12",
+      "tagging": {
+        "method": "embedding similarity (text-embedding-3-small) within the week",
+        "score": 0.44,
+        "reviewed": false
+      }
+    },
+    {
+      "id": "AI4B-204-3",
+      "week": 5,
+      "type": "true_false",
+      "text": "Cross-entropy loss is a function that can calculate similarity between two arbitrary probability distributions",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correct_index": 0,
+      "source": {
+        "curriculum": "AI for Beginners",
+        "file": "AI-For-Beginners/etc/quiz-app/src/assets/translations/en/lesson-4.json",
+        "quiz_id": 204,
+        "quiz_title": "Neural Networks: Post Quiz",
+        "kind": "post"
+      },
+      "go_id": "GO_05_12_001",
+      "lo_id": "LO_05_12",
+      "tagging": {
+        "method": "embedding similarity (text-embedding-3-small) within the week",
+        "score": 0.36,
+        "reviewed": false
+      }
+    },
+    {
+      "id": "AI4B-105-1",
+      "week": 5,
+      "type": "true_false",
+      "text": "Deep Neural Network training requires a lot of computations",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correct_index": 0,
+      "source": {
+        "curriculum": "AI for Beginners",
+        "file": "AI-For-Beginners/etc/quiz-app/src/assets/translations/en/lesson-5.json",
+        "quiz_id": 105,
+        "quiz_title": "Frameworks: Pre Quiz",
+        "kind": "pre"
+      },
+      "go_id": "GO_05_14_003",
+      "lo_id": "LO_05_14",
+      "tagging": {
+        "method": "embedding similarity (text-embedding-3-small) within the week",
+        "score": 0.344,
+        "reviewed": false
+      }
+    },
+    {
+      "id": "AI4B-105-2",
+      "week": 5,
+      "type": "multiple_choice",
+      "text": "Overfitting occurs because of ____",
+      "options": [
+        "Not enough testing data",
+        "Too powerful model",
+        "Too much noise in output data"
+      ],
+      "correct_index": 1,
+      "source": {
+        "curriculum": "AI for Beginners",
+        "file": "AI-For-Beginners/etc/quiz-app/src/assets/translations/en/lesson-5.json",
+        "quiz_id": 105,
+        "quiz_title": "Frameworks: Pre Quiz",
+        "kind": "pre"
+      },
+      "go_id": "GO_05_15_001",
+      "lo_id": "LO_05_15",
+      "tagging": {
+        "method": "embedding similarity (text-embedding-3-small) within the week",
+        "score": 0.456,
+        "reviewed": false
+      }
+    },
+    {
+      "id": "AI4B-105-3",
+      "week": 5,
+      "type": "multiple_choice",
+      "text": "Bias errors are caused by our ____ not being able to capture the relationship between training data correctly.",
+      "options": [
+        "model",
+        "algorithm",
+        "computer"
+      ],
+      "correct_index": 1,
+      "source": {
+        "curriculum": "AI for Beginners",
+        "file": "AI-For-Beginners/etc/quiz-app/src/assets/translations/en/lesson-5.json",
+        "quiz_id": 105,
+        "quiz_title": "Frameworks: Pre Quiz",
+        "kind": "pre"
+      },
+      "go_id": "GO_05_15_002",
+      "lo_id": "LO_05_15",
+      "tagging": {
+        "method": "embedding similarity (text-embedding-3-small) within the week",
+        "score": 0.42,
+        "reviewed": false
+      }
+    },
+    {
+      "id": "AI4B-205-1",
+      "week": 5,
+      "type": "multiple_choice",
+      "text": "After compiling our model object, we train by calling ____ function",
+      "options": [
+        "fit",
+        "train",
+        "teach"
+      ],
+      "correct_index": 0,
+      "source": {
+        "curriculum": "AI for Beginners",
+        "file": "AI-For-Beginners/etc/quiz-app/src/assets/translations/en/lesson-5.json",
+        "quiz_id": 205,
+        "quiz_title": "Frameworks: Post Quiz",
+        "kind": "post"
+      },
+      "go_id": "GO_05_14_003",
+      "lo_id": "LO_05_14",
+      "tagging": {
+        "method": "embedding similarity (text-embedding-3-small) within the week",
+        "score": 0.397,
+        "reviewed": false
+      }
+    },
+    {
+      "id": "AI4B-205-2",
+      "week": 5,
+      "type": "true_false",
+      "text": "Binary cross-entropy is also called log loss",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correct_index": 0,
+      "source": {
+        "curriculum": "AI for Beginners",
+        "file": "AI-For-Beginners/etc/quiz-app/src/assets/translations/en/lesson-5.json",
+        "quiz_id": 205,
+        "quiz_title": "Frameworks: Post Quiz",
+        "kind": "post"
+      },
+      "go_id": "GO_05_12_003",
+      "lo_id": "LO_05_12",
+      "tagging": {
+        "method": "embedding similarity (text-embedding-3-small) within the week",
+        "score": 0.328,
+        "reviewed": false
+      }
+    },
+    {
+      "id": "AI4B-205-3",
+      "week": 5,
+      "type": "multiple_choice",
+      "text": "TensorFlow is to ____ while PyTorch is to ____",
+      "options": [
+        "Facebook, Google",
+        "Google, Facebook",
+        "Microsoft, Google"
+      ],
+      "correct_index": 1,
+      "source": {
+        "curriculum": "AI for Beginners",
+        "file": "AI-For-Beginners/etc/quiz-app/src/assets/translations/en/lesson-5.json",
+        "quiz_id": 205,
+        "quiz_title": "Frameworks: Post Quiz",
+        "kind": "post"
+      },
+      "go_id": "GO_05_14_004",
+      "lo_id": "LO_05_14",
+      "tagging": {
+        "method": "embedding similarity (text-embedding-3-small) within the week",
+        "score": 0.43,
+        "reviewed": false
+      }
+    },
+    {
+      "id": "AI4B-124-1",
+      "week": 6,
+      "type": "multiple_choice",
+      "text": "Why we need to worry about Ethical AI?",
+      "options": [
+        "AI is a very powerful tool and can cause harm",
+        "We need to make sure AI models do not discriminate people",
+        "Both"
+      ],
+      "correct_index": 2,
+      "source": {
+        "curriculum": "AI for Beginners",
+        "file": "AI-For-Beginners/etc/quiz-app/src/assets/translations/en/lesson-24.json",
+        "quiz_id": 124,
+        "quiz_title": "Ethical and Responsible AI: Pre Quiz",
+        "kind": "pre"
+      },
+      "go_id": "GO_06_16_001",
+      "lo_id": "LO_06_16",
+      "tagging": {
+        "method": "embedding similarity (text-embedding-3-small) within the week",
+        "score": 0.568,
+        "reviewed": false
+      }
+    },
+    {
+      "id": "AI4B-124-2",
+      "week": 6,
+      "type": "multiple_choice",
+      "text": "Which is the example of interpretable AI?",
+      "options": [
+        "Expert system",
+        "Neural network",
+        "Image classifier"
+      ],
+      "correct_index": 0,
+      "source": {
+        "curriculum": "AI for Beginners",
+        "file": "AI-For-Beginners/etc/quiz-app/src/assets/translations/en/lesson-24.json",
+        "quiz_id": 124,
+        "quiz_title": "Ethical and Responsible AI: Pre Quiz",
+        "kind": "pre"
+      },
+      "go_id": "GO_06_16_002",
+      "lo_id": "LO_06_16",
+      "tagging": {
+        "method": "embedding similarity (text-embedding-3-small) within the week",
+        "score": 0.371,
+        "reviewed": false
+      }
+    },
+    {
+      "id": "AI4B-124-3",
+      "week": 6,
+      "type": "true_false",
+      "text": "It is not ethical to use AI in medicine",
+      "options": [
+        "true",
+        "false"
+      ],
+      "correct_index": 1,
+      "source": {
+        "curriculum": "AI for Beginners",
+        "file": "AI-For-Beginners/etc/quiz-app/src/assets/translations/en/lesson-24.json",
+        "quiz_id": 124,
+        "quiz_title": "Ethical and Responsible AI: Pre Quiz",
+        "kind": "pre"
+      },
+      "go_id": "GO_06_16_001",
+      "lo_id": "LO_06_16",
+      "tagging": {
+        "method": "embedding similarity (text-embedding-3-small) within the week",
+        "score": 0.452,
+        "reviewed": false
+      }
+    },
+    {
+      "id": "AI4B-224-1",
+      "week": 6,
+      "type": "multiple_choice",
+      "text": "Why an AI model can discriminate?",
+      "options": [
+        "Because it may become unfriendly",
+        "Because datasets were not properly balanced",
+        "Because developers programmed it in such a way"
+      ],
+      "correct_index": 1,
+      "source": {
+        "curriculum": "AI for Beginners",
+        "file": "AI-For-Beginners/etc/quiz-app/src/assets/translations/en/lesson-24.json",
+        "quiz_id": 224,
+        "quiz_title": "Ethical and Responsible AI: Post Quiz",
+        "kind": "post"
+      },
+      "go_id": "GO_06_17_001",
+      "lo_id": "LO_06_17",
+      "tagging": {
+        "method": "embedding similarity (text-embedding-3-small) within the week",
+        "score": 0.514,
+        "reviewed": false
+      }
+    },
+    {
+      "id": "AI4B-224-2",
+      "week": 6,
+      "type": "multiple_choice",
+      "text": "Which of the following is not a principle of Responsible AI?",
+      "options": [
+        "Transparency",
+        "Fairness",
+        "Cleverness"
+      ],
+      "correct_index": 2,
+      "source": {
+        "curriculum": "AI for Beginners",
+        "file": "AI-For-Beginners/etc/quiz-app/src/assets/translations/en/lesson-24.json",
+        "quiz_id": 224,
+        "quiz_title": "Ethical and Responsible AI: Post Quiz",
+        "kind": "post"
+      },
+      "go_id": "GO_06_16_004",
+      "lo_id": "LO_06_16",
+      "tagging": {
+        "method": "embedding similarity (text-embedding-3-small) within the week",
+        "score": 0.732,
+        "reviewed": false
+      }
+    },
+    {
+      "id": "AI4B-224-3",
+      "week": 6,
+      "type": "multiple_choice",
+      "text": "Accountability of an AI system means that",
+      "options": [
+        "there should be a human being involved in taking decisions, who can take responsibility",
+        "AI system should be held responsible for its actions",
+        "AI system developers should be held responsible"
+      ],
+      "correct_index": 0,
+      "source": {
+        "curriculum": "AI for Beginners",
+        "file": "AI-For-Beginners/etc/quiz-app/src/assets/translations/en/lesson-24.json",
+        "quiz_id": 224,
+        "quiz_title": "Ethical and Responsible AI: Post Quiz",
+        "kind": "post"
+      },
+      "go_id": "GO_06_16_004",
+      "lo_id": "LO_06_16",
+      "tagging": {
+        "method": "embedding similarity (text-embedding-3-small) within the week",
+        "score": 0.649,
+        "reviewed": false
+      }
+    },
+    {
+      "id": "AI4B-224-4",
+      "week": 6,
+      "type": "multiple_choice",
+      "text": "Model fairness is related to",
+      "options": [
+        "Interpretability",
+        "Biases",
+        "Accountability"
+      ],
+      "correct_index": 1,
+      "source": {
+        "curriculum": "AI for Beginners",
+        "file": "AI-For-Beginners/etc/quiz-app/src/assets/translations/en/lesson-24.json",
+        "quiz_id": 224,
+        "quiz_title": "Ethical and Responsible AI: Post Quiz",
+        "kind": "post"
+      },
+      "go_id": "GO_06_17_002",
+      "lo_id": "LO_06_17",
+      "tagging": {
+        "method": "embedding similarity (text-embedding-3-small) within the week",
+        "score": 0.607,
+        "reviewed": false
+      }
+    },
+    {
+      "id": "ML4B-5-1",
+      "week": 6,
+      "type": "multiple_choice",
+      "text": "Unfairness in Machine Learning can happen",
+      "options": [
+        "intentionally",
+        "unintentionally",
+        "both of the above"
+      ],
+      "correct_index": 2,
+      "source": {
+        "curriculum": "ML for Beginners",
+        "file": "ML-For-Beginners/quiz-app/src/assets/translations/en.json",
+        "quiz_id": 5,
+        "quiz_title": "Fairness and Machine Learning: Pre-Lecture Quiz",
+        "kind": "pre"
+      },
+      "go_id": "GO_06_17_001",
+      "lo_id": "LO_06_17",
+      "tagging": {
+        "method": "embedding similarity (text-embedding-3-small) within the week",
+        "score": 0.631,
+        "reviewed": false
+      }
+    },
+    {
+      "id": "ML4B-5-2",
+      "week": 6,
+      "type": "multiple_choice",
+      "text": "The term 'unfairness' in ML connotes:",
+      "options": [
+        "harms for a group of people",
+        "harm to one person",
+        "harms for the majority of people"
+      ],
+      "correct_index": 0,
+      "source": {
+        "curriculum": "ML for Beginners",
+        "file": "ML-For-Beginners/quiz-app/src/assets/translations/en.json",
+        "quiz_id": 5,
+        "quiz_title": "Fairness and Machine Learning: Pre-Lecture Quiz",
+        "kind": "pre"
+      },
+      "go_id": "GO_06_17_001",
+      "lo_id": "LO_06_17",
+      "tagging": {
+        "method": "embedding similarity (text-embedding-3-small) within the week",
+        "score": 0.591,
+        "reviewed": false
+      }
+    },
+    {
+      "id": "ML4B-5-3",
+      "week": 6,
+      "type": "multiple_choice",
+      "text": "The five main types of harms include",
+      "options": [
+        "allocation, quality of service, stereotyping, denigration, and over- or under- representation",
+        "elocation, quality of service, stereotyping, denigration, and over- or under- representation",
+        "allocation, quality of service, stereophonics, denigration, and over- or under- representation"
+      ],
+      "correct_index": 0,
+      "source": {
+        "curriculum": "ML for Beginners",
+        "file": "ML-For-Beginners/quiz-app/src/assets/translations/en.json",
+        "quiz_id": 5,
+        "quiz_title": "Fairness and Machine Learning: Pre-Lecture Quiz",
+        "kind": "pre"
+      },
+      "go_id": "GO_06_17_004",
+      "lo_id": "LO_06_17",
+      "tagging": {
+        "method": "embedding similarity (text-embedding-3-small) within the week",
+        "score": 0.395,
+        "reviewed": false
+      }
+    },
+    {
+      "id": "ML4B-6-1",
+      "week": 6,
+      "type": "multiple_choice",
+      "text": "Unfairness in a model can be caused by",
+      "options": [
+        "over reliance on historical data",
+        "under reliance on historical data",
+        "too closely aligning to historical data"
+      ],
+      "correct_index": 0,
+      "source": {
+        "curriculum": "ML for Beginners",
+        "file": "ML-For-Beginners/quiz-app/src/assets/translations/en.json",
+        "quiz_id": 6,
+        "quiz_title": "Fairness and Machine Learning: Post-Lecture Quiz",
+        "kind": "post"
+      },
+      "go_id": "GO_06_17_001",
+      "lo_id": "LO_06_17",
+      "tagging": {
+        "method": "embedding similarity (text-embedding-3-small) within the week",
+        "score": 0.546,
+        "reviewed": false
+      }
+    },
+    {
+      "id": "ML4B-6-2",
+      "week": 6,
+      "type": "multiple_choice",
+      "text": "To mitigate unfairness, you can",
+      "options": [
+        "identify harms and affected groups",
+        "define fairness metrics",
+        "both the above"
+      ],
+      "correct_index": 2,
+      "source": {
+        "curriculum": "ML for Beginners",
+        "file": "ML-For-Beginners/quiz-app/src/assets/translations/en.json",
+        "quiz_id": 6,
+        "quiz_title": "Fairness and Machine Learning: Post-Lecture Quiz",
+        "kind": "post"
+      },
+      "go_id": "GO_06_17_002",
+      "lo_id": "LO_06_17",
+      "tagging": {
+        "method": "embedding similarity (text-embedding-3-small) within the week",
+        "score": 0.584,
+        "reviewed": false
+      }
+    },
+    {
+      "id": "ML4B-6-3",
+      "week": 6,
+      "type": "multiple_choice",
+      "text": "Fairlearn is a package that can",
+      "options": [
+        "compare multiple models by using fairness and performance metrics",
+        "choose the best model for your needs",
+        "help you decide what is fair and what is not"
+      ],
+      "correct_index": 0,
+      "source": {
+        "curriculum": "ML for Beginners",
+        "file": "ML-For-Beginners/quiz-app/src/assets/translations/en.json",
+        "quiz_id": 6,
+        "quiz_title": "Fairness and Machine Learning: Post-Lecture Quiz",
+        "kind": "post"
+      },
+      "go_id": "GO_06_17_002",
+      "lo_id": "LO_06_17",
+      "tagging": {
+        "method": "embedding similarity (text-embedding-3-small) within the week",
+        "score": 0.578,
+        "reviewed": false
+      }
+    }
+  ]
+}

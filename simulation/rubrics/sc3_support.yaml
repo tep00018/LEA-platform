@@ -1,0 +1,20 @@
+id: SC3
+version: 1
+title: Was the tutor's support about right for this student at this moment?
+unit: one tutor reply, with the last five exchanges and the support the tutor chose for it
+instructions: >
+  For each numbered exchange you see the recent dialogue (the tutor's messages and the
+  student's replies), the support the tutor system chose for its reply (a level from minimal
+  to very high, an intervention type and a difficulty adjustment), and the reply itself.
+  Judge from the dialogue only: is the amount of support the tutor gave "too_little" (the
+  student is having difficulty, confused or repeating errors and got little help), "about_right",
+  or "too_much" (the student is answering well and confidently, yet was walked through the
+  answer, given hints or a simplified task they did not need). Support means hints, worked
+  steps, simpler sub-questions, reviews and reassurance; a plain follow-up question is
+  minimal support. Then say whether the intervention type fits what the student needs now.
+  Do not guess about anything not shown. Judge each exchange on its own.
+labels: [too_little, about_right, too_much]
+examples:
+  - {text: "The student answered the last three questions correctly and concisely; the reply re-explained the basic definition step by step.", label: too_much}
+  - {text: "The student said 'I have no idea' twice and the reply just asked a harder question with no hint.", label: too_little}
+  - {text: "The student gave a half-right answer; the reply confirmed the right part and gave one hint towards the rest.", label: about_right}

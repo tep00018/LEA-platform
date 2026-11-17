@@ -1,0 +1,12 @@
+# Pilot (docs/simulation/PLAN.md, section 7): 1 learner per profile, week 1.
+# Calibrates the allowance and sizes the main run. Set usage_credits_confirmed_off only
+# after the owner has checked usage credits are off.
+pilot: true
+usage_credits_confirmed_off: true   # owner confirmed on claude.ai 2026-09-26: off, £0, auto-reload off
+scale:
+  learners_per_profile: 1
+  weeks: [1]
+claude:
+  max_calls_per_run: 900   # raised from 400 by the owner (2026-09-26): the pilot needs about 700 calls
+openai:
+  budget_usd: 5

@@ -1,0 +1,17 @@
+# Smoke run (2026-09-27): support_off (default) + V5 (default) + the one-question tutor change +
+# 3c simulator fixes, 1 learner per profile, week 1. Reports extraction success, gate rate,
+# contradiction rate and reply length before any full baseline run.
+pilot: true
+usage_credits_confirmed_off: true
+scale:
+  learners_per_profile: 1
+  weeks: [1]
+claude:
+  max_calls_per_run: 900
+lea:
+  cognitive_load_model: personal
+  scaffolding_model: current
+  motivation_support: "off"
+  tutor_recorded_question: "on"
+openai:
+  budget_usd: 5

@@ -1,0 +1,611 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>LEA Teacher Screens</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Lexend:wght@300..600&display=swap">
+<style>
+:root{
+  --c-bg:#F3F2EF; --c-surface:#FFFFFF; --c-ink:#1F1D1B; --c-muted:#6A655F; --c-line:#DEDAD4;
+  --c-focus:#2F5FD0; --c-sel:#1F1D1B; --c-onsel:#FFFFFF;
+  --display:"Bricolage Grotesque", "Avenir Next", "Segoe UI", system-ui, sans-serif;
+  --body:"Lexend", "Segoe UI", system-ui, -apple-system, sans-serif;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --c-bg:#151412; --c-surface:#1E1C1A; --c-ink:#EEEAE5; --c-muted:#A39C94; --c-line:#34302C;
+    --c-focus:#8FB0FF; --c-sel:#EEEAE5; --c-onsel:#151412; color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --c-bg:#151412; --c-surface:#1E1C1A; --c-ink:#EEEAE5; --c-muted:#A39C94; --c-line:#34302C;
+  --c-focus:#8FB0FF; --c-sel:#EEEAE5; --c-onsel:#151412; color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{background:var(--c-bg); color:var(--c-ink); font-family:var(--body); font-size:15px; line-height:1.5; margin:0;
+  padding-inline:clamp(16px,4vw,48px); padding-block:28px 56px}
+.page{max-width:1240px; margin:0 auto; display:grid; gap:20px}
+h1,h2,h3,h4{font-family:var(--display); text-wrap:balance; margin:0}
+.intro{display:grid; gap:6px; max-width:78ch}
+.eyebrow{font-size:12px; letter-spacing:.08em; text-transform:uppercase; color:var(--c-muted)}
+.intro h1{font-size:clamp(26px,3.4vw,38px); font-weight:750; letter-spacing:-.01em}
+.intro p{margin:0; color:var(--c-muted)}
+.controls{display:flex; flex-wrap:wrap; gap:12px 22px; align-items:center}
+.ctl{display:flex; gap:10px; align-items:center; flex-wrap:wrap}
+.ctl > span{font-size:12px; letter-spacing:.08em; text-transform:uppercase; color:var(--c-muted)}
+.seg{display:inline-flex; flex-wrap:wrap; border:1.5px solid var(--c-line); border-radius:18px; padding:3px; background:var(--c-surface); gap:2px}
+.seg button{appearance:none; border:0; background:transparent; font:inherit; font-size:13.5px; color:var(--c-ink); padding:6px 13px; border-radius:999px; cursor:pointer}
+.seg button[aria-pressed="true"]{background:var(--c-sel); color:var(--c-onsel)}
+button:focus-visible{outline:2px solid var(--c-focus); outline-offset:2px}
+.caption{font-size:13.5px; color:var(--c-muted); max-width:92ch; margin:-6px 0 0}
+.caption b{color:var(--c-ink); font-weight:500}
+.frame{width:100%; border-radius:14px; overflow:hidden; border:1px solid var(--c-line); box-shadow:0 18px 40px -24px rgba(0,0,0,.35); background:var(--c-surface)}
+.frame .bar{display:flex; align-items:center; gap:8px; padding:9px 14px; border-bottom:1px solid var(--c-line); font-size:12px; color:var(--c-muted)}
+.frame .bar i{width:10px; height:10px; border-radius:50%; background:var(--c-line); display:inline-block}
+.frame .bar .url{margin-left:10px; padding:3px 12px; border-radius:6px; background:var(--c-bg)}
+.appwrap{height:760px}
+body.capture{padding:0; background:transparent}
+body.capture .intro, body.capture .controls, body.capture .caption{display:none}
+body.capture .page{max-width:none; gap:0}
+body.capture .frame{border-radius:0; box-shadow:none; border:0}
+
+/* ============ LEA app: Chalkboard tokens (set by script) ============ */
+.app{height:100%; background:var(--bg); color:var(--ink); font-family:var(--body); font-size:14px; overflow:hidden}
+.app h2,.app h3,.app h4{font-family:var(--display); color:var(--ink)}
+.shell{height:100%; display:grid; grid-template-columns:260px 1fr}
+.rail{background:var(--surface); border-right:1px solid var(--line); padding:18px 16px; display:flex; flex-direction:column; gap:14px; min-height:0}
+.brand{display:flex; gap:10px; align-items:center}
+.brand img{width:44px; height:44px; border-radius:50%; border:2px solid var(--accent)}
+.brand b{font-family:var(--display); font-size:22px; font-weight:800; display:block; line-height:1}
+.brand span{font-size:11.5px; color:var(--muted)}
+.course{border:1px solid var(--line); border-radius:10px; padding:9px 11px; display:flex; justify-content:space-between; align-items:center; gap:8px; background:var(--bg)}
+.course small,.label{display:block; font-size:11px; letter-spacing:.08em; text-transform:uppercase; color:var(--muted)}
+.course strong{font-weight:500; font-size:13.5px}
+.label{margin-bottom:-6px}
+.nav{display:grid; gap:2px; margin:0; padding:0; list-style:none}
+.nav a{display:flex; gap:10px; align-items:center; padding:8px 11px; border-radius:10px; font-size:13.5px; color:var(--ink); text-decoration:none}
+.nav a svg{width:18px; height:18px; flex:none; color:var(--muted)}
+.nav a.on{background:var(--surface-2); font-weight:600}
+.nav a.on svg{color:var(--ink)}
+.nav a em{margin-left:auto; font-style:normal; font-size:11.5px; color:var(--muted); font-variant-numeric:tabular-nums}
+.navlink{display:flex; justify-content:space-between; align-items:center; padding:9px 11px; border-radius:10px; font-size:13.5px; color:var(--ink); text-decoration:none; border:1px solid var(--line)}
+.rail .spacer{flex:1}
+.who{display:flex; gap:10px; align-items:center; padding-top:12px; border-top:1px solid var(--line); font-size:13px}
+.who .av{width:32px; height:32px; border-radius:50%; background:var(--primary); color:var(--on-primary); display:grid; place-items:center; font-weight:600}
+.who small{display:block; color:var(--muted); font-size:11.5px}
+.work{display:flex; flex-direction:column; min-height:0; min-width:0}
+.head{padding:16px 24px 14px; border-bottom:1px solid var(--line); display:flex; gap:16px; align-items:flex-end; justify-content:space-between; background:var(--bg)}
+.kicker{font-size:11.5px; letter-spacing:.07em; text-transform:uppercase; color:var(--muted); display:flex; gap:4px 10px; flex-wrap:wrap}
+.head h2{font-size:24px; font-weight:750; letter-spacing:-.01em; margin-top:3px}
+.head .sub{font-size:13px; color:var(--muted); margin-top:2px}
+.actions{display:flex; gap:8px; flex-wrap:wrap; align-items:center}
+.scroll{flex:1; overflow:auto; min-height:0; padding:18px 24px 24px}
+.btn{background:var(--primary); color:var(--on-primary); border:0; border-radius:9px; padding:9px 16px; font:inherit; font-weight:600; font-size:13.5px; white-space:nowrap}
+.btn.ghost{background:transparent; color:var(--ink); border:1.5px solid var(--line)}
+.btn.danger{background:transparent; color:var(--danger); border:1.5px solid var(--danger)}
+.btn.small{padding:6px 12px; font-size:12.5px}
+.card{background:var(--surface); border:1px solid var(--line); border-radius:12px}
+.pad{padding:14px 16px}
+.grid{display:grid; gap:14px}
+.muted{color:var(--muted)}
+.small{font-size:12.5px}
+.num{font-variant-numeric:tabular-nums}
+.pill{display:inline-flex; align-items:center; gap:6px; font-size:11.5px; padding:2px 9px; border-radius:99px; background:var(--surface-2); color:var(--ink); white-space:nowrap}
+.pill.ok{background:var(--success-soft); color:var(--success)}
+.pill.bad{background:var(--danger-soft); color:var(--danger)}
+.pill.warn{background:var(--accent-soft); color:var(--ink)}
+.pill.line{background:transparent; border:1px solid var(--line); color:var(--muted)}
+.pill.dash{background:transparent; border:1px dashed var(--muted); color:var(--muted)}
+.dot{width:8px; height:8px; border-radius:50%; display:inline-block; flex:none}
+.meter{height:6px; border-radius:99px; background:var(--line); overflow:hidden}
+.meter i{display:block; height:100%; background:var(--accent); border-radius:99px}
+table{width:100%; border-collapse:collapse; font-size:13px}
+th{font-size:11px; letter-spacing:.07em; text-transform:uppercase; color:var(--muted); font-weight:500; text-align:left; padding:8px 10px; border-bottom:1px solid var(--line); white-space:nowrap}
+td{padding:9px 10px; border-bottom:1px solid var(--line); vertical-align:top}
+tr:last-child td{border-bottom:0}
+td.r, th.r{text-align:right}
+.id{font-family:ui-monospace, "JetBrains Mono", Consolas, monospace; font-size:11.5px; color:var(--muted)}
+.banner{display:flex; gap:12px; align-items:center; padding:10px 14px; border-radius:10px; font-size:13px}
+.banner.info{background:var(--surface-2)}
+.banner.soft{background:var(--accent-soft); color:var(--ink)}
+.banner.bad{background:var(--danger-soft); color:var(--ink)}
+.banner b{font-weight:600}
+.tabs{display:flex; gap:4px; border-bottom:1px solid var(--line); margin-bottom:14px}
+.tabs a{padding:7px 12px; font-size:13.5px; color:var(--muted); text-decoration:none; border-bottom:2.5px solid transparent; margin-bottom:-1px}
+.tabs a.on{color:var(--ink); font-weight:600; border-bottom-color:var(--primary)}
+.check{width:18px; height:18px; border-radius:50%; display:grid; place-items:center; font-size:11px; flex:none}
+.check.done{background:var(--primary); color:var(--on-primary)}
+.check.now{background:var(--accent); color:var(--on-primary)}
+.check.todo{border:1.5px solid var(--line)}
+.log{font-family:ui-monospace, "JetBrains Mono", Consolas, monospace; font-size:11.5px; background:var(--bg); border:1px solid var(--line); border-radius:8px; padding:8px 10px; color:var(--muted); line-height:1.6; white-space:pre-wrap}
+.field{display:grid; gap:4px}
+.field label{font-size:11px; letter-spacing:.07em; text-transform:uppercase; color:var(--muted)}
+.input{border:1.5px solid var(--line); border-radius:9px; padding:7px 10px; background:var(--surface); font-size:13.5px}
+.twocol{display:grid; grid-template-columns:1fr 330px; gap:16px; align-items:start}
+.lo-head{display:flex; gap:10px; align-items:baseline; padding:10px 12px; background:var(--bg); border-bottom:1px solid var(--line)}
+.lo-head b{font-weight:600}
+.excerpt{font-size:12px; color:var(--muted); border-left:3px solid var(--line); padding-left:8px; margin-top:4px}
+.flag{color:var(--warning); font-size:12px}
+.stat{display:grid; gap:2px}
+.stat b{font-family:var(--display); font-size:26px; font-weight:750; line-height:1.1}
+.stat span{font-size:12px; color:var(--muted)}
+.bar2{display:flex; height:8px; border-radius:99px; overflow:hidden; background:var(--line)}
+.bar2 i{display:block; height:100%}
+.finding{display:grid; grid-template-columns:auto 1fr auto; gap:12px; padding:14px 16px; border-bottom:1px solid var(--line)}
+.finding:last-child{border-bottom:0}
+.sev{width:4px; border-radius:99px}
+.quote{font-size:12.5px; background:var(--bg); border-radius:8px; padding:7px 10px; margin-top:6px; color:var(--ink)}
+.msg{display:flex; gap:10px; max-width:74ch}
+.msg img{width:32px; height:32px; border-radius:50%; flex:none}
+.msg .b{background:var(--surface); border:1px solid var(--line); padding:10px 14px; border-radius:4px 14px 14px 14px; line-height:1.55}
+.msg .b p{margin:0 0 6px} .msg .b p:last-child{margin:0}
+.msg.me{align-self:flex-end; flex-direction:row-reverse}
+.msg.me .b{background:var(--primary); color:var(--on-primary); border-color:transparent; border-radius:14px 4px 14px 14px}
+.meta{font-size:11.5px; color:var(--muted); margin-top:5px}
+.kv{display:grid; grid-template-columns:auto 1fr; gap:4px 12px; font-size:12.5px}
+.kv dt{color:var(--muted)} .kv dd{margin:0; font-weight:500}
+.modes{display:flex; gap:4px; padding:12px 22px 0; border-bottom:1px solid var(--line); background:var(--bg)}
+.modes a{padding:8px 14px; font-size:14px; color:var(--muted); text-decoration:none; border-bottom:2.5px solid transparent; margin-bottom:-1px}
+.modes a.on{color:var(--ink); font-weight:600; border-bottom-color:var(--primary)}
+.preview-bar{display:flex; gap:12px; align-items:center; padding:9px 18px; background:var(--accent-soft); border-bottom:1px solid var(--accent); font-size:13px}
+.preview-bar b{font-weight:600}
+.preview-bar .actions{margin-left:auto}
+.explain{border-left:1px solid var(--line); background:var(--surface); padding:14px 16px; overflow:auto; display:grid; gap:12px; align-content:start}
+.explain h4{font-size:15px}
+.chunk{font-size:12px; border:1px solid var(--line); border-radius:8px; padding:7px 9px}
+.probe{display:flex; gap:8px; align-items:flex-start; font-size:12.5px}
+.box{display:flex; gap:8px; align-items:center; background:var(--surface); border:1.5px solid var(--line); border-radius:12px; padding:6px 6px 6px 14px}
+.box span{flex:1; color:var(--muted); font-size:14px}
+</style></head><body>
+<div class="page">
+  <div class="intro">
+    <div class="eyebrow">LEA · Teacher module · design checkpoint (B8)</div>
+    <h1>Teacher screens, Chalkboard style</h1>
+    <p>Wide screens first: teachers work at a desk. Same tokens, type and components as the student app (docs/design/DESIGN.md). Data shown is illustrative.</p>
+  </div>
+  <div class="controls">
+    <div class="ctl"><span>Screen</span><div class="seg" id="screens"></div></div>
+    <div class="ctl"><span>Theme</span><div class="seg" id="themes"><button data-t="light" aria-pressed="true">Light</button><button data-t="dark" aria-pressed="false">Dark</button></div></div>
+  </div>
+  <p class="caption" id="caption"></p>
+  <div class="frame"><div class="bar"><i></i><i></i><i></i><span class="url" id="url">localhost:5100/teach</span></div>
+    <div class="appwrap"><div class="app" id="app"></div></div></div>
+</div>
+<script>
+const AV = "data:image/jpeg;base64,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";
+const T = {
+  light:{bg:"#F3F5F1",surface:"#FFFFFF","surface-2":"#E2E9E0",ink:"#1B2621",muted:"#56655D",line:"#D2DBD0",
+    primary:"#2E5A47","on-primary":"#FFFFFF",accent:"#A98712","accent-soft":"#F5ECC3",
+    success:"#256B42","success-soft":"#DDEFE2",warning:"#9A5F06",danger:"#B03A2E","danger-soft":"#F7E0DC"},
+  dark:{bg:"#111814",surface:"#18221D","surface-2":"#223129",ink:"#E7EFE9",muted:"#9DB0A5",line:"#2A3B33",
+    primary:"#86C9A8","on-primary":"#0F1F17",accent:"#F0D35E","accent-soft":"#3A3418",
+    success:"#74CD99","success-soft":"#1C3A28",warning:"#F0B75A",danger:"#F08D84","danger-soft":"#3F2220"},
+};
+const I = {
+  home:'<path d="M3 11l9-7 9 7v9H3z"/><path d="M9 20v-6h6v6"/>',
+  setup:'<path d="M4 7h16M4 12h10M4 17h7"/><path d="M17 15l2 2 3-4"/>',
+  kc:'<circle cx="6" cy="6" r="2.5"/><circle cx="18" cy="6" r="2.5"/><circle cx="12" cy="18" r="2.5"/><path d="M8 7.5l3 8M16 7.5l-3 8M8.5 6h7"/>',
+  audit:'<path d="M9 4h6l1 3H8z"/><rect x="5" y="6" width="14" height="15" rx="2"/><path d="M9 13l2 2 4-4"/>',
+  analytics:'<path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/>',
+  preview:'<path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/>',
+  admin:'<circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c.8-3.6 3.4-5.5 6.5-5.5s5.7 1.9 6.5 5.5"/><path d="M17 11l1.5 1.5L22 9"/>',
+  videos:'<rect x="3" y="5" width="18" height="14" rx="3"/><path d="M10 9.5l5 2.5-5 2.5z"/>',
+};
+const svg = k => `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">${I[k]}</svg>`;
+
+function rail(active, course="AIML101 · Introduction to AI and ML"){
+  const items = [["home","Courses",""],["setup","Setup and materials",""],["kc","Objectives","Draft"],
+                 ["videos","Videos","9"],["audit","Content audit","7"],["analytics","Analytics",""],["preview","Try as a student",""]];
+  const nav = items.map(([k,t,e])=>`<li><a class="${k===active?"on":""}" href="#">${svg(k)}${t}${e?`<em>${e}</em>`:""}</a></li>`).join("");
+  return `<aside class="rail">
+    <div class="brand"><img src="${AV}" alt=""><div><b>LEA</b><span>Teaching</span></div></div>
+    <div class="course"><div><small>Course</small><strong>${course}</strong></div><span>▾</span></div>
+    <ul class="nav">${nav}</ul>
+    <div class="label">Admin</div>
+    <ul class="nav"><li><a class="${active==="admin"?"on":""}" href="#">${svg("admin")}Users and owners</a></li></ul>
+    <div class="spacer"></div>
+    <a class="navlink" href="#">Back to learning <span>→</span></a>
+    <div class="who"><span class="av">R</span><div>Dr Rivera<small>Teacher · Admin · Log out</small></div></div>
+  </aside>`;
+}
+function head(kicker, title, sub, actions=""){
+  return `<div class="head"><div><div class="kicker">${kicker}</div><h2>${title}</h2>${sub?`<div class="sub">${sub}</div>`:""}</div><div class="actions">${actions}</div></div>`;
+}
+const band = b => ({mastered:'<span class="pill ok">Mastered</span>', developing:'<span class="pill warn">Developing</span>',
+  struggling:'<span class="pill bad">Struggling</span>', none:'<span class="pill dash">Not enough evidence</span>'})[b];
+
+const S = {};
+S.home = {title:"Courses", url:"/teach", caption:"<b>Teacher home.</b> Every course the teacher owns (an admin sees all), with its state and the one next step. Student counts and attention flags come from real sessions only; below 5 students they're hidden.", render:()=>`
+<div class="shell">${rail("home","All courses")}<main class="work">
+${head("Teaching","Your courses","3 courses · you own 2, admin view shows all",`<button class="btn">New course</button>`)}
+<div class="scroll"><div class="grid" style="grid-template-columns:repeat(3,1fr)">
+  <div class="card pad grid" style="gap:10px">
+    <div style="display:flex;justify-content:space-between;align-items:center"><span class="pill ok">Live · version 2</span><span class="small muted">Owners: you, Dr Okafor</span></div>
+    <div><h3 style="font-size:19px">AIML101</h3><div class="muted small">Introduction to AI and Machine Learning</div></div>
+    <div style="display:flex;gap:18px"><div class="stat"><b class="num">42</b><span>students</span></div><div class="stat"><b class="num">6</b><span>weeks</span></div><div class="stat"><b class="num">63</b><span>objectives</span></div></div>
+    <div class="banner soft"><span class="dot" style="background:var(--danger)"></span><span><b>3 objectives</b> need attention · Week 5</span></div>
+    <div class="actions"><button class="btn small">Open analytics</button><button class="btn ghost small">Edit objectives</button></div>
+  </div>
+  <div class="card pad grid" style="gap:10px">
+    <div style="display:flex;justify-content:space-between;align-items:center"><span class="pill line">Live · before versioning</span><span class="small muted">Owner: you</span></div>
+    <div><h3 style="font-size:19px">DEMO102</h3><div class="muted small">Second Demo Course</div></div>
+    <div style="display:flex;gap:18px"><div class="stat"><b class="num">4</b><span>students</span></div><div class="stat"><b class="num">13</b><span>weeks</span></div><div class="stat"><b class="num">79</b><span>objectives</span></div></div>
+    <div class="banner info"><span class="small">Analytics start at <b>5 students</b>. 4 so far.</span></div>
+    <div class="actions"><button class="btn ghost small">Run content audit</button><button class="btn ghost small">Try as a student</button></div>
+  </div>
+  <div class="card pad grid" style="gap:10px">
+    <div style="display:flex;justify-content:space-between;align-items:center"><span class="pill warn">Setting up</span><span class="small muted">Owner: Dr Okafor</span></div>
+    <div><h3 style="font-size:19px">BIO210</h3><div class="muted small">Cell Biology</div></div>
+    <div class="grid" style="gap:6px"><div style="display:flex;justify-content:space-between" class="small"><span>Building · Chunking and embedding</span><span class="num">64%</span></div><div class="meter"><i style="width:64%"></i></div></div>
+    <div class="small muted">Students can't see this course until you publish its objectives.</div>
+    <div class="actions"><button class="btn small">Continue setup</button></div>
+  </div>
+</div>
+<h3 style="font-size:16px;margin:22px 0 10px">Recent activity</h3>
+<div class="card"><table><tbody>
+<tr><td class="small muted" style="width:120px">Today 10:42</td><td>Dr Okafor started a build of <b>BIO210</b> (estimated $0.41)</td></tr>
+<tr><td class="small muted">Yesterday</td><td>You published <b>AIML101</b> version 2: 4 added, 3 changed, 1 split, 1 merged, 1 retired</td></tr>
+<tr><td class="small muted">Mon 22 Sep</td><td>Content audit of <b>AIML101</b>: 7 findings, 5 reviewed</td></tr>
+</tbody></table></div>
+</div></main></div>`};
+
+S.setup = {title:"Setup and materials", url:"/teach/courses/BIO210/setup", caption:"<b>Course setup and materials.</b> Four steps down the left of the content; the build card prices the run before it starts and nothing is spent until the teacher confirms. While it runs: step list, progress, the latest log lines and Cancel.", render:()=>`
+<div class="shell">${rail("setup","BIO210 · Cell Biology")}<main class="work">
+${head("BIO210 · Setup","Setup and materials","Students can't see this course until its objectives are published.",`<button class="btn ghost">Course details</button>`)}
+<div class="scroll"><div class="twocol">
+<div class="grid">
+  <div class="card">
+    <div class="pad" style="display:flex;justify-content:space-between;align-items:center"><div><h3 style="font-size:17px">Materials</h3><div class="small muted">14 files · 212 MB of 1 GB · PDF, Word, PowerPoint, Excel, Markdown, text, notebooks, MP3, MP4, WAV (50 MB each)</div></div><button class="btn small">Upload files</button></div>
+    <div style="margin:0 16px 12px;border:1.5px dashed var(--line);border-radius:10px;padding:12px;text-align:center" class="small muted">Drop files here · choose a week and kind, or leave them for later</div>
+    <table><thead><tr><th>File</th><th>Week</th><th>Kind</th><th class="r">Size</th><th></th></tr></thead><tbody>
+      <tr><td>Lecture 1 - The cell.pptx</td><td>1</td><td>Lecture</td><td class="r num">18.2 MB</td><td class="small muted">Staged</td></tr>
+      <tr><td>Membranes reading.pdf</td><td>1</td><td>Reading</td><td class="r num">2.4 MB</td><td class="small muted">Staged</td></tr>
+      <tr><td>Lecture 2 recording.mp4</td><td>2</td><td>Video</td><td class="r num">48.9 MB</td><td class="small" style="color:var(--accent)">Transcribing…</td></tr>
+      <tr><td>Microscopy lab.docx</td><td>2</td><td>Lab</td><td class="r num">1.1 MB</td><td class="small muted">Waiting</td></tr>
+      <tr><td>Glossary.md</td><td class="muted">—</td><td>Reading</td><td class="r num">12 KB</td><td class="small muted">Waiting</td></tr>
+    </tbody></table>
+  </div>
+  <div class="card pad grid" style="gap:10px">
+    <div style="display:flex;justify-content:space-between;align-items:baseline"><h3 style="font-size:17px">Weekly learning objectives</h3><a class="small" style="color:var(--primary)">Edit</a></div>
+    <div class="small muted">The objectives the KC model is drafted from. Full sentences, like "Explain how…".</div>
+    <div class="small"><b>Week 1 · The cell</b> — 3 objectives</div>
+    <div class="small"><b>Week 2 · Membranes and transport</b> — 2 objectives</div>
+    <div class="small"><b>Week 3 · Energy and metabolism</b> — 3 objectives</div>
+  </div>
+</div>
+<div class="grid">
+  <div class="card pad grid" style="gap:10px">
+    <div style="display:flex;justify-content:space-between;align-items:center"><h3 style="font-size:17px">Build</h3><span class="pill warn">Running</span></div>
+    <div class="grid" style="gap:6px"><div style="display:flex;justify-content:space-between" class="small"><span>Chunking and embedding · 9 of 14 files</span><span class="num">64%</span></div><div class="meter"><i style="width:64%"></i></div></div>
+    <div class="grid" style="gap:7px">
+      ${[["done","Converting uploads"],["done","Transcribing audio and video"],["now","Chunking and embedding"],["todo","Drafting the objectives (GPT-4o)"],["todo","Writing the course profile"],["todo","Checking content for each objective"]].map(([s,t])=>`<div style="display:flex;gap:9px;align-items:center" class="small"><span class="check ${s}">${s==="done"?"✓":s==="now"?"•":""}</span>${t}</div>`).join("")}
+    </div>
+    <div class="log">10:44:02 Week01-LectureA-The-Cell.pptx
+10:44:19   Added 22 chunks
+10:44:20 Week01-ReadingA-Membranes-Reading.pdf
+10:44:31   Added 9 chunks</div>
+    <div class="small muted">Estimated cost <b style="color:var(--ink)">$0.41</b> · started by Dr Okafor at 10:42</div>
+    <button class="btn danger small">Cancel after this file</button>
+  </div>
+  <div class="card pad grid" style="gap:8px">
+    <h4 style="font-size:14px">Before a build starts</h4>
+    <div class="small muted">LEA shows the price per step and waits:</div>
+    <table class="small"><tbody><tr><td>Chunking and embedding (14 files, 38 pictures)</td><td class="r num">$0.30</td></tr><tr><td>Drafting objectives (11 model calls)</td><td class="r num">$0.11</td></tr><tr><td>Transcription on this PC</td><td class="r num">$0.00</td></tr><tr><td><b>Total</b></td><td class="r num"><b>$0.41</b></td></tr></tbody></table>
+    <div class="actions"><button class="btn small">Start build · $0.41</button><button class="btn ghost small">Not now</button></div>
+  </div>
+</div>
+</div></div></main></div>`};
+
+const KC_ROWS = [
+  ["GO_05_12_001","Understand loss functions","Understand","0.70","loss, error",0.71,false],
+  ["GO_05_12_002","Gradient descent mechanics","Understand","0.72","gradient, step size",0.68,false],
+  ["GO_05_12_003","Loss function minimization","Analyze","0.85","optimisation",0.62,false],
+  ["GO_05_12_004","Implement gradient descent","Apply","0.85","python, numpy",0.41,true],
+];
+S.kc = {title:"Objectives", url:"/teach/courses/AIML101/kc", caption:"<b>KC review.</b> A table by week and learning objective, one row per granular objective: name, Bloom level, threshold, keywords and the course excerpt it was matched to. IDs are shown but never editable. Problems sit in a side panel; nothing is published from here.", render:()=>`
+<div class="shell">${rail("kc")}<main class="work">
+${head("AIML101 · Objectives","Objectives: draft","Based on version 2 · saved 2 minutes ago · 6 edits",`<button class="btn ghost small">Export to Excel</button><button class="btn ghost small">Import</button><button class="btn ghost small">Discard draft</button><button class="btn">Review changes</button>`)}
+<div class="scroll"><div class="twocol">
+<div class="grid">
+  <div class="tabs"><a>Week 1</a><a>Week 2</a><a>Week 3</a><a>Week 4</a><a class="on">Week 5</a><a>Week 6</a></div>
+  <div class="card" style="overflow:hidden">
+    <div class="lo-head"><span class="id">LO_05_12</span><b>Explain learning as minimising a loss function with gradient descent</b><span class="small muted" style="margin-left:auto">Short title: Loss and Gradient Descent</span></div>
+    <table><thead><tr><th style="width:32%">Objective</th><th>Bloom</th><th class="r">Threshold</th><th>Keywords</th><th>Content match</th></tr></thead><tbody>
+    ${KC_ROWS.map(([id,n,b,t,k,s,weak])=>`<tr><td><div style="font-weight:500">${n}</div><div class="id">${id}</div>${weak?'<div class="excerpt">“Let\'s now implement the training loop…” · Week05-LabA-Own-Framework</div>':""}</td><td><span class="pill line">${b}</span></td><td class="r num">${t}</td><td class="small muted">${k}</td><td class="small">${weak?'<span class="flag">▲ Weak support</span>':`<span class="num">${s.toFixed(2)}</span>`}</td></tr>`).join("")}
+    <tr><td colspan="5" class="small"><a style="color:var(--primary)">+ Add objective</a> · <a style="color:var(--primary)">Split…</a> · <a style="color:var(--primary)">Merge…</a></td></tr>
+    </tbody></table>
+  </div>
+  <div class="card" style="overflow:hidden">
+    <div class="lo-head"><span class="id">LO_05_13</span><b>Describe multi-layer perceptrons and backpropagation</b></div>
+    <table><tbody>
+      <tr><td style="width:32%"><div style="font-weight:500">MLP architecture</div><div class="id">GO_05_13_001</div></td><td><span class="pill line">Understand</span></td><td class="r num">0.67</td><td class="small muted">layers, hidden units</td><td class="small num">0.74</td></tr>
+      <tr><td><div style="font-weight:500">Backpropagation steps <span class="pill warn" style="margin-left:4px">Edited</span></div><div class="id">GO_05_13_003</div></td><td><span class="pill line">Apply</span></td><td class="r num"><span style="border-bottom:2px solid var(--danger)">0.99</span></td><td class="small muted">chain rule</td><td class="small num">0.70</td></tr>
+    </tbody></table>
+  </div>
+</div>
+<div class="grid">
+  <div class="card pad grid" style="gap:10px">
+    <h3 style="font-size:16px">Checks</h3>
+    <div class="banner bad small"><span><b>1 problem</b> stops this draft being saved</span></div>
+    <div class="small"><b>Row 18 · Threshold.</b> Mastery threshold must be 0.5 to 0.95.</div>
+    <div class="banner soft small"><span><b>2 warnings</b></span></div>
+    <div class="small"><b>GO_05_12_004.</b> Its prerequisite GO_05_14_002 comes later in the week.</div>
+    <div class="small"><b>GO_05_12_004.</b> Weak support in the content (0.41; course average 0.66).</div>
+  </div>
+  <div class="card pad grid" style="gap:8px">
+    <h3 style="font-size:16px">Row details</h3>
+    <div class="field"><label>Description</label><div class="input small">Students implement a gradient-descent loop that updates weights from the loss gradient.</div></div>
+    <div class="field"><label>Prerequisites</label><div class="small"><span class="pill line">GO_05_12_002 · Gradient descent mechanics</span></div></div>
+    <div class="field"><label>Source excerpt</label><div class="excerpt">“Let's now implement the training loop. For each minibatch we compute the loss…” (Week05-LabA-Own-Framework.ipynb)</div></div>
+  </div>
+</div>
+</div></div></main></div>`};
+
+S.publish = {title:"Review changes", url:"/teach/courses/AIML101/kc/diff", caption:"<b>Review and publish.</b> Every change against the live version, and who it affects, before anything reaches students. The research note says exactly what publishing does to mastery.", render:()=>`
+<div class="shell">${rail("kc")}<main class="work">
+${head("AIML101 · Objectives","Publish version 3?","Draft based on version 2 · reviewed over 3 sittings, 26 minutes",`<button class="btn ghost">Back to the draft</button><button class="btn">Publish version 3</button>`)}
+<div class="scroll"><div class="twocol">
+<div class="grid">
+  <div class="card pad" style="display:flex;gap:26px">
+    ${[["4","added"],["3","changed"],["1","split"],["1","merged"],["1","retired"],["66","objectives after"]].map(([n,t])=>`<div class="stat"><b class="num">${n}</b><span>${t}</span></div>`).join("")}
+  </div>
+  <div class="card" style="overflow:hidden"><table><thead><tr><th>Change</th><th>Objective</th><th>Detail</th></tr></thead><tbody>
+    <tr><td><span class="pill ok">Added</span></td><td>Learning-rate schedules<div class="id">GO_05_12_005 · new</div></td><td class="small muted">Week 5 · Loss and Gradient Descent</td></tr>
+    <tr><td><span class="pill warn">Changed</span></td><td>Backpropagation steps<div class="id">GO_05_13_003</div></td><td class="small">Threshold <s class="muted">0.82</s> → 0.80 · Bloom <s class="muted">Apply</s> → Analyze</td></tr>
+    <tr><td><span class="pill">Split</span></td><td>Implement gradient descent<div class="id">GO_05_12_004 → _006, _007</div></td><td class="small">“Compute the gradient” and “Update the weights”</td></tr>
+    <tr><td><span class="pill">Merged</span></td><td>Framework abstraction + Pre-built components<div class="id">GO_05_14_001 + _002 → GO_05_14_005</div></td><td class="small">“What a framework gives you”</td></tr>
+    <tr><td><span class="pill bad">Retired</span></td><td>Framework ecosystem support<div class="id">GO_05_14_004</div></td><td class="small muted">Removed; its ID is never reused</td></tr>
+  </tbody></table></div>
+</div>
+<div class="grid">
+  <div class="card pad grid" style="gap:10px">
+    <h3 style="font-size:16px">Students affected</h3>
+    <div class="stat"><b class="num">18</b><span>of 42 students have mastery on objectives this changes</span></div>
+    <table class="small"><tbody>
+      <tr><td>Split (12 students)</td><td class="muted">each part starts at their old mastery</td></tr>
+      <tr><td>Merged (6)</td><td class="muted">the average of their mastery on the two</td></tr>
+      <tr><td>Retired (2)</td><td class="muted">kept, no longer counted</td></tr>
+    </tbody></table>
+  </div>
+  <div class="banner soft small" style="align-items:flex-start"><span><b>Research note.</b> Publishing changes what students see and moves mastery as above. It's recorded in the event log with your review time and edits.</span></div>
+  <div class="field"><label>Note for this version (optional)</label><div class="input small muted">Split gradient descent after low first-attempt accuracy</div></div>
+</div>
+</div></div></main></div>`};
+
+S.audit = {title:"Content audit", url:"/teach/courses/AIML101/audit", caption:"<b>Content audit.</b> Findings, not scores: ranked by severity, each with its evidence, a link to the objective or file, and how well that kind of check is validated. The teacher accepts or dismisses each one; decisions carry over to the next run.", render:()=>`
+<div class="shell">${rail("audit")}<main class="work">
+${head("AIML101 · Content audit","7 findings","Run on version 2 · Mon 22 Sep · 5 reviewed",`<button class="btn ghost small">Compare with last run</button><button class="btn">Run audit again · ≈ $0.12</button>`)}
+<div class="scroll">
+<div style="display:flex;gap:8px;margin-bottom:12px;flex-wrap:wrap">
+  <span class="pill" style="background:var(--ink);color:var(--bg)">All 7</span><span class="pill line">Accessibility 3</span><span class="pill line">Question writing 1</span><span class="pill line">Bloom balance 1</span><span class="pill line">Coverage 1</span><span class="pill line">Prerequisite order 1</span>
+  <span style="margin-left:auto" class="small muted">Evidence: <span class="pill ok">Well supported</span> <span class="pill line">Moderate</span> <span class="pill dash">Experimental</span></span>
+</div>
+<div class="card">
+  <div class="finding"><span class="sev" style="background:var(--danger)"></span><div>
+    <div style="display:flex;gap:8px;align-items:center"><b>12 slides have pictures with no text alternative</b><span class="pill ok">Well supported</span></div>
+    <div class="small muted">Screen-reader users miss what these pictures show. WCAG 2.2, 1.1.1.</div>
+    <div class="quote">Week04-LectureB-Perceptron.pptx · slides 3, 4, 7 · Week05-LabA … (9 more)</div></div>
+    <div class="actions"><button class="btn small">Accept</button><button class="btn ghost small">Dismiss…</button></div></div>
+  <div class="finding"><span class="sev" style="background:var(--warning)"></span><div>
+    <div style="display:flex;gap:8px;align-items:center"><b>“Implement gradient descent” has weak support in the materials</b><span class="pill dash">Experimental</span></div>
+    <div class="small muted">Its best match scores 0.41 against a course average of 0.66. The objective may need material, or rewording.</div>
+    <div class="quote">GO_05_12_004 → best match: Week05-LabA-Own-Framework.ipynb</div></div>
+    <div class="actions"><button class="btn small">Accept</button><button class="btn ghost small">Dismiss…</button></div></div>
+  <div class="finding"><span class="sev" style="background:var(--warning)"></span><div>
+    <div style="display:flex;gap:8px;align-items:center"><b>A prerequisite is taught after the objective that needs it</b><span class="pill ok">Rule-based</span></div>
+    <div class="small muted">GO_03_09_004 “Error measurement” needs GO_05_12_001 “Loss functions”, taught two weeks later.</div></div>
+    <div class="actions"><span class="pill ok">Accepted · “move loss to week 3”</span></div></div>
+  <div class="finding"><span class="sev" style="background:var(--muted)"></span><div>
+    <div style="display:flex;gap:8px;align-items:center"><b>Week 5 is mostly “Understand”</b><span class="pill line">Moderate</span><span class="small muted">LLM suggestion</span></div>
+    <div class="bar2" style="margin:8px 0 4px;max-width:420px"><i style="width:12%;background:var(--muted)"></i><i style="width:58%;background:var(--primary)"></i><i style="width:18%;background:var(--accent)"></i><i style="width:12%;background:var(--danger)"></i></div>
+    <div class="small muted">Remember 12% · Understand 58% · Apply 18% · Analyze 12% — shown as a distribution, not per item.</div></div>
+    <div class="actions"><span class="pill line">Dismissed · “intended”</span></div></div>
+</div>
+</div></main></div>`};
+
+const OV = [
+  ["Implement gradient descent","GO_05_12_004","struggling",31,"0.38","7.2","High: flat curve · 9 tutor struggles"],
+  ["Backpropagation steps","GO_05_13_003","struggling",29,"0.45","6.1","High: low first-attempt accuracy"],
+  ["Bias-variance trade-off","GO_05_15_004","developing",27,"0.58","4.4","Medium: many chat questions"],
+  ["Loss function minimization","GO_05_12_003","developing",30,"0.62","3.9","Low"],
+  ["MLP architecture","GO_05_13_001","mastered",33,"0.81","2.1","—"],
+  ["Framework ecosystem support","GO_05_14_004","none",3,"—","—","Not enough students yet"],
+];
+S.analytics = {title:"Analytics", url:"/teach/courses/AIML101/analytics", caption:"<b>Analytics overview.</b> Leads with objectives, not usage: a mastery band per objective (grey when evidence is thin), first-attempt accuracy, attempts to mastery, and LEA's “needs attention” ranking with the factor that drove it. Real students only; anything under 5 students is hidden. Usage comes last.", render:()=>`
+<div class="shell">${rail("analytics")}<main class="work">
+${head("AIML101 · Analytics","Objectives in week 5","42 students · real sessions only · version 2",`<span class="pill line">Week 5 ▾</span><span class="pill line">Last 30 days ▾</span><button class="btn ghost small">Export curves (CSV)</button>`)}
+<div class="scroll grid" style="gap:14px">
+<div class="card pad" style="display:flex;gap:26px;align-items:center">
+  <div class="stat"><b class="num">2</b><span>struggling</span></div><div class="stat"><b class="num">2</b><span>developing</span></div><div class="stat"><b class="num">11</b><span>mastered</span></div><div class="stat"><b class="num">1</b><span>not enough evidence</span></div>
+  <div class="small muted" style="margin-left:auto;max-width:44ch">“Needs attention” is LEA's heuristic: low first-attempt accuracy, a flat learning curve, tutor struggles and chat questions on the topic.</div>
+</div>
+<div class="card" style="overflow:hidden"><table><thead><tr><th>Objective</th><th>Band</th><th class="r">Students</th><th class="r">First-try accuracy</th><th class="r">Attempts to master</th><th>Needs attention</th></tr></thead><tbody>
+${OV.map(([n,id,b,s,a,m,why])=>`<tr><td><div style="font-weight:500">${n}</div><div class="id">${id}</div></td><td>${band(b)}</td><td class="r num">${b==="none"?'<span class="muted">&lt; 5</span>':s}</td><td class="r num">${a}</td><td class="r num">${m}</td><td class="small ${why.startsWith("High")?"":"muted"}">${why.startsWith("High")?'<span class="dot" style="background:var(--danger);margin-right:6px"></span>':""}${why}</td></tr>`).join("")}
+</tbody></table></div>
+<div class="card pad" style="display:flex;gap:26px"><span class="small muted" style="align-self:center">Usage · last 30 days</span><div class="stat"><b class="num">38</b><span>active students</span></div><div class="stat"><b class="num">214</b><span>sessions</span></div><div class="stat"><b class="num">61 h</b><span>time on task</span></div></div>
+</div></main></div>`};
+
+function curve(){
+  const pts=[0.62,0.6,0.61,0.58,0.59,0.57,0.58], pts2=[0.55,0.41,0.33,0.26,0.21,0.18,0.15];
+  const x=i=>40+i*62, y=v=>150-v*170;
+  const path=p=>p.map((v,i)=>`${i?"L":"M"}${x(i)},${y(v)}`).join(" ");
+  return `<svg viewBox="0 0 440 170" style="width:100%;height:auto">
+    ${[0,0.25,0.5,0.75].map(v=>`<line x1="40" x2="420" y1="${y(v)}" y2="${y(v)}" stroke="var(--line)"/><text x="4" y="${y(v)+4}" font-size="10" fill="var(--muted)">${Math.round(v*100)}%</text>`).join("")}
+    <path d="${path(pts2)}" fill="none" stroke="var(--muted)" stroke-width="2" stroke-dasharray="4 4"/>
+    <path d="${path(pts)}" fill="none" stroke="var(--danger)" stroke-width="2.5"/>
+    ${pts.map((v,i)=>`<circle cx="${x(i)}" cy="${y(v)}" r="3.5" fill="var(--danger)"/><text x="${x(i)-3}" y="165" font-size="10" fill="var(--muted)">${i+1}</text>`).join("")}
+  </svg>`;
+}
+S.detail = {title:"Objective detail", url:"/teach/courses/AIML101/analytics/GO_05_12_004", caption:"<b>Objective detail.</b> The learning curve (error rate by practice opportunity; flat means the teaching isn't landing), the most common wrong answers, tutor struggle signals, paraphrased chat questions (only topics 5+ students asked about), and a drafted suggestion the teacher can edit. Nothing is changed or published automatically.", render:()=>`
+<div class="shell">${rail("analytics")}<main class="work">
+${head("AIML101 · Analytics · Week 5","Implement gradient descent","GO_05_12_004 · 31 students · 214 graded attempts",`<button class="btn ghost small">Open in Objectives</button><button class="btn small">Draft an explainer</button>`)}
+<div class="scroll"><div class="grid" style="grid-template-columns:1.2fr 1fr">
+  <div class="card pad grid" style="gap:6px">
+    <div style="display:flex;justify-content:space-between;align-items:baseline"><h3 style="font-size:16px">Learning curve</h3><span class="small muted"><span style="color:var(--danger)">━</span> this objective · <span class="muted">┅</span> course typical</span></div>
+    ${curve()}
+    <div class="small muted">Error rate by practice opportunity. <b style="color:var(--ink)">Flat at about 60%</b>: practice isn't reducing errors. Consider a worked example, or splitting the objective.</div>
+  </div>
+  <div class="grid">
+    <div class="card pad grid" style="gap:8px"><h3 style="font-size:16px">Common wrong answers</h3>
+      <div class="small"><b>41%</b> of wrong answers: subtract the gradient from the loss, not from the weights</div><div class="meter"><i style="width:41%;background:var(--danger)"></i></div>
+      <div class="small"><b>23%</b>: learning rate applied to the loss</div><div class="meter"><i style="width:23%;background:var(--danger)"></i></div>
+      <div class="small muted">Grouped by objective: quiz questions are written fresh for each student.</div></div>
+    <div class="card pad grid" style="gap:6px"><h3 style="font-size:16px">Tutor struggle</h3>
+      <div class="kv"><dt>3+ wrong replies in a row</dt><dd>9 students (29%)</dd><dt>Video help shown</dt><dd>7 students</dd><dt>Left without moving on</dt><dd>5 sessions</dd></div></div>
+  </div>
+  <div class="card pad grid" style="gap:8px"><h3 style="font-size:16px">What students ask in Chat</h3>
+    <div class="small"><b>Why do we subtract the gradient?</b> <span class="muted">· 11 students</span></div>
+    <div class="quote">“why is it minus the gradient and not plus?” · “does the step go downhill or uphill”</div>
+    <div class="small"><b>Choosing a learning rate</b> <span class="muted">· 6 students</span></div>
+    <div class="small muted">Paraphrased by LEA; names removed. Topics asked by fewer than 5 students aren't shown.</div></div>
+  <div class="card pad grid" style="gap:8px"><h3 style="font-size:16px">Suggested action <span class="pill line" style="margin-left:6px">LEA suggestion</span></h3>
+    <div class="small">Add a worked example that updates one weight by hand, then revisit <b>Week05-LabA-Own-Framework.ipynb</b>, cells 12–18, where the update rule first appears.</div>
+    <div class="actions"><button class="btn ghost small">Edit note</button><button class="btn ghost small">Dismiss</button></div></div>
+</div></div></main></div>`};
+
+S.preview = {title:"Try as a student", url:"/teach/courses/AIML101/preview/tutor", caption:"<b>Preview as a student.</b> The real student app with a sandbox account whose activity is tagged test and never reaches research logs, analytics or exports. A persistent banner; an explain panel (teachers only) shows why the tutor did what it did; a checklist of probes to try.", render:()=>`
+<div style="height:100%;display:flex;flex-direction:column">
+<div class="preview-bar"><span class="dot" style="background:var(--accent)"></span><span><b>Preview:</b> your answers aren't recorded as student data · AIML101 · published version 2</span><div class="actions"><button class="btn ghost small">Reset preview</button><button class="btn small">Back to teaching</button></div></div>
+<div style="flex:1;display:grid;grid-template-columns:1fr 340px;min-height:0">
+  <main class="work" style="min-height:0">
+    <nav class="modes"><a>Chat</a><a class="on">Tutor</a><a>Quiz</a></nav>
+    <div class="head" style="align-items:center"><div><div class="kicker">Week 5 · Objective 4 of 15</div><h2 style="font-size:20px">Implement gradient descent</h2></div><span class="pill">Step-by-step · medium support</span></div>
+    <div class="scroll" style="display:flex;flex-direction:column;gap:14px">
+      <div class="msg"><img src="${AV}" alt=""><div><div class="b"><p>Let's update one weight by hand. The loss gradient for w is 0.8 and the learning rate is 0.1. What's the new w if it was 1.5?</p></div></div></div>
+      <div class="msg me"><div><div class="b"><p>1.5 + 0.08 = 1.58</p></div><div class="meta" style="text-align:right">Graded · incorrect</div></div></div>
+      <div class="msg"><img src="${AV}" alt=""><div><div class="b"><p>Close: the step size is right, but gradient descent moves <b>against</b> the gradient, so we subtract: 1.5 − 0.08. Why do you think we go against it?</p></div></div></div>
+    </div>
+    <div style="padding:10px 22px 14px;border-top:1px solid var(--line)"><div class="box"><span>Type your reply…</span><button class="btn small">Send</button></div></div>
+  </main>
+  <aside class="explain">
+    <div style="display:flex;justify-content:space-between;align-items:baseline"><h4>Why the tutor did this</h4><span class="small muted">Teachers only</span></div>
+    <dl class="kv"><dt>Objective</dt><dd>GO_05_12_004</dd><dt>Mastery</dt><dd>0.42 → 0.31 <span class="muted">(threshold 0.85)</span></dd><dt>Graded</dt><dd>Incorrect · score 0.2</dd><dt>ZPD</dt><dd>Within reach (0.58)</dd><dt>Cognitive load</dt><dd>Moderate (0.47)</dd><dt>Motivation</dt><dd>Maintained</dd><dt>Scaffolding</dt><dd>Procedural · medium</dd></dl>
+    <div><div class="label" style="margin-bottom:6px">Course content it used</div>
+      <div class="chunk"><b>Week05-LectureA-Multi-Layered-Perceptron.md</b><div class="muted">“…we move in the direction opposite to the gradient, scaled by the learning rate η…”</div></div></div>
+    <div><div class="label" style="margin-bottom:6px">Try these · Week 5</div>
+      <div class="grid" style="gap:6px">${[["done","Answer the first question with “I don't know”"],["done","Give a wrong answer twice"],["todo","Ask something off-topic"],["todo","Ask for the answer outright"],["todo","Ask for a hint"]].map(([s,t])=>`<div class="probe"><span class="check ${s}">${s==="done"?"✓":""}</span>${t}</div>`).join("")}</div></div>
+  </aside>
+</div></div>`};
+
+S.admin = {title:"Users and owners", url:"/admin/users", caption:"<b>Admin.</b> Every account with its role and status; create teacher accounts (no self sign-up), change roles, deactivate (signs the account out everywhere), and set course owners. The last active admin can't be demoted.", render:()=>`
+<div class="shell">${rail("admin","All courses")}<main class="work">
+${head("Admin","Users and owners","46 accounts · 3 teachers · 1 admin",`<button class="btn">New teacher account</button>`)}
+<div class="scroll"><div class="twocol">
+<div class="card" style="overflow:hidden">
+  <div class="pad" style="display:flex;gap:8px;align-items:center"><div class="input small muted" style="flex:1">Search accounts</div><span class="pill" style="background:var(--ink);color:var(--bg)">All</span><span class="pill line">Staff</span><span class="pill line">Test accounts</span></div>
+  <table><thead><tr><th>Account</th><th>Role</th><th>Owns</th><th>Status</th><th></th></tr></thead><tbody>
+    <tr><td><div style="font-weight:500">Dr Rivera</div><div class="id">rivera</div></td><td><span class="pill ok">Admin</span></td><td class="small">AIML101, DEMO102</td><td class="small">Active</td><td class="small" style="color:var(--primary)">Edit</td></tr>
+    <tr><td><div style="font-weight:500">Dr Okafor</div><div class="id">okafor</div></td><td><span class="pill">Teacher</span></td><td class="small">AIML101, BIO210</td><td class="small">Active</td><td class="small" style="color:var(--primary)">Edit</td></tr>
+    <tr><td><div style="font-weight:500">Sam Lee</div><div class="id">slee</div></td><td><span class="pill line">Student</span></td><td class="small muted">—</td><td class="small">Active</td><td class="small" style="color:var(--primary)">Edit</td></tr>
+    <tr><td><div style="font-weight:500">rivera.preview</div><div class="id">test account</div></td><td><span class="pill line">Student</span></td><td class="small muted">—</td><td><span class="pill dash">Test</span></td><td class="small" style="color:var(--primary)">Edit</td></tr>
+    <tr><td><div style="font-weight:500">Jo Park</div><div class="id">jpark</div></td><td><span class="pill line">Student</span></td><td class="small muted">—</td><td class="small" style="color:var(--danger)">Deactivated</td><td class="small" style="color:var(--primary)">Edit</td></tr>
+  </tbody></table>
+</div>
+<div class="grid">
+  <div class="card pad grid" style="gap:10px"><h3 style="font-size:16px">Course owners</h3>
+    <div class="course" style="background:var(--surface)"><div><small>Course</small><strong>AIML101</strong></div><span>▾</span></div>
+    <div style="display:flex;justify-content:space-between" class="small"><span>Dr Rivera <span class="muted">(admin)</span></span><a style="color:var(--danger)">Remove</a></div>
+    <div style="display:flex;justify-content:space-between" class="small"><span>Dr Okafor</span><a style="color:var(--danger)">Remove</a></div>
+    <div style="display:flex;gap:8px"><div class="input small muted" style="flex:1">Add a teacher…</div><button class="btn small">Add</button></div>
+    <div class="small muted">Only teachers and admins can own courses.</div></div>
+  <div class="card pad grid" style="gap:8px"><h3 style="font-size:16px">New teacher account</h3>
+    <div class="field"><label>Name</label><div class="input small">Dr Amara Okafor</div></div>
+    <div class="field"><label>Username</label><div class="input small">okafor</div></div>
+    <div class="field"><label>Temporary password</label><div class="input small">••••••••••••</div></div>
+    <div class="actions"><button class="btn small">Create teacher</button></div></div>
+</div>
+</div></div></main></div>`};
+
+const thumb = (c) => `<div style="width:76px;height:43px;border-radius:7px;background:var(--surface-2);border:1px solid var(--line);display:grid;place-items:center;flex:none;color:${c||"var(--primary)"}"><svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M8 5.5v13l11-6.5z"/></svg></div>`;
+const VID = [
+  ["Backpropagation, step by step","3Blue1Brown","Added by Dr Okafor · 12 Sep","Watch from 3:20: the worked example on one weight."],
+  ["Gradient descent: what the derivative is doing","StatQuest","Added by Dr Okafor · 12 Sep",""],
+  ["Build backprop from scratch in 20 minutes","Andrej Karpathy","Added by Dr Rivera · 14 Sep","The proof is at 8:00; skip it if you are short of time."],
+  ["Chain rule refresher","Khan Academy","Added by Dr Rivera · 14 Sep",""],
+];
+const VROWS = [
+  ["Implement gradient descent","GO_05_12_004",3,"mine","14"],
+  ["Backpropagation steps","GO_05_13_003",0,"paused","11"],
+  ["Bias-variance trade-off","GO_05_15_004",1,"mine","8"],
+  ["Loss function minimization","GO_05_12_003",0,"paused","6"],
+  ["MLP architecture","GO_05_13_001",2,"mine","&lt; 5"],
+  ["Framework ecosystem support","GO_05_14_004",0,"paused","&lt; 5"],
+];
+S.videos = {title:"Videos", url:"/teach/courses/AIML101/videos", caption:"<b>Videos for stuck students.</b> When a student gets three answers in a row wrong on an objective, the tutor adds a short list of videos, once per stuck streak. Here the instructor chooses them per objective; with none, LEA searches YouTube (at most once a week per objective) and, when Google's daily quota is used up, falls back to generic search links. The banner says when search is paused. <b>Help shown</b> counts students who were shown video help in the last 30 days (hidden below 5) so the effort goes where students are stuck. Phone: read-only.", render:()=>`
+<div class="shell">${rail("videos")}<main class="work">
+${head("AIML101 · Videos","Videos for stuck students","Shown once when a student gets three answers in a row wrong · 9 of 63 objectives have your videos",`<span class="pill line">Week 5 ▾</span><span class="pill line">Without videos ▾</span>`)}
+<div class="scroll grid" style="gap:14px">
+<div class="banner soft"><span class="dot" style="background:var(--accent)"></span><span><b>Automatic YouTube search is paused</b> until midnight Pacific (about 7 hours): Google's daily quota is used up. Your videos are unaffected; objectives without them show generic search links until then.</span></div>
+<div class="card pad" style="display:flex;gap:26px;align-items:center">
+  <div class="stat"><b class="num">9</b><span>objectives with your videos</span></div><div class="stat"><b class="num">54</b><span>without</span></div><div class="stat"><b class="num">212</b><span>times help was shown · 30 days</span></div>
+  <div class="small muted" style="margin-left:auto;max-width:46ch">Students see the <b>first three</b> videos in your order. Search results for an objective are kept for a week.</div>
+</div>
+<div class="card" style="overflow:hidden"><table><thead><tr><th>Objective</th><th>Your videos</th><th>What a stuck student gets</th><th class="r">Help shown</th><th></th></tr></thead><tbody>
+${VROWS.map(([n,id,c,src,shown])=>`<tr><td><div style="font-weight:500">${n}</div><div class="id">${id}</div></td>
+<td>${c?`<span class="pill ok">${c} of 5</span>`:`<span class="pill dash">None yet</span>`}</td>
+<td>${src==="mine"?`<span class="pill ok">Your videos</span>`:`<span class="pill warn">Search links</span> <span class="small muted">search paused</span>`}</td>
+<td class="r num">${shown==="&lt; 5"?`<span class="muted">&lt; 5</span>`:shown}</td>
+<td class="r"><button class="btn ghost small">${c?"Edit videos":"Add videos"}</button></td></tr>`).join("")}
+</tbody></table></div>
+</div></main></div>`};
+
+S["videos-edit"] = {title:"Videos: objective", url:"/teach/courses/AIML101/videos/GO_05_13_003", caption:"<b>Videos for one objective.</b> Paste a YouTube link: LEA checks it with YouTube (public, embeddable) and fills in the title and channel. Add an optional note that students see under the link. Up to 5 videos; the order is the order students see and only the first three are shown (the rest wait). Move up/down, remove. On the right, exactly what a stuck student sees. Errors say what to do: “YouTube can't show that video: it may be private, removed, age-restricted or not allowed to be embedded. Check the link, or choose another video.” Phone: read-only.", render:()=>`
+<div class="shell">${rail("videos")}<main class="work">
+${head("AIML101 · Videos · Week 5","Backpropagation steps","GO_05_13_003 · 11 students were shown video help here in the last 30 days",`<button class="btn ghost small">All objectives</button>`)}
+<div class="scroll"><div class="twocol" style="grid-template-columns:1fr 360px">
+<div class="grid" style="gap:14px">
+  <div class="card pad grid" style="gap:12px">
+    <div style="display:flex;justify-content:space-between;align-items:center"><h3 style="font-size:17px">Your videos</h3><span class="small muted">4 of 5 · the first three are shown</span></div>
+    ${VID.map(([t,ch,by,note],i)=> i<3 ? `<div style="display:flex;gap:10px;align-items:center;padding-top:${i?9:0}px;${i?"border-top:1px solid var(--line)":""}">
+      <span class="pill ok" style="flex:none">${i+1}</span>${thumb()}
+      <div style="flex:1;min-width:0"><div style="font-weight:600;font-size:13.5px">${t}</div><div class="small muted">${ch} · ${by}</div>
+        ${note?`<div class="small" style="margin-top:2px">Note: ${note}</div>`:""}</div>
+      <div style="display:flex;gap:6px;align-items:center;flex:none"><button class="btn ghost small" style="padding:5px 9px" aria-label="Move up">↑</button><button class="btn ghost small" style="padding:5px 9px" aria-label="Move down">↓</button><a class="small" style="color:var(--danger);margin-left:4px">Remove</a></div></div>`
+      : `<div style="display:flex;gap:10px;align-items:center;padding-top:9px;border-top:1px solid var(--line)">
+      <span class="pill dash" style="flex:none">${i+1}</span>
+      <div style="flex:1;min-width:0" class="small"><b>${t}</b> <span class="muted">· ${ch} · waits: students see the first three</span></div>
+      <div style="display:flex;gap:6px;align-items:center;flex:none"><button class="btn ghost small" style="padding:5px 9px" aria-label="Move up">↑</button><button class="btn ghost small" style="padding:5px 9px" aria-label="Move down">↓</button><a class="small" style="color:var(--danger);margin-left:4px">Remove</a></div></div>`).join("")}
+  </div>
+  <div class="card pad grid" style="gap:10px"><h3 style="font-size:17px">Add a video</h3>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
+      <div class="field"><label>YouTube link</label><div class="input small muted">Paste a link, e.g. https://youtu.be/…</div></div>
+      <div class="field"><label>Note for students (optional)</label><div class="input small muted">e.g. Watch from 3:20 · 0 / 200</div></div></div>
+    <div style="display:flex;gap:12px;align-items:center"><button class="btn small">Check and add</button><span class="small muted">LEA checks the link with YouTube and fills in the title and channel.</span></div>
+  </div>
+</div>
+<div class="grid" style="gap:14px">
+  <div class="card pad grid" style="gap:10px"><h3 style="font-size:16px">What a stuck student sees</h3>
+    <div style="background:var(--surface-2);border-radius:12px;padding:12px 14px;font-size:13px;line-height:1.5">
+      <div style="color:var(--muted);font-size:11.5px;margin-bottom:4px">LEA tutor</div>
+      That's a common mix-up. The weight update needs how much this weight contributed to the error. Let's take the chain rule one link at a time.
+      <div style="margin-top:10px;font-weight:600">📹 Video Resources to Help You:</div>
+      <div style="margin-top:4px">1. <u>${VID[0][0]}</u><div class="muted">${VID[0][3]}</div></div>
+      <div>2. <u>${VID[1][0]}</u></div>
+      <div>3. <u>${VID[2][0]}</u><div class="muted">${VID[2][3]}</div></div>
+    </div>
+    <div class="small muted">Shown once, when a student has three wrong answers in a row on this objective.</div></div>
+  <div class="card pad grid" style="gap:6px"><h3 style="font-size:16px">With no videos of yours</h3>
+    <div class="small">LEA searches YouTube for this objective at most once a week and shows what it finds. When Google's daily quota is used up it shows generic search links instead. <span class="muted">Choosing videos here avoids both.</span></div></div>
+</div>
+</div></div></main></div>`};
+
+const ORDER = ["home","setup","kc","publish","videos","videos-edit","audit","analytics","detail","preview","admin"];
+const params = new URLSearchParams(location.hash.slice(1));
+let screen = params.get("screen") || "home", theme = params.get("theme") || "light";
+if (params.has("capture")) document.body.classList.add("capture");
+
+function apply(){
+  const app = document.getElementById("app");
+  for (const [k,v] of Object.entries(T[theme])) app.style.setProperty(`--${k}`, v);
+  app.innerHTML = S[screen].render();
+  document.getElementById("caption").innerHTML = S[screen].caption;
+  document.getElementById("url").textContent = "localhost:5100" + S[screen].url;
+  document.documentElement.dataset.theme = theme;
+  document.querySelectorAll("#screens button").forEach(b=>b.setAttribute("aria-pressed", b.dataset.s===screen));
+  document.querySelectorAll("#themes button").forEach(b=>b.setAttribute("aria-pressed", b.dataset.t===theme));
+}
+document.getElementById("screens").innerHTML = ORDER.map(k=>`<button data-s="${k}">${S[k].title}</button>`).join("");
+document.getElementById("screens").onclick = e=>{ if(e.target.dataset.s){screen=e.target.dataset.s; apply();} };
+document.getElementById("themes").onclick = e=>{ if(e.target.dataset.t){theme=e.target.dataset.t; apply();} };
+apply();
+</script>
+</body></html>

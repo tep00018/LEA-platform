@@ -1,0 +1,167 @@
+# Simulation v2 defaults (docs/simulation/PLAN.md). A run config names this as its base
+# and overrides what it needs. Values marked "proposed" wait for the researcher's confirmation.
+
+course: AIML101
+seed: 20260925
+
+# Section 6, "Staying inside the subscription", layer 1. The owner turns usage credits
+# off in Claude's usage settings and says so; only then is this set to true. No run starts
+# without it (the one-call login check doesn't need it).
+usage_credits_confirmed_off: false
+
+# A pilot may run before calibration exists (simulation/config/allowance.yaml); any other
+# run may not.
+pilot: false
+# For any other run: the pilot run whose per-learner-week figures size it (``plan``). A run
+# that doesn't fit claude.max_days_per_run won't start.
+sizing_from: null
+
+scale:
+  profiles: null              # null: all six; or a list of profile keys (smoke tests)
+  learners_per_profile: 1
+  weeks: [1]
+  repetitions: 1
+  tutor_turn_cap: 40
+  extra_rounds_when_stuck: 2
+
+claude:
+  executable: null            # null: shutil.which("claude")
+  concurrency: 2
+  student_model: haiku
+  judge_model: sonnet
+  second_judge_model: opus
+  bank_model: sonnet
+  student_effort: low
+  judge_effort: low
+  # Extended thinking. The pilot showed Haiku spending ~2,250 hidden output tokens per
+  # 30-token student reply (about $0.012 and 20 s a call) under --effort low, so it is
+  # switched off for the student. null leaves a role at the model's default (judges).
+  student_max_thinking_tokens: 0
+  judge_max_thinking_tokens: null
+  timeout_seconds: 300
+  # Budgets in API-equivalent USD (total_cost_usd; an estimate under a subscription, not a
+  # bill). null until calibration sets them.
+  per_5h_budget: null
+  per_week_budget: null
+  share_of_allowance: 0.5
+  pause_at_5h: 0.80
+  pause_at_week: 0.60
+  run_hours: null             # e.g. "23:00-07:00" (local time)
+  max_calls_per_run: 400
+  max_days_per_run: 7
+
+lea:
+  # Which cognitive-load equation drives LEA's scaffolding in this run: fixed (the existing equation) or
+  # personal (src/core/cognitive_load.py). Both are always computed and logged.
+  cognitive_load_model: fixed
+  # How ZPD and support level are decided (src/core/scaffolding_model.py): current, zpd_shrunk or load_led.
+  scaffolding_model: current
+  # Whether the motivation state shifts the load level that picks the support level (on / off; LEA's own
+  # default is now "off" -- Amendment A3), and whether recent accuracy counts toward calling a motivation
+  # drop or high (current / no_performance).
+  motivation_support: "off"
+  motivation_classifier: current
+  # The tutor ends each reply on one recorded, on-objective question (src/core/scaffolding_model.py's
+  # tutor_records_one_question); off by default, not yet measured live.
+  tutor_recorded_question: "off"
+  # The tutor's reply-generation temperature (src/core/scaffolding_model.py's tutor_temperature); LEA's
+  # own default is 0.7, unchanged.
+  tutor_temperature: 0.7
+
+openai:
+  budget_usd: 25              # LEA_SIM_OPENAI_BUDGET_USD overrides
+
+metrics:
+  # M16b: AIML101's course profile sets no length limit; LEA caps tutor replies at
+  # max_tokens=500 (about 375 words). The pre-registration confirms or changes this.
+  tutor_reply_word_limit: 375
+
+# ---------------------------------------------------------------------------- learners
+# Section 1 of the plan. Proposed values; the owner confirms them before the question bank
+# and the pilot.
+learner:
+  # Hidden cognitive load and the timing signals it produces (see simulation/signals.py); {} = defaults
+  signals: {}
+  guess: {multiple_choice: 0.25, true_false: 0.5, fill_in: 0.05, open_ended: 0.05, tutor_reply: 0.05}
+  d_type: {multiple_choice: 0.0, true_false: 0.0, fill_in: 0.05, open_ended: 0.10, tutor_reply: 0.05}
+  bloom_difficulty: {remember: -0.5, understand: -0.5, apply: 0.0, analyze: 0.5, analyse: 0.5,
+                     evaluate: 0.5, create: 0.5}
+  difficulty_jitter_sd: 0.3
+  quiz_learning_factor: 0.5      # after quiz feedback, p_learn x this
+  # Target words for free-text replies (minimal replies are separate)
+  reply_words: {very_short: 4, short: 10, moderate: 25, long: 60}
+  # How engagement shifts the per-turn rates (then rescaled so each profile's average over
+  # its stationary engagement mix equals its configured rate)
+  engagement_multipliers:
+    engaged: {ask: 1.3, minimal: 0.3, quit: 0.2}
+    steady: {ask: 1.0, minimal: 1.0, quit: 1.0}
+    disengaging: {ask: 0.4, minimal: 2.5, quit: 3.0}
+  engagement_persistence: 0.8    # chance the state carries over to the next turn before mixing
+
+profiles:
+  advanced_eager:
+    name: Advanced Eager
+    theta: 1.5
+    p_learn: 0.30
+    slip: 0.05
+    sigma: 0.1
+    ask: 0.20
+    minimal: 0.02
+    quit: 0.00
+    reply_length: moderate
+    engagement: {engaged: 0.70, steady: 0.25, disengaging: 0.05}
+  moderate_reflective:
+    name: Moderate Reflective
+    theta: 0.5
+    p_learn: 0.20
+    slip: 0.08
+    sigma: 0.2
+    ask: 0.40
+    minimal: 0.02
+    quit: 0.00
+    reply_length: long
+    engagement: {engaged: 0.50, steady: 0.40, disengaging: 0.10}
+  struggling_eager:
+    name: Struggling Eager
+    theta: -1.0
+    p_learn: 0.15
+    slip: 0.10
+    sigma: 0.2
+    ask: 0.60
+    minimal: 0.05
+    quit: 0.01
+    reply_length: short
+    engagement: {engaged: 0.55, steady: 0.35, disengaging: 0.10}
+  capable_disengaged:
+    name: Capable Disengaged
+    theta: 1.0
+    p_learn: 0.20
+    slip: 0.15
+    sigma: 0.2
+    ask: 0.05
+    minimal: 0.35
+    quit: 0.08
+    reply_length: very_short
+    engagement: {engaged: 0.10, steady: 0.30, disengaging: 0.60}
+  novice_variable:
+    name: Novice Variable
+    theta: -1.5
+    p_learn: 0.12
+    slip: 0.15
+    sigma: 0.6
+    ask: 0.50
+    minimal: 0.10
+    quit: 0.02
+    reply_length: varies
+    engagement: {engaged: 0.30, steady: 0.40, disengaging: 0.30}
+  inconsistent_adaptive:
+    name: Inconsistent Adaptive
+    theta: 0.0
+    p_learn: 0.25
+    slip: 0.12
+    sigma: 0.5
+    ask: 0.30
+    minimal: 0.08
+    quit: 0.02
+    reply_length: moderate
+    engagement: {engaged: 0.35, steady: 0.40, disengaging: 0.25}

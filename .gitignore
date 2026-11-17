@@ -1,0 +1,153 @@
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+/build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+/lib/
+/lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+*.manifest
+*.spec
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Virtual Environments
+venv/
+.venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+lea_env/
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*.ipynb
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+
+# Data directories (IMPORTANT - sensitive course content)
+data/org_docs/*
+!data/org_docs/.gitkeep
+!data/org_docs/AIML101/
+!data/org_docs/AIML101/*.ipynb
+
+data/md_docs/*
+!data/md_docs/.gitkeep
+!data/md_docs/AIML101/
+
+data/chroma_data/*
+!data/chroma_data/.gitkeep
+!data/chroma_data/AIML101/
+
+data/metadata/*
+!data/metadata/.gitkeep
+!data/metadata/doc_metadata_AIML101.json
+
+data/mastery_tracking/*
+!data/mastery_tracking/.gitkeep
+
+data/signatures/*
+!data/signatures/.gitkeep
+
+# Only the open course (AIML101) is allowlisted; every other course stays local
+data/kc_models/*
+!data/kc_models/AIML101/
+
+# Course profiles: only the open course is tracked
+data/course_profiles/*
+!data/course_profiles/AIML101.json
+!data/course_profiles/README.md
+
+# Runtime research logs (contain usernames)
+data/decision_logs/*
+!data/decision_logs/.gitkeep
+data/motivation_logs/*
+!data/motivation_logs/.gitkeep
+data/go_progress/
+# Teacher uploads and KC drafts: private course content, never committed
+data/course_uploads/
+data/kc_models/*/drafts/
+data/audits/
+data/course_videos/
+data/analytics/
+# Durable event log (research data; back it up, never commit it)
+data/lea_events.db*
+data/simulation_results/
+
+# Course-onboarding intermediates: only the AIML101 and DEMO101 examples are tracked
+data_foundation/*.xlsx
+data_foundation/*.json
+!data_foundation/DEMO101.xlsx
+!data_foundation/DEMO101_Improved_KC_Model_Updated.xlsx
+!data_foundation/KC_Model_DEMO101.json
+!data_foundation/AIML101.xlsx
+!data_foundation/AIML101_Improved_KC_Model_Updated.xlsx
+data_foundation/tutor_natural_checkpoints/
+data_foundation/tutor_natural_results/
+ragas_*.json
+*.pkl
+
+# Local auth fallback data
+local_auth_data/
+
+# Logs
+*.log
+logs/
+
+# Temporary files
+*.tmp
+*.temp
+.cache/
+
+# Redis dumps
+dump.rdb
+
+# ngrok
+ngrok.yml
+
+# macOS
+.AppleDouble
+.LSOverride
+
+# Streamlit
+.streamlit/secrets.toml
+data/kc_models/*/versions/draft.json
+
+# Simulation v2: run folders (events, manifests, copies of course data) and the usage ledger
+simulation/runs/
+
+# Local assistant and editor settings
+.claude/
+CLAUDE.md

@@ -1,0 +1,13 @@
+# Cognitive-load comparison, arm B: the personal equation drives scaffolding.
+# Same learners and seed as arm A; only lea.cognitive_load_model differs. Both equations are logged in both arms.
+pilot: true
+usage_credits_confirmed_off: true
+scale:
+  learners_per_profile: 2
+  weeks: [1]
+claude:
+  max_calls_per_run: 1800
+lea:
+  cognitive_load_model: personal
+openai:
+  budget_usd: 5

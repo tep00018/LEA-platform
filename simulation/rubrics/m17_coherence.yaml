@@ -1,0 +1,16 @@
+id: M17
+version: 1
+title: Dialogue coherence over the last five turns
+unit: one tutor reply, judged against the five exchanges before it (the transcript window shown)
+instructions: >
+  Rate how coherent the TUTOR's reply is as a continuation of the conversation so far
+  (up to the last five exchanges), on this anchored scale. Judge the tutor only.
+scale:
+  1: Incoherent. The reply contradicts or ignores the conversation; it could belong to a different dialogue.
+  2: Weak. It relates to the topic but loses the thread (repeats what was settled, drops the student's point, or jumps without a link).
+  3: Adequate. It follows on, but with a noticeable gap (an unexplained jump or a partly ignored message).
+  4: Good. It follows on clearly from the conversation and the student's last message, with only minor roughness.
+  5: Excellent. It builds naturally on what came before, links back where useful, and moves the dialogue forward smoothly.
+examples:
+  - {text: "After the student explains supervised learning, the tutor confirms, links it to the labelled data the student mentioned, and asks about a regression example.", score: 5}
+  - {text: "After the student says they're confused about bias, the tutor repeats the question it asked two turns earlier word for word.", score: 2}

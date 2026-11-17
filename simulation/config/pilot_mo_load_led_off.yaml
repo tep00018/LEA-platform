@@ -1,0 +1,15 @@
+# Motivation-adjustment comparison (Amendment A3), arm: load_led_off. Personal load equation in every arm; same learners and seed.
+pilot: true
+usage_credits_confirmed_off: true
+scale:
+  learners_per_profile: 2
+  weeks: [1]
+claude:
+  max_calls_per_run: 1800
+lea:
+  cognitive_load_model: personal
+  scaffolding_model: load_led
+  motivation_support: "off"
+  motivation_classifier: current
+openai:
+  budget_usd: 5

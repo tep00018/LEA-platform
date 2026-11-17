@@ -1,0 +1,20 @@
+calibrated_on: '2026-09-26'
+plan: Claude subscription via claude -p (tier not confirmed; usage credits off)
+pilot_api_equivalent_usd: 4.9204
+before_percent:
+  five_hour: 1.0
+  seven_day: 25.0
+after_percent:
+  five_hour: 14.0
+  seven_day: 26.0
+note: 'From Claude''s own utilization logged on every pilot call (00:26 to 03:28 UTC,
+  400 haiku student calls): five_hour 0.01 to 0.14, seven_day 0.25 to 0.26 (1-point
+  resolution, so the weekly estimate is coarse: about a factor of 2 either way). The
+  owner''s UI readings were before 0%/25% and after 2%/20%, taken after the 5-hour
+  window reset and as older usage left the rolling week, so they are not used. Other
+  Claude use during the pilot would inflate utilization, so allowances may be underestimated.
+  Partial pilot: 4 of 6 learner-weeks, no judge calls.'
+five_hour_used_percent: 13.0
+five_hour_usd: 37.85
+seven_day_used_percent: 1.0
+weekly_usd: 492.04

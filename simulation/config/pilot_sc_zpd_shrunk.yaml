@@ -1,0 +1,14 @@
+# Scaffolding-model comparison (Amendment A2), arm: zpd_shrunk. The load equation is the personal one in every arm;
+# same learners and seed as the other arms; only lea.scaffolding_model differs.
+pilot: true
+usage_credits_confirmed_off: true
+scale:
+  learners_per_profile: 2
+  weeks: [1]
+claude:
+  max_calls_per_run: 1800
+lea:
+  cognitive_load_model: personal
+  scaffolding_model: zpd_shrunk
+openai:
+  budget_usd: 5

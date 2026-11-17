@@ -1,0 +1,16 @@
+id: M3
+version: 1
+title: Follow-up resolution in Chat
+unit: one answer to a follow-up question (with the question it refers back to and LEA's earlier answer)
+instructions: >
+  The student asked a question, got an answer, then asked a short follow-up that refers
+  back to it. Judge only LEA's answer to the FOLLOW-UP: does it address what the
+  follow-up refers to? Answer "yes" or "no".
+items:
+  resolves_reference:
+    question: Does the answer to the follow-up address what the follow-up refers back to?
+    yes_if: The answer is about the earlier topic the follow-up points to (for example gives an example of that concept).
+    no_if: The answer treats the follow-up as a new, unrelated question, asks what the student means when it was clear, or answers about something else.
+    examples:
+      - {text: "Q1 about overfitting; follow-up 'can you give an example of that?'; answer gives an overfitting example.", answer: "yes"}
+      - {text: "Same follow-up; answer gives a general example of machine learning, not of overfitting.", answer: "no"}
